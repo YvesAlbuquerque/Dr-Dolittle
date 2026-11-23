@@ -42,6 +42,8 @@ jobs:
         run: python scripts/validate_confidence.py
       - name: Validate AI provenance and conjectures
         run: python scripts/validate_ai_readiness.py
+      - name: Crossref worker offline smoke test
+        run: python scripts/crossref_metadata_worker.py --limit 5
       - name: Rebuild draft matrix
         run: python scripts/build_r1_pilot_matrix.py
       - name: Verify reproducible committed visualization

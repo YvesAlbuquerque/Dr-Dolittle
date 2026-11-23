@@ -7,7 +7,7 @@ This is an evidence-gated plan, not a delivery commitment.
 | R0 | Publish scope, ontology proposal, contribution process | Reviewable public documents | Documented |
 | R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Prototyped (80-reference catalog, 15 unreviewed source observations and draft coverage chart; definitions and claims still unvalidated) |
 | R1-P | Evaluate physiological biomarkers, cross-species molecular homology, assay timescale and neural/behavioral links to communication | Source-linked candidate measurements, explicit confounders and review | Scaffolded (documentation and empty fields only) |
-| R1-AI | Design an AI-operated research pipeline with source integrity screening and evidence-grounded model critiques | Architecture, staged source integrity records, conjecture ledger and validator; no autonomous model run or calibration | Scaffolded |
+| R1-AI | Build evidence provenance toward an AI-operated research pipeline | Architecture and audit ledger, plus bounded Crossref DOI metadata worker; no live benchmark, autonomous model run or appraisal calibration | Prototyped (worker; science AI only Documented) |
 | R1-C | Methodologically appraise source-specific observations and synthesize explicit hypothesis-level certainty | 15 not-assessed placeholders, evidence-confidence protocol and validators; no graded hypotheses yet | Scaffolded |
 | R2 | Group-level comparative evidence matrix | Traceable study-to-capability entries and confidence labels | Planned |
 | R3 | Select high-information comparisons and candidate species | Transparent selection criteria and dataset audits | Planned |

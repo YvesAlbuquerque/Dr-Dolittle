@@ -8,6 +8,7 @@
 - [`ai/assessment_runs.csv`](ai/assessment_runs.csv): header-only model/version/prompt/input manifest; no execution recorded.
 - [`ai/appraisal_proposals.csv`](ai/appraisal_proposals.csv): header-only source-grounded candidate AI method judgments, separate from appraised evidence.
 - [`research/conjectures.csv`](research/conjectures.csv): two **ungraded, untested** ideas from project discussions, without invented supporting experiments. Even disconfirmed ideas stay in revision history.
+- [Crossref metadata worker](../docs/crossref-metadata-worker.md) for bounded, optional real DOI metadata snapshots; it does **not** promote fields to source-integrity records or grade scientific hypotheses.
 - [AI-first scientific operations](../docs/ai-first-scientific-operations.md) and `python scripts/validate_ai_readiness.py`: stage-based operation with deterministic checks and calibration prerequisites. A validation pass cannot certify biological truth.
 
 The repository's canonical small structured datasets are UTF-8 CSV with stable IDs and normalized relationships. Bibliography metadata is separately stored in [CSL JSON](../bibliography/catalog/seed.csl.json). DuckDB/Parquet are optional *derived* analytical products, not the source of truth.

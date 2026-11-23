@@ -1,0 +1,5 @@
+# Ephemeral DOI lookup runs and optional local environments
+_local/
+__pycache__/
+*.pyc
+.pytest_cache/
