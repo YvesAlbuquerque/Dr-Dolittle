@@ -1,12 +1,13 @@
 """Deterministic, network-free tests for the R1 source-first AI pipeline."""
 import csv
 import json
+import urllib.error
 import tempfile
 import unittest
 from pathlib import Path
 
 from scripts.r1_research_pipeline import (
-    extract_xml, fetch_source, lookup_metadata, model_call_ollama,
+    extract_xml, extract_bioc, fetch_source, lookup_metadata, model_call_ollama,
     prompt, selected_passages, validate_model_draft, execute, request
 )
 
@@ -103,6 +104,36 @@ class ResearchPipelineTests(unittest.TestCase):
         self.assertEqual("pmid_match_doi_unconfirmed",result["status"])
         self.assertFalse(result["doi_confirmed"])
 
+    def test_official_pmc_oa_bioc_fallback_with_confirmed_identity(self):
+        sample={"documents":[{"id":"PMC12345678","passages":[
+           {"infons":{"section_type":"METHODS"},"text":"Seven birds were tested using a playback design with controls."},
+           {"infons":{"section_type":"RESULTS"},"text":"Familiar playback responses differed from control conditions."},
+           {"infons":{"section_type":"DISCUSSION"},"text":"The interpretation remains constrained by design and sampling."}]}]}
+        raw=json.dumps(sample).encode()
+        output=extract_bioc(raw,"PMC12345678",known_pmid="98765",metadata_oa=True)
+        self.assertEqual(3,len(output["sections"]))
+        self.assertIn("PMC Open Access",output["rights_basis"])
+        with self.assertRaisesRegex(ValueError,"OA metadata"):
+            extract_bioc(raw,"PMC12345678",metadata_oa=False)
+        with self.assertRaisesRegex(ValueError,"document id"):
+            extract_bioc(raw,"PMC00000000",metadata_oa=True)
+
+    def test_fallback_when_jats_service_returns_500(self):
+        sample={"documents":[{"id":"PMC12345678","passages":[
+           {"infons":{"section_type":"METHODS"},"text":"Seven birds were enrolled in the playback study with controls."},
+           {"infons":{"section_type":"RESULTS"},"text":"Familiar calls produced different responses in this sample."},
+           {"infons":{"section_type":"ABSTRACT"},"text":"This study examined social calling in zebra finches."}]}]}
+        def fail_jats(req,timeout=18):
+            if "fullTextXML" in req.full_url:
+                raise urllib.error.HTTPError(req.full_url,500,"error",{},None)
+            if "BioC_json" in req.full_url:
+                return FakeResponse(json.dumps(sample).encode())
+            return fake_source(req,timeout)
+        r=fetch_source({"assertion_id":"r1-013","reference_id":"ref13","doi":DOI},
+                       opener=fail_jats,sleeper=lambda _:None)
+        self.assertEqual("full_text",r["status"])
+        self.assertEqual("bioc_json",r["source_format"])
+
     def test_restricted_url_is_rejected(self):
         with self.assertRaisesRegex(ValueError,"disallowed"):
             request("https://arbitrary.example.com/unsafe")
@@ -170,7 +201,7 @@ class ResearchPipelineTests(unittest.TestCase):
         self.assertEqual("draft_validated_structurally",
                          result["results"][0]["methodology_proposal_status"])
         self.assertFalse(result["scientific_certainty_updated"])
-        self.assertTrue((folder/"r1-013"/"source.xml").exists())
+        self.assertTrue((folder/"r1-013"/"source.jats.xml").exists())
         self.assertFalse((self.root/"data/evidence/certainty_assessments.csv").exists())
 
     def test_default_is_zero_requests(self):
