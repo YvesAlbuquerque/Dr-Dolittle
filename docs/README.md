@@ -7,6 +7,7 @@ This directory contains the conceptual foundation of Dr. Dolittle. Documents dis
 | [Theoretical definitions compared (R1)](definition-comparison-r1.md) | Source-qualified comparison, disagreements and operational tiers |
 | [Physiology, biomarkers and communication](physiological-biomarkers-and-communication.md) | Endocrine, neural, cardiovascular, evolutionary and assay evidence as a separate axis |
 | [Respiration and communication](respiration-and-communication.md) | Deep breaths, sighs, snorts, cues versus signals |
+| [Crossref metadata worker](crossref-metadata-worker.md) | Bounded DOI source lookups and local provenance snapshots |
 | [AI-first scientific research operations](ai-first-scientific-operations.md) | End-to-end AI research design, source integrity and anti-bias criteria |
 | [Evidence certainty and appraisal methodology](evidence-certainty-methodology.md) | Domain appraisals, hypothesis-level confidence, downgrade/revision rules and provenance |
 | [R1 pilot 01 — 15 studies](r1-pilot-01.md) | Source-linked unreviewed observations and first source-coverage matrix |
