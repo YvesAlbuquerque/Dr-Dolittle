@@ -13,6 +13,14 @@
 | Interaction organization | Dyadic, group, broadcast, networked, colony-level | Receiver identity and audience effects matter |
 | Informational/cognitive capacities | Discrimination, reference-like behavior, combinatoriality, turn-taking, repair, cultural transmission | Strong claims need operational definitions and controls |
 
+### Behavioral and physiological event families are not modalities
+
+Add a provisional **observable-event family** dimension that precedes the question of communication. Candidates include respiratory acts (deep inspiration, sigh, snort, breath blow), locomotor/postural movements, grooming/contact actions, body-color changes and physiological emissions. These are not yet accepted or universally exhaustive controlled terms.
+
+A visible respiratory change can be classified as a **visual observation** and an audible expiration as an **acoustic observation**; the motor event is respiratory, and its meaning/function stays unknown until tested. Multiple sensory channels can describe one event. [Research note on respiratory behaviors](respiration-and-communication.md).
+
+For each event record observation method, context, individual, possible receiver, time sequence and alternate physiological explanations **without** inventing communicative intent. See [R1 definition comparison](definition-comparison-r1.md).
+
 ## Level 2 — capabilities
 
 For each candidate capability, document:
