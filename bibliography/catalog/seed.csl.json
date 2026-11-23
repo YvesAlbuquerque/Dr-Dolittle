@@ -655,5 +655,89 @@
       ]
     },
     "DOI": "10.1038/sdata.2016.18"
+  },
+  {
+    "id": "ref-prisma-scr-2018",
+    "type": "article-journal",
+    "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+    "URL": "https://doi.org/10.7326/M18-0850",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "DOI": "10.7326/M18-0850"
+  },
+  {
+    "id": "ref-mapping-nonhuman-cultures-2025",
+    "type": "article-journal",
+    "title": "Mapping nonhuman cultures with the Animal Culture Database",
+    "URL": "https://doi.org/10.1038/s41597-025-05315-y",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "DOI": "10.1038/s41597-025-05315-y"
+  },
+  {
+    "id": "ref-acdb-web-app-2025",
+    "type": "article-journal",
+    "title": "A Web App for the Animal Culture Database and a Template for Deploying Comparative Trait Databases With Shiny",
+    "URL": "https://doi.org/10.1002/ece3.71913",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "DOI": "10.1002/ece3.71913"
+  },
+  {
+    "id": "ref-multi-interaction-2026",
+    "type": "article-journal",
+    "title": "Multi-interaction: a new open-access approach for studying multimodal communication and interactions across species",
+    "URL": "https://doi.org/10.1016/j.anbehav.2026.123526",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.anbehav.2026.123526"
+  },
+  {
+    "id": "ref-electric-fish-signals-algorithm-2023",
+    "type": "article-journal",
+    "title": "Supervised learning algorithm for analysis of communication signals in the weakly electric fish Apteronotus leptorhynchus",
+    "URL": "https://doi.org/10.1007/s00359-023-01664-4",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "DOI": "10.1007/s00359-023-01664-4"
+  },
+  {
+    "id": "ref-interspecies-cooperation-cues-signals-2026",
+    "type": "article-journal",
+    "title": "The ecology and evolution of cues and signals in animal interspecies cooperation",
+    "URL": "https://doi.org/10.1016/j.anbehav.2026.123611",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.anbehav.2026.123611"
   }
 ]
