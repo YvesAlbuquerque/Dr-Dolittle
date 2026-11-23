@@ -1,101 +1,92 @@
-# Research instrumentation: records, classification and visualization
+# Research instrumentation — adopted choices and evidence boundary
 
-**Status: Proposed architecture (2026-11-23).** No software stack has been implemented or benchmarked by this document.
+**Decision date:** 2026-11-23. **Decision: adopted for the first research data pilot.** This is a tooling decision, **not** evidence that any import, validation, model, dataset integration, chart or public site has run. Initial directory scaffolding may exist, but functionality remains unvalidated.
 
-## Design requirements
+## Architectural principle
 
-1. Open formats, reproducible transformations, permissive access, and minimal infrastructure.
-2. Keep bibliographic metadata separate from *claims* and *evidence*.
-3. Preserve source and taxonomic version provenance.
-4. Support multi-label, multi-modal, uncertain, and contradictory classifications.
-5. Make manual scientific review possible without requiring programming skills.
-6. Avoid premature custom web application or graph database deployment.
+**GitHub is the canonical, reviewable publication surface. Open text files are the archival source of truth.** Researcher-friendly tools and generated databases are optional adapters. No proprietary service, paid API, always-on server, relational database server, vector database, or AI model is required for R1.
 
-## Proposed initial toolchain
+## Selected choices
 
-| Responsibility | Candidate | Reason | Decision |
-| --- | --- | --- | --- |
-| Literature discovery | OpenAlex, Crossref, PubMed | Search and DOI metadata | Evaluate coverage, API terms and reproducibility |
-| Reference management | Zotero + Better BibTeX export (optional) | Human-friendly reading, tagging, annotation | Candidate; no mandatory hosted account |
-| Canonical bibliography | CSL JSON / BibTeX plus stable IDs | Portable, diffable, interoperable | Proposed |
-| Taxonomy | Pinned Catalogue of Life release | Traceable names and hierarchy | Adopted source policy; ingestion not implemented |
-| Structured records | CSV for flat tables, JSON Schema and JSONL for evidence | Readable and machine-checkable | Proposed |
-| Validation | Python, pytest, JSON Schema | Deterministic checks and export generation | Proposed, not installed |
-| Local analytical query | DuckDB over Parquet snapshots | Lightweight joins and exploratory analysis | Candidate; no database server required |
-| Exploratory notebooks | Jupyter + pandas / DuckDB | Reproducible plots and statistics | Candidate |
-| Comparative graph | NetworkX for derived graph; Cytoscape for exploration | Flexible many-to-many links | Candidate |
-| Phylogenetic views | Tree of Life sources + compatible phylogeny libraries | Overlay independently sourced trees | Research required |
-| Public publication | GitHub Pages + static generated charts | Low-maintenance public exploration | Candidate, not deployed |
+| Need | Selected tool / representation | Status |
+| --- | --- | --- |
+| Discovery and DOI metadata | [Crossref REST](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) first; [OpenAlex](https://help.openalex.org/api/) to expand citation and related-work graphs; PubMed for biomedical records | Selected; no harvest run |
+| Human reference management | [Zotero](https://www.zotero.org/support/kb/exporting), recommended but **optional**, including CSL JSON import/export | Selected as optional interface |
+| Canonical bibliography | **CSL JSON** with stable local `id`, DOI where available, and provenance in a separate review log | Selected; catalog seed may be partial |
+| Scientific evidence and review | **Normalized UTF-8 CSV tables** (one claim, one source link, one review per row); foreign keys checked across files | Selected; no scientific assertions accepted |
+| Controlled terms | Versioned CSV vocabularies; explicit IDs, definitions and migration notes | Selected |
+| Validation | Python stdlib for CSV, identifiers, DOI normalization and relationships; [JSON Schema](https://json-schema.org/) on parsed row objects when justified; pytest when checks exist | Selected; not yet coded |
+| Analysis | [DuckDB](https://duckdb.org/docs/data/csv/overview) querying CSV directly, materialized Parquet optionally generated and ignored by Git | Selected; not yet benchmarked |
+| First public visualization | [Vega-Lite](https://vega.github.io/vega-lite/docs/) matrix, sourced from **reviewed** evidence exports; optional GitHub Pages | Selected; not implemented |
+| Derived graph | NetworkX, exportable as GraphML for optional Cytoscape exploration | Later; not implemented |
+| Taxonomic names | Version-pinned Catalogue of Life Base; XR/specialists for gap resolution | Policy adopted; no taxonomy ingested |
+| Phylogeny | Separate independently sourced and pinned reference tree(s) | Not selected; no evolutionary claims inferred |
 
-## Data model (conceptual)
+### Why normalized CSV over JSONL as the *canonical* evidence representation?
 
-**Reference**: bibliographic work, DOI/URL, source metadata, access and review status.
+The data must support independent sources, evidence assertions, multiple classification labels, and contradictory reviewers without merging them into one nested object. Small linked tables with stable IDs are easier for collaborators to diff, open in spreadsheet software, and query with SQL. JSONL is still a **possible derived interchange format**, not the initial canonical format.
 
-**Study**: design, sampling, population, context, controls and limitations; may be linked to multiple references.
+The price is more tables and explicit referential-integrity validation. This cost is preferable to a flexible JSONL blob with hard-to-review nested changes. **CSV is not itself a semantic schema**: the accompanying field definitions and checks are mandatory.
 
-**Taxon**: name, rank, parent, accepted/synonym status, source/release identifier.
+### Why not a web application now?
 
-**Phenomenon**: observable communication-related process, not presumed semantics.
+We lack reviewed content. A beautiful atlas of unvalidated assertions could falsely imply scientific certainty. The initial public visualization must prominently differentiate **not assessed**, **insufficient**, **conflicting**, **presence in a particular test**, and **absence under a specified test**. Only reviewed rows may be published as evidence.
 
-**Communication system**: recurrent patterns of signal production, perception and response, potentially spanning modalities.
-
-**Capability**: independently defined testable property, not a rank of intelligence.
-
-**Evidence assertion**: explicit link between study, taxon or group, phenomenon/system, capability, observed result, evidence status, uncertainty and reviewer.
-
-**Classification scheme**: versioned axes and terms; changing definitions requires migration or preserved historical codes.
-
-All many-to-many relations should have stable IDs and documented provenance. Avoid a single spreadsheet where a paper, species, signal and claim are treated as one row.
-
-## Suggested repository layout (not yet created)
+## Conceptual relational entities
 
 ```text
-bibliography/
-  sources/                 # provenance and search protocols
-  catalog/                 # DOI-deduplicated CSL JSON or BibTeX
-data/
-  taxonomy/                # release manifest; large external data excluded from git
-  ontology/                # controlled vocabularies and definitions
-  evidence/                # curated assertions, reviews and uncertainty
-schemas/                   # machine-readable validation
-scripts/                   # import, normalize, validate, build
-notebooks/                 # exploratory analysis with pinned dependencies
-site/                      # generated static atlas (later)
-docs/                      # scientific rationale and methods
+references [CSL JSON] 1──N assertion_sources N──1 assertions
+                                              │
+                                              ├──N assertion_capabilities N──1 capabilities
+                                              │
+                                              ├──N assertion_modalities N──1 modalities
+                                              │
+                                              ├──N assertion_taxa N──1 taxa (from pinned COL)
+                                              │
+                                              └──N reviews
 ```
 
-## Visualization roadmap
+Avoid mandatory taxon or capability IDs on raw observations that cannot yet be classified. Group-level claims are **study-scope claims**, never inherited automatically by all descendant species. Contradictory assertions and reviews stay distinct; derived aggregations must show disagreement.
 
-**V0: evidence coverage matrix** — axes: capability × animal group; cell: evidence status and number of reviewed studies, never a simplistic present/absent Boolean.
+Minimum assertion fields: local ID; literal claim; evidence status; observation-vs-interpretation label; context; methodology/limitations; classification version; review status. Additional linked tables carry citation locations, groups, capabilities and modalities. A source must be traceable to a paper and preferably figure/table/page or experiment section. Do not use machine-generated claims as verified evidence.
 
-**V1: modality-capability explorer** — filter systems by modalities, signal structure, context and confidence.
+## Contribution and review workflow
 
-**V2: comparative similarity network** — weighted relationships with explicit distance metric, sensitivity analysis, and missing-data handling.
+1. **Discovered** bibliographic reference: DOI/title/URL metadata available. May enter catalog; says nothing about a scientific conclusion.
+2. **Screened** reference: scope and inclusion/exclusion reason documented.
+3. **Extracted draft**: one atomic assertion supported by a specified source location and defined observational method. AI may draft tags only with an explicit draft flag.
+4. **Reviewed**: human reviewer checks the source, operative definition, counterexamples and context. No silent promotion merely because a PR merged.
+5. **Disputed**: retain conflicting records; do not collapse them to an unjustified majority vote.
+6. **Independently corroborated**: only after independent review and/or independent empirical evidence as appropriate. A single reviewer must not be described as external validation.
 
-**V3: phylogenetic overlay** — compare similarity with externally sourced evolutionary trees; do not infer shared ancestry from layout.
+Governance for a solo-maintained phase: the founder may curate **metadata** and mark a record as checked, but scientific assertions lacking external review remain provisional. Record authorship and reviewers; avoid invented reviewers or endorsements.
 
-**V4: study-to-claim provenance view** — click a cell to see papers, operational criteria, conflicting evidence and reviewer notes.
+## First useful visual
 
-## Scientific safeguards
+**V0: capability × sampled animal group evidence coverage**. A cell shows counts by *review state* and *evidence state*, with a drill-through to source assertions. Zero-reviewed-studies ≠ biological absence. Display counts per unique study separately from assertions to reduce double counting. Default to "not assessed" for an unexamined cell, not a negative.
 
-- Store contradictory claims; do not overwrite them with a consensus Boolean.
-- Unknown and not-assessed are distinct from documented absence.
-- Review counts measure research effort, not biological capacity.
-- Do not silently propagate a group-level observation to every species.
-- Record whether each datum is observation, interpretation, hypothesis, or model prediction.
-- Dataset licensing and ethics metadata travel with derived exports.
-- AI may propose tags, but acceptance of scientific claims remains human-reviewed.
-- Cite and pin phylogeny sources separately from Catalogue of Life taxonomy.
+**V1:** filter by modality, context and quality; **V2:** network of explicitly supported comparisons; **V3:** overlay an independently sourced phylogenetic tree. More elaborate visualizations are conditional on real reviewed data.
 
-## Evaluation before selecting a stack
+## Data hygiene
 
-Run a small vertical slice: 20–30 references, 3 contrasting modalities, 3–5 animal groups, and 10–20 reviewed assertions. Validate DOI normalization, taxonomy lookup, multi-label coding, disagreement capture, export/import, and generation of a coverage matrix.
+- Use UTF-8 CSV (RFC 4180 quoting), lowercase snake_case IDs, stable row order, dates as ISO 8601 and explicit null conventions.
+- Git stores only original metadata, curated definitions and compact evidence records; no unauthorized article PDFs, recordings, major taxonomy dumps, caches or generated databases.
+- Reference record `id` is a project-local key, never an implicit DOI; track duplicate/alternate DOI identifiers separately.
+- Pinned taxonomy releases and retrieval dates belong in a provenance manifest, not in the license header of each assertion.
+- Never infer data accessibility or redistribution permission from a public link or from the repository MIT license.
+- Prefer small reviewable pull requests and deterministic transformations. Scientific claims must carry provenance and uncertainty.
 
-Choose tools only after this test. Prefer the simplest stack that supports reliable contributions.
+## Free-tier caveat
 
-## Decisions needed
+OpenAlex documentation in November 2026 describes **$1 of free API usage per day** for a registered free account, with usage-metered calls. It is not accurate to promise unlimited free OpenAlex harvesting. Crossref's public API has dynamic rate limits. Caching, backoff, request budgets and provenance are required before implementing bulk collection.
 
-1. Is Zotero optional or a recommended collaborative interface?
-2. Should the first evidence schema use JSONL + JSON Schema, or normalized CSV tables?
-3. What are the review roles and criteria for promoting an assertion?
-4. Which public interactive views matter most for the first milestone?
+## First verification slice (not yet run)
+
+- 20–30 DOI-checked references spanning **acoustic, visual, chemical, vibrational and electric** signaling.
+- 3–5 broad animal sampling groups, without choosing a canonical species list first.
+- 10–20 draft evidence assertions, with at least one ambiguous and one conflicting case.
+- Tests for missing DOI, duplicate references, broken foreign keys, unknown controlled terms, blank provenance and conflicting reviews.
+- Generate V0 from approved evidence only and show all unknown/absence distinctions.
+- Confirm that all outputs can be rebuilt offline from a clean checkout and documented tool versions.
+
+**Exit criterion:** validated, repeatable data import + classification + matrix; no research finding is inferred from a successful software build.
