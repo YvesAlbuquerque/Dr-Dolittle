@@ -104,6 +104,8 @@ def parse_payload(expected_doi, raw):
     recorded = normalize_doi(work.get("DOI"))
     notices, relations = update_notices(work)
     title = title_text(work)
+    # Editorial flag may be recorded in a title even when update links are absent.
+    title_retraction_flag = bool(title and re.match(r"^\s*RETRACTED\s*:", title, flags=re.I))
     return {
         "status": "matched" if expected_doi == recorded and title else "mismatch_or_incomplete",
         "crossref_doi": recorded,
@@ -116,7 +118,10 @@ def parse_payload(expected_doi, raw):
         "crossref_issued": work.get("issued"),
         "listed_updates": notices,
         "relation_keys": relations,
-        "integrity_notice_result": "metadata_updates_present" if notices else "not_cleared",
+        "title_retraction_flag_present": title_retraction_flag,
+        "integrity_notice_result": ("metadata_updates_present" if notices else
+                                    "title_suggests_retraction_needs_verification" if title_retraction_flag else
+                                    "not_cleared"),
         "peer_review_status": "unknown",
         "venue_transparency": "unknown",
     }
