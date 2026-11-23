@@ -20,6 +20,14 @@ This directory is organized by **what each resource contributes**, rather than c
 | [Derby Lab (Georgia State)](https://labs.ni.gsu.edu/derby/research/) | Crustacean chemical sensing and communication | Non-acoustic evidence, chemical signals and receptors | Research lab |
 | [iMak AI Lab animal communication](https://imak.ai/projects/animals-communication) | ML approaches to animal vocalization | Adjacent exploratory effort; independently verify outputs | Related research lead |
 
+## Existing cross-taxon databases and interaction tooling
+
+| Resource | What it contributes | Boundary / reuse check |
+| --- | --- | --- |
+| [Animal Culture Database (ACDB)](https://datadiversitylab.github.io/ACDB/) / [source data release](https://github.com/datadiversitylab/ACDB_datarelease) | Comparative records of socially transmitted behaviors, including communicative behaviors, at species/population/group granularity | Not a comprehensive communication atlas; review the specific data-release terms and coding choices before reuse |
+| [ACDB web application and methods paper](https://doi.org/10.1002/ece3.71913) | Public exploration of comparative behavioral data; possible reference for our visualizations | Assess use and maintenance cost before writing a bespoke atlas front end |
+| [Multi-interaction (2026)](https://doi.org/10.1016/j.anbehav.2026.123526) / [institutional summary](https://www.ilcb.fr/multi-interaction-a-new-open-access-approach-for-studying-multimodal-communication-and-interactions-across-species/) | Open-access analysis approach addressing multimodal overlap, simultaneous exchange and silence | Tool capability, code availability and license need direct evaluation |
+
 ## Structured domain resources (important for modality balance)
 
 | Resource | Primary content | Research-use caution |
