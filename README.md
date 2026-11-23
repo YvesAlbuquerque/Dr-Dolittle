@@ -49,7 +49,10 @@ Interspecies communication may provide **supporting evidence** of shared percept
 | [Comparative ontology](docs/comparative-ontology.md) | Proposed classification axes, capabilities, and evidence states |
 | [Research methodology](docs/methodology.md) | Literature-first, group-first workflow and validation safeguards |
 | [Research roadmap](docs/roadmap.md) | Phases, milestones, and contribution opportunities |
-| [Reading list & initiatives](docs/references.md) | Foundational research and relevant external projects |
+| [Related research worldwide](docs/related-projects.md) | Other initiatives, research groups, and open tools |
+| [Bibliography plan](docs/bibliography-plan.md) | Literature sources, screening workflow, and reading queue |
+| [Taxonomic authority](docs/taxonomy-source.md) | Catalogue of Life, release policy, and species inventory provenance |
+| [Reading list](docs/references.md) | Initial references and research leads |
 | [Contributing](CONTRIBUTING.md) | How to propose evidence, critique, datasets, and improvements |
 | [Mission](MISSION.md) | Public-good principles and open collaboration |
 | [History](HISTORY.md) | Project origins and historical milestones |
