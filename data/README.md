@@ -12,9 +12,13 @@ The repository's canonical small structured datasets are UTF-8 CSV with stable I
 - `evidence/assertion_modalities.csv`: many-to-many classification; multimodality is **derived**, not a single modality label
 - `evidence/assertion_taxa.csv`: scoped taxon links to pinned taxonomy references; no inheritance to every group member
 - `evidence/reviews.csv`: independent reviewer decisions; disagreeing reviews retained
+- `evidence/assertion_physiological_markers.csv`: **header-only provisional** study-linked physiological measurement metadata; a biomarker is not a communication channel or a verified claim
+- `ontology/physiological_marker_families.csv`: **proposed** physiological/mechanistic evidence families, not a table of validated species abilities
 - `ontology/modalities.csv`: **provisional**, descriptive categories, not evidence for animal abilities
 - `ontology/capabilities.csv`: empty until operational definitions are reviewed
 - `taxonomy/source-manifest.json`: proposed COL source release, with ingestion explicitly marked false
+
+See [biomarker scope and recording limitations](../docs/physiological-biomarkers-and-communication.md). A measurement linking to an assertion must retain an exact source passage, time window and baseline/comparator. Hormone assay comparability and homologous molecule identities must be validated independently of behavior.
 
 ## Null and status rules
 
