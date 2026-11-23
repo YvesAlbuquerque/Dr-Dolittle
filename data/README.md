@@ -2,6 +2,14 @@
 
 **Status: Prototyped R1 study pilot, NOT independently scientifically reviewed.** Some CSVs now contain **15 draft source-reported observations** from a purposive test set; there are **no independently accepted scientific claims**, and no taxonomic inventory has been downloaded. See [R1 pilot 01](../docs/r1-pilot-01.md).
 
+## AI-first provenance and conjecture additions
+
+- [`bibliography/source_integrity.csv`](bibliography/source_integrity.csv): **80 source checks**, all `not_checked`; peer-review status, venue transparency and retraction/correction status are explicitly unknown, not evaluated. Editorial metadata is **not** a scientific claim.
+- [`ai/assessment_runs.csv`](ai/assessment_runs.csv): header-only model/version/prompt/input manifest; no execution recorded.
+- [`ai/appraisal_proposals.csv`](ai/appraisal_proposals.csv): header-only source-grounded candidate AI method judgments, separate from appraised evidence.
+- [`research/conjectures.csv`](research/conjectures.csv): two **ungraded, untested** ideas from project discussions, without invented supporting experiments. Even disconfirmed ideas stay in revision history.
+- [AI-first scientific operations](../docs/ai-first-scientific-operations.md) and `python scripts/validate_ai_readiness.py`: stage-based operation with deterministic checks and calibration prerequisites. A validation pass cannot certify biological truth.
+
 The repository's canonical small structured datasets are UTF-8 CSV with stable IDs and normalized relationships. Bibliography metadata is separately stored in [CSL JSON](../bibliography/catalog/seed.csl.json). DuckDB/Parquet are optional *derived* analytical products, not the source of truth.
 
 ## Relation map
