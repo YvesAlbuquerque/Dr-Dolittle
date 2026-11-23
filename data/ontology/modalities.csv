@@ -1,0 +1,7 @@
+modality_id,label,definition,status
+acoustic,Acoustic,Pressure waves in gas or liquid detected through auditory or vibration-sensitive systems,proposed
+visual,Visual,Optical or visual displays perceptible to receivers,proposed
+chemical,Chemical,Chemical substances emitted or presented and detected by chemosensory systems,proposed
+tactile,Tactile,Direct-contact mechanosensory interactions including touch,proposed
+substrate_vibration,Substrate-borne vibration,Mechanical vibration transmitted through solids or water surfaces,proposed
+electrical,Electrical,Electric fields or discharges detected through electroreception,proposed
