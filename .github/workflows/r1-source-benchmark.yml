@@ -1,0 +1,43 @@
+name: R1 live source retrieval (no model dependency)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/r1_research_pipeline.py'
+      - 'scripts/report_r1_run.py'
+      - '.github/workflows/r1-source-benchmark.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-retrieval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve four primary research sources where permitted
+        run: |
+          python scripts/r1_research_pipeline.py --live --model none \
+            --ids r1-001 r1-006 r1-009 r1-013 \
+            --output "${{ runner.temp }}/r1-source-run"
+      - name: Evaluate access and provenance
+        if: always()
+        run: |
+          if [ -f "${{ runner.temp }}/r1-source-run/manifest.json" ]; then
+            python scripts/report_r1_run.py "${{ runner.temp }}/r1-source-run"
+          else
+            echo "No source manifest; acquisition could not be evaluated" && exit 1
+          fi
+      - name: Archive source snapshots and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r1-real-europepmc-source-acquisition
+          path: ${{ runner.temp }}/r1-source-run/
+          retention-days: 7
+          if-no-files-found: warn

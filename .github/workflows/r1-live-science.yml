@@ -1,0 +1,58 @@
+name: R1 live open-science + local AI pilot
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/r1_research_pipeline.py'
+      - 'scripts/report_r1_run.py'
+      - 'tests/test_r1_research_pipeline.py'
+      - '.github/workflows/r1-live-science.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  r1-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline unit tests and source grounding safeguards
+        run: python -m unittest tests.test_r1_research_pipeline -v
+      - name: Run local model server (no API billing or remote inference)
+        run: |
+          docker run -d --name r1-ollama -p 127.0.0.1:11434:11434 ollama/ollama:latest
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:11434/api/tags >/dev/null; then break; fi
+            sleep 2
+          done
+          curl --fail --silent http://127.0.0.1:11434/api/tags >/dev/null
+          docker exec r1-ollama ollama pull qwen2.5:0.5b
+          docker exec r1-ollama ollama list > "${{ runner.temp }}/r1-model-list.txt"
+      - name: Four legal-source retrievals and local model draft critiques
+        run: |
+          python scripts/r1_research_pipeline.py --live --model qwen2.5:0.5b \
+            --ids r1-001 r1-006 r1-009 r1-013 \
+            --output "${{ runner.temp }}/r1-research-run"
+      - name: Measure source acquisition, citation grounding and abstention
+        if: always()
+        run: |
+          if [ -f "${{ runner.temp }}/r1-research-run/manifest.json" ]; then
+            python scripts/report_r1_run.py "${{ runner.temp }}/r1-research-run"
+          else
+            echo "No run manifest created: inspect preceding step" && exit 1
+          fi
+      - name: Archive reproducible research records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r1-source-grounded-ollama-pilot
+          path: |
+            ${{ runner.temp }}/r1-research-run/
+            ${{ runner.temp }}/r1-model-list.txt
+          retention-days: 7
+          if-no-files-found: warn

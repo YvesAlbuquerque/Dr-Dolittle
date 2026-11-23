@@ -9,6 +9,7 @@
 - [`ai/appraisal_proposals.csv`](ai/appraisal_proposals.csv): header-only source-grounded candidate AI method judgments, separate from appraised evidence.
 - [`research/conjectures.csv`](research/conjectures.csv): two **ungraded, untested** ideas from project discussions, without invented supporting experiments. Even disconfirmed ideas stay in revision history.
 - [First live Crossref benchmark](../docs/crossref-live-benchmark-2026-11-23.md) observed 5 metadata matches and 1 DOI 404 and detected retraction warnings; it still does **not** certify papers.
+- [Executable R1 local-AI pilot](../docs/r1-executable-ai-research-pilot.md) implements licensed full-text/abstract acquisition, source-hash artifacts and provisional model proposals; it never edits canonical scientific evidence.
 - [R1 AI-method packets](../scripts/build_ai_appraisal_packets.py) and [first four-source AI critique](../docs/r1-ai-methodological-critique-01.md) are **draft**, not completed appraisals or calibrated model executions.
 - [Crossref metadata worker](../docs/crossref-metadata-worker.md) for bounded, optional real DOI metadata snapshots; it does **not** promote fields to source-integrity records or grade scientific hypotheses.
 - [AI-first scientific operations](../docs/ai-first-scientific-operations.md) and `python scripts/validate_ai_readiness.py`: stage-based operation with deterministic checks and calibration prerequisites. A validation pass cannot certify biological truth.

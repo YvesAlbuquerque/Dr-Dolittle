@@ -67,6 +67,8 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
 | [First real DOI benchmark](docs/crossref-live-benchmark-2026-11-23.md) | Six real queries, retraction positive and missing-link controls |
+| [First real R1 AI execution report](docs/r1-real-execution-report-2026-11-23.md) | Sources, model run, failure analysis and validation boundaries |
+| [Executable AI research pilot (R1)](docs/r1-executable-ai-research-pilot.md) | Four DOI-matched source retrievals, lawful OA capture and local draft AI analysis |
 | [First AI-assisted methods critique](docs/r1-ai-methodological-critique-01.md) | Four source-qualified draft critiques, explicit abstention and no confidence promotion |
 | [AI methodology appraisal packet generator](docs/ai-methodological-appraisal-prompt-v0.1.md) | AI-agnostic R1 input/output contract and anti-bias tests |
 | [Crossref DOI metadata worker](docs/crossref-metadata-worker.md) | First reproducible provenance-only tool; dry-run by default, no AI truth grading |
