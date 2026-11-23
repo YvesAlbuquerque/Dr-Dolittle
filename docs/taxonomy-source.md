@@ -24,11 +24,13 @@ COL provides curated taxonomic checklists, accepted names, synonyms, higher-leve
 
 ## Baseline snapshot to pin when data ingestion begins
 
+**Verified release citation:** the [COL metadata page](https://www.catalogueoflife.org/data/metadata) recommends DOI [10.48580/dgzlf](https://doi.org/10.48580/dgzlf) for the 2026-10-16 **Extended** release. Do **not** use this XR DOI to cite the 2026-10-14 Base release without checking its own release-specific citation. The [local source manifest](../data/taxonomy/source-manifest.json) intentionally records both as **not downloaded**.
+
 As observed on COL's release page in November 2026:
 - Base: **2026-10-14**, prioritized accuracy, 2,276,639 listed species across all kingdoms.
 - Extended: **2026-10-16 XR**, broader coverage, 2,504,814 listed species across all kingdoms.
 
-These are **not animal-only totals**, not necessarily extant-only totals, and not a complete census of life. Do not present them as such. No taxonomy dump has yet been downloaded, filtered, or ingested.
+These are **not animal-only totals**, include extinct species in the COL reporting convention, and are not a complete census of life. Do not present them as such. No taxonomy dump has yet been downloaded, filtered, or ingested.
 
 ## Scope and specialist checks
 
