@@ -252,7 +252,7 @@ def prompt(item, source, passages):
             "uncertainties": [""], "alternative_explanations": [""],
             "scientific_confidence": None
         },
-        "source_passages": context[:21000],
+        "source_passages": context[:11000],
     }
     return json.dumps(task, ensure_ascii=False)
 
@@ -261,7 +261,7 @@ def model_call_ollama(prompt_text, model, opener=None):
     if not model or not re.fullmatch(r"[A-Za-z0-9._:/-]{1,80}", model):
         raise ValueError("invalid local model name")
     body = json.dumps({"model": model, "prompt": prompt_text, "stream": False,
-                       "format": "json", "options": {"temperature": 0, "num_predict": 650}}).encode()
+                       "format": "json", "options": {"temperature": 0, "num_predict": 550, "num_ctx": 4096}}).encode()
     req = urllib.request.Request(MODEL_ENDPOINT, data=body, headers={
         "Content-Type": "application/json", "User-Agent": AGENT}, method="POST")
     opener = opener or urllib.request.urlopen
