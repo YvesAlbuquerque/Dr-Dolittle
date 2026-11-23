@@ -7,7 +7,7 @@ Dr. Dolittle is an **open, early-stage research initiative** to map the diversit
 
 Our working approach is *phenomenon-first*: classify general communication mechanisms and capabilities, compare broad animal groups, and only then select individual species for detailed study. Humans provide a richly documented comparative reference, **not** an evolutionary endpoint.
 
-> **Research status: Proposed / foundational documentation.** This repository currently contains a conceptual framework and research plan. It does **not** claim a validated atlas, trained model, completed dataset audit, animal-language translation, or published experimental findings.
+> **Research status: Prototyped R1 pilot / unreviewed observations.** This repository contains a conceptual research framework, literature catalog and a 15-study experimental source-coverage pilot. It does **not** claim a validated atlas, trained model, completed dataset audit, animal-language translation, or published experimental findings.
 
 ## Why this matters
 
@@ -55,7 +55,7 @@ Dr. Dolittle is **not the only initiative studying animal communication**, and w
 
 ## Open bibliography and data foundations
 
-The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**74 discovery records; eight with checked author/venue metadata; no accepted evidence assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
+The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**76 candidate references; eight with checked author/venue metadata; 15 unreviewed source observations; zero independently accepted assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
 
 ## Explore the research
 
@@ -66,6 +66,8 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
+| [R1 pilot 01 — 15 studies](docs/r1-pilot-01.md) | Source-linked draft observations, data constraints, and first reproducible matrix |
+| [Draft source coverage matrix](docs/figures/r1-draft-coverage.svg) | Visual exploratory source-count matrix; not a biological trait map |
 | [R1 definition comparison](docs/definition-comparison-r1.md) | Seven competing theoretical positions, operational tests and source-access limits |
 | [Physiological biomarkers](docs/physiological-biomarkers-and-communication.md) | Hormones, neural activity, heart rate and comparative physiology—without assuming direct communication |
 | [Respiratory behavior research](docs/respiration-and-communication.md) | Why deep breaths, sighs and snorts matter even before establishing communication |
@@ -102,7 +104,7 @@ Especially valuable early contributions include rigorous definitions, literature
 
 ## Project maturity and licensing
 
-This project is currently at the **conceptual documentation stage**. The ontology is a proposal for discussion, not a finalized standard. No specific species, architecture, dataset, or experimental outcome has been endorsed as validated.
+This project is currently at the **conceptual documentation stage**. The ontology is a proposal for discussion, not a finalized standard. The 15 R1 records are unreviewed reports extracted for testing; no animal communication claim, species capability or dataset is endorsed as independently validated.
 
 **Open and independent.** Dr. Dolittle was initiated by **Yves Albuquerque in 2026** as a curiosity-driven research initiative, independent of Polite Goblin. See the [mission](MISSION.md) and [project history](HISTORY.md); this historical credit is not an additional reuse condition. The repository's original content is available under the [MIT License](LICENSE), which permits reuse, modification, redistribution, and commercial use while retaining the copyright and permission notice. External datasets, recordings, and third-party material remain subject to their own licenses and permissions. Contributions are welcome.
 
