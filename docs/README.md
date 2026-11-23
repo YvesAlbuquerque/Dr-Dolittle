@@ -8,6 +8,7 @@ This directory contains the conceptual foundation of Dr. Dolittle. Documents dis
 | [Physiology, biomarkers and communication](physiological-biomarkers-and-communication.md) | Endocrine, neural, cardiovascular, evolutionary and assay evidence as a separate axis |
 | [Respiration and communication](respiration-and-communication.md) | Deep breaths, sighs, snorts, cues versus signals |
 | [Crossref real DOI benchmark](crossref-live-benchmark-2026-11-23.md) | First six live checks and correction/retraction warning findings |
+| [R1 real source/model execution report](r1-real-execution-report-2026-11-23.md) | Observed outcomes, actual run links and scientific gates |
 | [Executable R1 AI science pilot](r1-executable-ai-research-pilot.md) | Europe PMC source retrieval, SHA-256 source snapshots, local Ollama and evidence quote checks |
 | [R1 AI-assisted method critique](r1-ai-methodological-critique-01.md) | Four draft source analyses, abstentions and methodological gaps |
 | [AI methodology critic protocol](ai-methodological-appraisal-prompt-v0.1.md) | Source-access contract and proposed model response structure |
