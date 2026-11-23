@@ -38,6 +38,10 @@ A new [biomarker research note](physiological-biomarkers-and-communication.md) d
 
 Add to a later pilot only with units, tissue/matrix, assay, temporal scale, physiological controls and correct evolution terminology. Do **not** infer external animal-to-animal signaling from an internal measurement.
 
+### AI-operated research and source vetting extension
+
+The [AI-first scientific operations design](ai-first-scientific-operations.md) adds independent metadata checks for journal/editorial authenticity, reproducible AI-run manifests, draft method appraisals with precise source locators, and a conjecture ledger. A [deterministic validator](../scripts/validate_ai_readiness.py) enforces schema consistency, but does not judge scientific quality. **No autonomous LLM research worker or calibrated evaluator is implemented yet.** Journal prestige and institution name are metadata, not evidence multipliers.
+
 ## Conceptual relational entities
 
 ```text
