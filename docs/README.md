@@ -5,6 +5,8 @@ This directory contains the conceptual foundation of Dr. Dolittle. Documents dis
 | Document | Purpose |
 | --- | --- |
 | [Communication foundations (R1)](communication-foundations.md) | Working definitions, comparisons and open classification questions |
+| [R1 scoping-review protocol](review-protocol-r1.md) | Search, eligibility, screening, and charting protocol (not yet run) |
+| [Second foundation review](foundation-review-round-2-2026-11-23.md) | Consistency audit and next evidence gate |
 | [Foundation audit](foundation-audit-2026-11-23.md) | Review, corrections and evidence gaps |
 | [CSL reference seed](../bibliography/catalog/README.md) | Discovered candidates and metadata status |
 | [Evidence records](../data/README.md) | Canonical CSV schema and zero-evidence state |
