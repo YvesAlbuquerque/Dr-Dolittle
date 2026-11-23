@@ -44,7 +44,7 @@ CASES = [
     {
         "case": "known_retraction_metadata_gap",
         "doi": "10.33263/BRIAC94.979986",
-        "kind": "known_retracted_but_update_link_reportedly_absent",
+        "kind": "known_retraction_metadata_gap",
         "context": "Crossref community discussion 2026 describes a Retraction Watch record without a linked Crossref update",
         "expected": "do not issue no-retraction verdict from missing updates",
         "ground_truth_url": "https://community.crossref.org/t/rwdb-record-62686-10-33263-briac94-979986-retraction-recorded-in-retraction-watch-but-absent-from-crossref-metadata/16586",
@@ -52,7 +52,7 @@ CASES = [
     {
         "case": "known_correction_metadata_gap",
         "doi": "10.1029/2001RG000106",
-        "kind": "publisher_correction_reportedly_unlinked",
+        "kind": "publisher_correction_metadata_gap",
         "context": "Crossref community discussion says correction notices may have separate unlinked DOI",
         "expected": "do not issue no-correction verdict from missing updates",
         "ground_truth_url": "https://community.crossref.org/t/rwdb-record-62686-10-33263-briac94-979986-retraction-recorded-in-retraction-watch-but-absent-from-crossref-metadata/16586",
