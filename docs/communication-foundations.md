@@ -6,6 +6,8 @@
 
 Before selecting species or building AI models, we need reproducible criteria for what counts as communication and which properties can be compared. A sound, posture, scent, or electrical discharge can carry information without necessarily functioning as a communicative signal.
 
+The [first theoretical comparison](definition-comparison-r1.md) examines competing positions and their sources; it is not a settled consensus. The [respiratory behavior note](respiration-and-communication.md) shows why a bodily event must be recorded **before** labeling it a communication signal.
+
 ## Provisional distinctions
 
 | Concept | Working interpretation | Main empirical question |
