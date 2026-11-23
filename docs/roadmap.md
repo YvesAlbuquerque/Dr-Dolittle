@@ -5,7 +5,7 @@ This is an evidence-gated plan, not a delivery commitment.
 | Phase | Goal | Exit evidence | Status |
 | --- | --- | --- | --- |
 | R0 | Publish scope, ontology proposal, contribution process | Reviewable public documents | Documented |
-| R1 | Literature-backed definitions and claim taxonomy | Referenced definitions, unresolved disagreements logged | Planned |
+| R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Scaffolded (reference seed and formats; definitions unvalidated) |
 | R2 | Group-level comparative evidence matrix | Traceable study-to-capability entries and confidence labels | Planned |
 | R3 | Select high-information comparisons and candidate species | Transparent selection criteria and dataset audits | Planned |
 | R4 | Reproducible baseline computational experiments | Data permissions, code, evaluation splits, measured results | Planned |
@@ -20,4 +20,4 @@ This is an evidence-gated plan, not a delivery commitment.
 - Compare candidate datasets' provenance, licensing, and synchronization.
 - Review the evidence-state vocabulary for ambiguity.
 
-Before opening a large implementation PR, discuss the research question and acceptance criteria in an issue.
+Before opening a large implementation PR, discuss the research question and acceptance criteria in an issue. The [foundation audit](foundation-audit-2026-11-23.md), [reading queue](references.md), [related projects](related-projects.md) and [instrumentation decision](research-instrumentation.md) establish the R1 foundation, **not** the scientific exit criteria.
