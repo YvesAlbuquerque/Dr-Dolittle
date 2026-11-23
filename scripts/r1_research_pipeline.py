@@ -50,6 +50,7 @@ def configured_inputs(root, ids):
     bib = {r["id"]: r for r in json.loads((root / "bibliography/catalog/seed.csl.json").read_text(encoding="utf-8"))}
     claims = {r["assertion_id"]: r for r in load_csv(root / "data/evidence/assertions.csv")}
     sources = {r["assertion_id"]: r for r in load_csv(root / "data/evidence/assertion_sources.csv")}
+    screening = {r["assertion_id"]: r for r in load_csv(root / "data/evidence/assertion_screening.csv")}
     allowed = set(STUDIES)
     if not ids or len(ids) > len(STUDIES) or len(ids) != len(set(ids)) or set(ids) - allowed:
         raise ValueError("pilot IDs must be a nonempty unique subset of " + str(STUDIES))
@@ -59,7 +60,9 @@ def configured_inputs(root, ids):
         ref = bib[source["reference_id"]]
         if not ref.get("DOI"):
             raise ValueError(f"missing DOI for {aid}")
+        match = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", screening[aid].get("source_access_url", ""))
         items.append({"assertion_id": aid, "reference_id": ref["id"], "doi": ref["DOI"].lower(),
+                      "known_pmid": match.group(1) if match else None,
                       "catalog_title": ref["title"], "draft_claim": claims[aid]["claim"],
                       "draft_limits": claims[aid]["limitations"]})
     return items
@@ -95,22 +98,37 @@ def request(url, opener=None, max_bytes=MAX_HTTP_BYTES, attempts=2, sleeper=None
             raise
 
 
-def lookup_metadata(doi, opener=None, sleeper=None):
-    query = urllib.parse.urlencode({"query": f'DOI:{doi}', "format": "json", "pageSize": 1, "resultType": "core"})
+def lookup_metadata(doi, opener=None, sleeper=None, pmid=None):
+    """DOI match first; a known PubMed ID is a clearly flagged abstract-only fallback."""
+    query = urllib.parse.urlencode({"query": f"DOI:{doi}", "format": "json",
+                                    "pageSize": 1, "resultType": "core"})
     url = REST + "search?" + query
     raw = request(url, opener=opener, sleeper=sleeper)
     data = json.loads(raw)
     records = data.get("resultList", {}).get("result", [])
-    matching = [x for x in records if x.get("doi", "").lower() == doi.lower()]
+    matching = [x for x in records if (x.get("doi") or "").lower() == doi.lower()]
+    status, raw_hash = "matched", sha256(raw)
+    if not matching and pmid and re.fullmatch(r"\\d{1,12}", pmid):
+        fallback_query = urllib.parse.urlencode({"query": f"EXT_ID:{pmid} AND SRC:MED",
+                                                  "format":"json","pageSize":1,"resultType":"core"})
+        fallback_url = REST + "search?" + fallback_query
+        backup = request(fallback_url, opener=opener, sleeper=sleeper)
+        results = json.loads(backup).get("resultList", {}).get("result", [])
+        matching = [x for x in results if str(x.get("id")) == pmid and x.get("source") == "MED"]
+        if matching:
+            status = "pmid_match_doi_unconfirmed"
+            url, raw_hash = fallback_url, sha256(backup)
     if not matching:
-        return {"status": "no_exact_doi_match", "query_url": url, "metadata_raw_sha256": sha256(raw)}
+        return {"status": "no_exact_doi_match", "query_url": url,
+                "metadata_raw_sha256": raw_hash}
     r = matching[0]
-    return {"status": "matched", "query_url": url, "metadata_raw_sha256": sha256(raw),
-            "doi": r.get("doi"), "title": r.get("title"), "pmcid": r.get("pmcid"),
+    return {"status": status, "query_url": url, "metadata_raw_sha256": raw_hash,
+            "requested_doi": doi, "returned_doi": r.get("doi"),
+            "doi_confirmed": (r.get("doi") or "").lower() == doi.lower(),
+            "title": r.get("title"), "pmcid": r.get("pmcid"),
             "pmid": r.get("id"), "is_open_access": r.get("isOpenAccess") == "Y",
             "abstract": r.get("abstractText", ""),
             "journal": r.get("journalTitle"), "first_publication_date": r.get("firstPublicationDate")}
-
 
 def normalize_whitespace(s):
     return re.sub(r"\s+", " ", s).strip()
@@ -122,9 +140,15 @@ def element_text(element):
 
 def extract_xml(raw, expected_doi):
     """Only explicitly OA JATS content; refuse DTD/entity expansion and DOI mismatch."""
-    if b"<!DOCTYPE" in raw.upper() or b"<!ENTITY" in raw.upper():
-        raise ValueError("XML declarations with DTD/entity not accepted")
-    root = ET.fromstring(raw)
+    if b"<!ENTITY" in raw.upper() or b"<![CDATA[<!DOCTYPE" in raw.upper():
+        raise ValueError("XML entity/internal expansion prohibited")
+    # Some legitimate JATS OA files include an external PUBLIC/SYSTEM DTD
+    # declaration. Strip only a simple declaration with NO internal subset.
+    cleaned = re.sub(rb'<!DOCTYPE\s+article\s+(?:PUBLIC\s+"[^"]+"\s+"[^"]+"|SYSTEM\s+"[^"]+")\s*>',
+                     b"", raw, count=1, flags=re.I)
+    if b"<!DOCTYPE" in cleaned.upper():
+        raise ValueError("unsupported XML doctype/internal subset")
+    root = ET.fromstring(cleaned)
     doi_values = {element_text(x).lower() for x in root.findall(".//article-id[@pub-id-type='doi']")}
     if expected_doi.lower() not in doi_values:
         raise ValueError("full text XML DOI does not match requested reference")
@@ -165,16 +189,18 @@ def extract_abstract(metadata):
 
 
 def fetch_source(item, opener=None, sleeper=None):
-    meta = lookup_metadata(item["doi"], opener, sleeper)
+    meta = lookup_metadata(item["doi"], opener, sleeper, pmid=item.get("known_pmid"))
     result = {"assertion_id": item["assertion_id"], "reference_id": item["reference_id"],
               "doi": item["doi"], "status": "unavailable", "retrieved_at_utc": utcnow(),
               "metadata": meta, "source_url": None, "source_sha256": None,
               "source_access_level": "none", "sections": [], "license": [],
               "limitations": [], "raw_source_bytes": None}
-    if meta["status"] != "matched":
-        result["limitations"].append("Exact DOI match not found in Europe PMC metadata")
+    if meta["status"] not in ("matched", "pmid_match_doi_unconfirmed"):
+        result["limitations"].append("DOI/PMID not found in configured Europe PMC sources")
         return result
-    if meta["is_open_access"] and meta.get("pmcid"):
+    if not meta.get("doi_confirmed"):
+        result["limitations"].append("PMID located, but DOI not confirmed by Europe PMC; abstract only")
+    if meta.get("doi_confirmed") and meta["is_open_access"] and meta.get("pmcid"):
         pmcid = meta["pmcid"]
         if not re.fullmatch(r"PMC\d+", pmcid):
             result["limitations"].append("Unsafe/malformed PMCID")
@@ -191,7 +217,7 @@ def fetch_source(item, opener=None, sleeper=None):
                     return result
                 result["limitations"].append("Full text lacked body/paragraphs")
             except (urllib.error.HTTPError, urllib.error.URLError, ValueError, ET.ParseError) as exc:
-                result["limitations"].append("OA XML unavailable or invalid: " + type(exc).__name__)
+                result["limitations"].append("OA XML unavailable or invalid: " + type(exc).__name__ + ": " + str(exc)[:140])
     # Abstract content is not a full methods/results source.
     sections = extract_abstract(meta)
     if sections:
