@@ -41,7 +41,8 @@ def validate(catalog_path: Path, status_path: Path):
             errors.append(f"{key}: missing title")
         if not isinstance(entry.get("type"), str) or not entry["type"].strip():
             errors.append(f"{key}: missing CSL type")
-        year = entry.get("issued", {}).get("date-parts", [[None]])
+        issued = entry.get("issued")
+        year = issued.get("date-parts", [[None]]) if isinstance(issued, dict) else [[None]]
         try:
             y = year[0][0]
             if not isinstance(y, int) or y < 1500 or y > 2200:
@@ -86,11 +87,11 @@ def validate(catalog_path: Path, status_path: Path):
             errors.append(f"{key}: invalid screening_status")
         if row.get("metadata_status") not in META_STATES:
             errors.append(f"{key}: invalid metadata_status")
-        if not row.get("source_provenance", "").strip():
+        if not isinstance(row.get("source_provenance"), str) or not row["source_provenance"].strip():
             errors.append(f"{key}: missing source provenance")
         try:
             dt.date.fromisoformat(row.get("checked_on", ""))
-        except ValueError:
+        except (TypeError, ValueError):
             errors.append(f"{key}: checked_on must be YYYY-MM-DD")
     for key, count in Counter(sid).items():
         if count > 1:
