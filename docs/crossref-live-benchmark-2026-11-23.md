@@ -1,7 +1,7 @@
 # R1 live Crossref DOI benchmark — first observed run
 
 **Executed:** 2026-11-23 (GitHub Actions, Ubuntu runner; real HTTPS requests).  
-**Run:** https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45108997603  
+**Runs:** initial https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45108997603 and corrected-regression rerun https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45109156893  
 **Artifact:** https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45108997603/artifacts/14787734664  
 **Repository PR:** https://github.com/YvesAlbuquerque/Dr-Dolittle/pull/6  
 **Status:** first small empirical transport/metadata check, **not an estimate of general sensitivity or specificity**, not a bibliographic review, not a peer-review check, not an AI-methods assessment.
@@ -24,7 +24,7 @@ Six requests reached the real public Crossref API after offline regressions pass
 ## Discovered implementation defects and repairs
 
 1. The original code inspected `update-by` (incorrect for the original work), whereas actual Crossref JSON uses `updated-by`. This could miss known retraced works. Fixed, tested on synthetic cases and **confirmed by the live positive control**.
-2. The API returned **“RETRACTED:” in the title** for `10.33263/BRIAC94.979986`, but no structured update relationship. The original benchmark recorded an empty update list. A subsequent code change added the independent `title_retraction_flag_present` and `title_suggests_retraction_needs_verification` warning. That addition is subject to the subsequent PR CI run; it was **not part of the original execution**.
+2. The API returned **“RETRACTED:” in the title** for `10.33263/BRIAC94.979986`, but no structured update relationship. The original benchmark recorded an empty update list. A subsequent code change added the independent `title_retraction_flag_present` and `title_suggests_retraction_needs_verification` warning. The updated code was **executed in a second live GitHub Actions run** (45109156893). The six calls again returned **5 matched / 1 not-found**, the linked-retraction positive control passed, and the gap article correctly produced `title_retraction_flag_present=true`. This is a metadata flag, not an independently verified publisher notice.
 
 An absent linked notice is intentionally **not** a negative control proving a publication is sound. This pipeline therefore has **no “verified no retraction” result**.
 
