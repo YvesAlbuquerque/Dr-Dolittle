@@ -1,7 +1,5 @@
 assertion_id,modality_id
 r1-001,acoustic
-r1-002,visual
-r1-002,substrate_vibration
 r1-003,acoustic
 r1-004,visual
 r1-005,visual
@@ -12,4 +10,3 @@ r1-011,acoustic
 r1-012,acoustic
 r1-013,acoustic
 r1-015,tactile
-r1-015,visual
