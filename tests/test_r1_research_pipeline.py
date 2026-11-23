@@ -63,6 +63,8 @@ class ResearchPipelineTests(unittest.TestCase):
               [["r1-013","A response was reported.","Single group"]])
         write("data/evidence/assertion_sources.csv",["assertion_id","reference_id"],
               [["r1-013","ref13"]])
+        write("data/evidence/assertion_screening.csv",["assertion_id","source_access_url"],
+              [["r1-013","https://journals.plos.org/ploscompbiol/article?id="+DOI]])
 
     def tearDown(self): self.tmp.cleanup()
 
@@ -82,6 +84,24 @@ class ResearchPipelineTests(unittest.TestCase):
             extract_xml(OA.replace(b"<license ",b"<licensing ").replace(b"</license>",b"</licensing>"),DOI)
         with self.assertRaisesRegex(ValueError,"DTD"):
             extract_xml(b"<!DOCTYPE bomb>"+OA,DOI)
+
+    def test_valid_external_jats_doctype_sanitized(self):
+        safe = OA.replace(b"<article>", b'<!DOCTYPE article PUBLIC "-//NLM//DTD JATS" "archive.dtd"><article>',1)
+        data = extract_xml(safe, DOI)
+        self.assertTrue(data["full_text"])
+
+    def test_exact_pmid_fallback_does_not_claim_doi_verified(self):
+        def source(req, timeout=18):
+            if "EXT_ID" in req.full_url:
+                return FakeResponse(json.dumps({"resultList":{"result":[{
+                    "id":"8210757","source":"MED","doi":"10.1234/incorrect",
+                    "abstractText":"Four dogs were recorded while sleeping.","isOpenAccess":"N"
+                }]}}).encode())
+            return FakeResponse(json.dumps({"resultList":{"result":[]}}).encode())
+        result=lookup_metadata("10.1016/0034-5687(93)90004-t",opener=source,
+                               sleeper=lambda _:None,pmid="8210757")
+        self.assertEqual("pmid_match_doi_unconfirmed",result["status"])
+        self.assertFalse(result["doi_confirmed"])
 
     def test_restricted_url_is_rejected(self):
         with self.assertRaisesRegex(ValueError,"disallowed"):
@@ -104,6 +124,8 @@ class ResearchPipelineTests(unittest.TestCase):
                "observations":[{"claim":"Bird count","quote":"Seven birds were enrolled",
                                 "passage_id":exact["id"]}],
                "controls":[],"uncertainties":["One sample"],"alternative_explanations":["training"],"scientific_confidence":None}
+        self.assertEqual([],validate_model_draft(draft,"r1-013",x,passages))
+        draft["observations"][0]["passage_id"]=exact["id"]+" "+exact["section"]
         self.assertEqual([],validate_model_draft(draft,"r1-013",x,passages))
         draft["observations"][0]["quote"]="Seven thousand birds"
         self.assertIn("unverifiable quote", " ".join(validate_model_draft(draft,"r1-013",x,passages)))
