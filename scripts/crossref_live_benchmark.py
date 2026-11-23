@@ -11,7 +11,10 @@ import sys
 import time
 from pathlib import Path
 
-from crossref_metadata_worker import lookup, normalize_doi
+try:
+    from .crossref_metadata_worker import lookup
+except ImportError:
+    from crossref_metadata_worker import lookup
 
 # Source-backed challenge cases, including known Crossref metadata *gaps*.
 # A retraction without an update link is NOT a negative ground truth.
