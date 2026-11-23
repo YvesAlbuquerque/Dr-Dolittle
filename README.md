@@ -40,10 +40,30 @@ By comparing **capabilities rather than ranking species**, we hope to identify c
 
 Interspecies communication may provide **supporting evidence** of shared perceptual or communicative capacities, but a comprehensive interspecies survey is outside the initial scope.
 
+## Explore related research around the world
+
+Dr. Dolittle is **not the only initiative studying animal communication**, and we want visitors to discover complementary science. Start with these independent programs and resources:
+
+| Research and collaboration | Data, methods and other modalities |
+| --- | --- |
+| [Earth Species Project](https://earthspecies.org/what-we-do/publications/) — computational animal-communication research | [The Pherobase](https://www.pherobase.com/about/) — chemical signals and semiochemicals |
+| [Project CETI](https://www.projectceti.org/research/index) — sperm-whale vocalization and behavior | [FishSounds](https://fishsounds.net/) — fish sounds and source references |
+| [Wild Dolphin Project](https://www.wilddolphinproject.org/our-research/) — longitudinal dolphin fieldwork | [BirdNET](https://birdnet.cornell.edu/about/) — bioacoustic classification and tools |
+| [ElephantVoices](https://www.elephantvoices.org/the-elephant-ethogram-user-guide) — detailed behavioral ethogram | [ManyPrimates](https://manyprimates.github.io/) — collaborative comparative research |
+
+**[Explore the full worldwide research directory](docs/related-projects.md)**, which includes more laboratories, datasets, open tools and citizen-science collaborations. Listing a project does not imply affiliation or endorsement.
+
+## Open bibliography and data foundations
+
+The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
+
 ## Explore the research
 
 | Start here | What you'll find |
 | --- | --- |
+| [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
+| [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
+| [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
 | [Communication foundations (R1)](docs/communication-foundations.md) | Working definitions, classification protocol, and open questions |
 | [Research questions & boundaries](docs/research-scope.md) | Central hypothesis, scientific scope, and important distinctions |
 | [Comparative ontology](docs/comparative-ontology.md) | Proposed classification axes, capabilities, and evidence states |
@@ -64,7 +84,7 @@ We welcome contributions from **ethologists, bioacousticians, evolutionary biolo
 
 Especially valuable early contributions include rigorous definitions, literature-backed comparisons, negative evidence, overlooked communication modalities, and dataset evaluations. **You do not need to train an AI model to contribute meaningfully.**
 
-**[Read the contribution guide](CONTRIBUTING.md)** · **[Propose a research question](../../issues/new)** · **[Explore open discussions and issues](../../issues)**
+**[Read the contribution guide](CONTRIBUTING.md)** · **[Propose a research question](https://github.com/YvesAlbuquerque/Dr-Dolittle/issues/new)** · **[Explore open discussions and issues](https://github.com/YvesAlbuquerque/Dr-Dolittle/issues)**
 
 ## Scientific commitments
 
