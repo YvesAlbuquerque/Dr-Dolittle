@@ -34,4 +34,4 @@ The repository maintainers review changes. A merged hypothesis is not a validate
 
 ## License
 
-A public repository is not automatically open-licensed. Until a license is selected and added, reuse permissions are not granted beyond applicable law and platform terms. Contributors should discuss licensing before contributing substantial original content or code.
+Original repository content is licensed under the [MIT License](LICENSE). By contributing, you agree that your contribution may be distributed under that license, and you confirm you have the necessary rights to submit it. Third-party papers, datasets, images, recordings, and other external material are **not** automatically covered by the repository license; document and respect their own terms. Dr. Dolittle is an independent, non-commercial research initiative started by Yves Albuquerque, not a Polite Goblin product.
