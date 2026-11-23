@@ -1,0 +1,8 @@
+family_id,label,definition,status
+endocrine_neurochemical,Endocrine and neurochemical,Measured hormones neuropeptides neurotransmitters or receptor expression in a defined tissue or biological matrix,proposed
+autonomic_cardiovascular,Autonomic and cardiovascular,Physiological indicators such as heart rate heart rate variability blood pressure or species-appropriate conductance,proposed
+neural_activity,Neural activity,Electrophysiological hemodynamic or immediate-early-gene measures linked to neural processing,proposed
+respiratory_somatic,Respiratory and somatic,Respiration dynamics and physiological motor patterns rather than assumed signaling,proposed
+thermal_metabolic,Thermal and metabolic,Body temperature or energy use under defined measurement conditions,proposed
+immune_biochemical,Immune and biochemical,Inflammatory biochemical or other physiological markers linked to a measured context,proposed
+molecular_evolutionary,Molecular and evolutionary,Genes peptides receptor families sequence homology and expression used for mechanistic comparisons,proposed
