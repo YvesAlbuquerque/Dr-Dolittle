@@ -40,7 +40,7 @@ Add to a later pilot only with units, tissue/matrix, assay, temporal scale, phys
 
 ### AI-operated research and source vetting extension
 
-The [AI-first scientific operations design](ai-first-scientific-operations.md) adds independent metadata checks for journal/editorial authenticity, reproducible AI-run manifests, draft method appraisals with precise source locators, and a conjecture ledger. A [deterministic validator](../scripts/validate_ai_readiness.py) enforces schema consistency, but does not judge scientific quality. **No autonomous LLM research worker or calibrated evaluator is implemented yet.** Journal prestige and institution name are metadata, not evidence multipliers.
+The [AI-first scientific operations design](ai-first-scientific-operations.md) adds independent metadata checks for journal/editorial authenticity, reproducible AI-run manifests, draft method appraisals with precise source locators, and a conjecture ledger. A [deterministic validator](../scripts/validate_ai_readiness.py) enforces schema consistency, but does not judge scientific quality. A bounded [Crossref DOI lookup worker](crossref-metadata-worker.md) is implemented for **explicit opt-in metadata retrieval only**, with local snapshots and offline tests. **No autonomous LLM research worker or calibrated evaluator is implemented yet.** Journal prestige and institution name are metadata, not evidence multipliers.
 
 ## Conceptual relational entities
 
