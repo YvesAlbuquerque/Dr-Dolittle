@@ -1,7 +1,7 @@
 # AI-first scientific research operations — architecture and reliability gates (v0.1)
 
 **Decision date:** 2026-11-23  
-**Status:** **Accepted direction / Documented design**, *not implemented as an autonomous research agent*. A metadata-integrity staging dataset and schema validators are implemented separately. No LLM was run as part of this research pipeline, no automated study appraisal was calibrated, and no scientific conclusions were promoted by this decision.
+**Status:** **Accepted direction / Documented design**, *not implemented as an autonomous research agent*. A metadata-integrity staging dataset and schema validators are implemented separately. No autonomous LLM workflow has been run as part of this repository pipeline, no automated study appraisal was calibrated, and no scientific conclusions were promoted by this decision.
 
 ## Decision
 
@@ -64,7 +64,9 @@ The [existing hypothesis assessment and study appraisal schemas](../data/README.
 
 **Phase B — Provenance-only worker:** an initial [Crossref DOI worker](crossref-metadata-worker.md) is now **Prototyped** (bounded manual opt-in lookups, local immutable snapshots, synthetic tests); this is not an autonomous AI worker. Future: Crossref/OpenAlex/PubMed queries with rate limits, pagination and caching; source integrity checks, full provenance, immutable snapshots. Run on a small known set including preprints, corrections, retractions, duplicates, non-indexed but legitimate publications. Review false positives and negatives by comparison with authoritative source records, not an AI's own prior answer.
 
-**Phase C — Extraction worker:** benchmark source-locator extraction and study-method field extraction against openly documented reference annotations; use explicit `unable_to_assess`, report accuracy by source type/field/language and evaluate robustness to adversarial text.
+**Phase B empirical result:** [real Crossref benchmark](crossref-live-benchmark-2026-11-23.md) executed six API queries, identified a linked retraction and a separately title-flagged retraction with no linked notice. This is a smoke benchmark, not calibrated recall/precision.
+
+**Phase C — Extraction worker:** the [R1 source critique packet builder](../scripts/build_ai_appraisal_packets.py) is now **Prototyped** and the [four-paper AI-assisted draft note](r1-ai-methodological-critique-01.md) records an interactive, uncalibrated trial. This does not constitute a running autonomous agent. Future: benchmark source-locator extraction and study-method field extraction against openly documented reference annotations; use explicit `unable_to_assess`, report accuracy by source type/field/language and evaluate robustness to adversarial text.
 
 **Phase D — AI appraisal pilot:** use four R1 papers with methods/Results access. Test if the evaluator can reliably identify study design, sample size, controls, confounders and limitations. Record calibration and disagreements with validated methodological benchmarks, using external published reference appraisals where possible. Do not allow autoreview to be marked `appraised` just because an AI completed a checklist.
 

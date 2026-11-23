@@ -1,6 +1,6 @@
 # Crossref provenance-only DOI worker — R1 implementation
 
-**2026-11-23 — Status: Prototyped.** A bounded Python worker and offline regression tests are implemented. **No live Crossref batch has been executed by this document or merged automatically into the canonical bibliography.** The worker **does not use an LLM** and **does not grade scientific claims**.
+**2026-11-23 — Status: Prototyped.** A bounded Python worker and offline regression tests are implemented. **Six real DOI lookups were subsequently executed via GitHub Actions; see [first live benchmark](crossref-live-benchmark-2026-11-23.md). No results have been automatically promoted to the canonical bibliography.** The worker **does not use an LLM** and **does not grade scientific claims**.
 
 ## Why Crossref first
 

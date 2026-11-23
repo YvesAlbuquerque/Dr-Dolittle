@@ -66,6 +66,9 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
+| [First real DOI benchmark](docs/crossref-live-benchmark-2026-11-23.md) | Six real queries, retraction positive and missing-link controls |
+| [First AI-assisted methods critique](docs/r1-ai-methodological-critique-01.md) | Four source-qualified draft critiques, explicit abstention and no confidence promotion |
+| [AI methodology appraisal packet generator](docs/ai-methodological-appraisal-prompt-v0.1.md) | AI-agnostic R1 input/output contract and anti-bias tests |
 | [Crossref DOI metadata worker](docs/crossref-metadata-worker.md) | First reproducible provenance-only tool; dry-run by default, no AI truth grading |
 | [AI-first scientific research operations](docs/ai-first-scientific-operations.md) | Architecture for automated discovery, provenance, appraisal, conjectures and calibration |
 | [Evidence certainty methodology](docs/evidence-certainty-methodology.md) | Transparent criteria, study-level bias appraisal and hypothesis-level confidence |

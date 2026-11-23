@@ -44,6 +44,8 @@ jobs:
         run: python scripts/validate_ai_readiness.py
       - name: Crossref worker offline smoke test
         run: python scripts/crossref_metadata_worker.py --limit 5
+      - name: Build four source-linked ungraded AI appraisal packets
+        run: python scripts/build_ai_appraisal_packets.py --ids r1-001 r1-006 r1-009 r1-013 --output "${{ runner.temp }}/r1-ai-appraisal-packets.json"
       - name: Rebuild draft matrix
         run: python scripts/build_r1_pilot_matrix.py
       - name: Verify reproducible committed visualization
