@@ -62,7 +62,7 @@ The [existing hypothesis assessment and study appraisal schemas](../data/README.
 
 **Phase A — Now (scaffolded):** publish this policy, schema and CI checks. `0` actual AI research pipeline runs; no algorithmic certainty grades.
 
-**Phase B — Provenance-only worker:** live Crossref/OpenAlex/PubMed queries with rate limits, pagination and caching; source integrity checks, full provenance, immutable snapshots. Run on a small known set including preprints, corrections, retractions, duplicates, non-indexed but legitimate publications. Review false positives and negatives by comparison with authoritative source records, not an AI's own prior answer.
+**Phase B — Provenance-only worker:** an initial [Crossref DOI worker](crossref-metadata-worker.md) is now **Prototyped** (bounded manual opt-in lookups, local immutable snapshots, synthetic tests); this is not an autonomous AI worker. Future: Crossref/OpenAlex/PubMed queries with rate limits, pagination and caching; source integrity checks, full provenance, immutable snapshots. Run on a small known set including preprints, corrections, retractions, duplicates, non-indexed but legitimate publications. Review false positives and negatives by comparison with authoritative source records, not an AI's own prior answer.
 
 **Phase C — Extraction worker:** benchmark source-locator extraction and study-method field extraction against openly documented reference annotations; use explicit `unable_to_assess`, report accuracy by source type/field/language and evaluate robustness to adversarial text.
 
@@ -86,4 +86,4 @@ No available model, or ensemble of models, can be assumed bias-free, immune to h
 - [Systematic review of LLMs for review tasks (2026)](https://www.sciencedirect.com/science/article/pii/S089543562600096X): demonstrates current appraisal reliability gap.
 - [NIST Generative AI profile (2024)](https://doi.org/10.6028/NIST.AI.600-1): provenance, evaluation and risk management recommendations.
 
-**Next decisive engineering task:** implement the **provenance-only metadata worker** and benchmark its coverage/accuracy before giving an AI permission to assign qualitative certainty levels.
+**Next decisive engineering task:** run and benchmark the **provenance-only Crossref worker** against known DOI metadata, correction/retraction cases and false/ambiguous records before implementing canonical source-integrity promotion or AI appraisal. No real API retrieval was performed by the initial implementation PR.
