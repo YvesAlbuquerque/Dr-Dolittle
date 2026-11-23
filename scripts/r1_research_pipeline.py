@@ -61,8 +61,10 @@ def configured_inputs(root, ids):
         if not ref.get("DOI"):
             raise ValueError(f"missing DOI for {aid}")
         match = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", screening[aid].get("source_access_url", ""))
+        pmc_match = re.search(r"(PMC\d+)", screening[aid].get("source_access_url", ""))
         items.append({"assertion_id": aid, "reference_id": ref["id"], "doi": ref["DOI"].lower(),
                       "known_pmid": match.group(1) if match else None,
+                      "known_pmcid": pmc_match.group(1) if pmc_match else None,
                       "catalog_title": ref["title"], "draft_claim": claims[aid]["claim"],
                       "draft_limits": claims[aid]["limitations"]})
     return items
@@ -189,19 +191,27 @@ def extract_abstract(metadata):
 
 
 def fetch_source(item, opener=None, sleeper=None):
-    meta = lookup_metadata(item["doi"], opener, sleeper, pmid=item.get("known_pmid"))
+    try:
+        meta = lookup_metadata(item["doi"], opener, sleeper, pmid=item.get("known_pmid"))
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
+        # An independent, source-listed PMCID may rescue an OA full text, but
+        # the article XML must still prove its own DOI and licence.
+        meta = {"status": "metadata_transport_error", "doi_confirmed": False,
+                "error": type(exc).__name__, "is_open_access": False}
     result = {"assertion_id": item["assertion_id"], "reference_id": item["reference_id"],
               "doi": item["doi"], "status": "unavailable", "retrieved_at_utc": utcnow(),
               "metadata": meta, "source_url": None, "source_sha256": None,
               "source_access_level": "none", "sections": [], "license": [],
               "limitations": [], "raw_source_bytes": None}
-    if meta["status"] not in ("matched", "pmid_match_doi_unconfirmed"):
-        result["limitations"].append("DOI/PMID not found in configured Europe PMC sources")
-        return result
+    if meta["status"] != "matched":
+        result["limitations"].append("Metadata status: " + meta["status"])
     if not meta.get("doi_confirmed"):
-        result["limitations"].append("PMID located, but DOI not confirmed by Europe PMC; abstract only")
-    if meta.get("doi_confirmed") and meta["is_open_access"] and meta.get("pmcid"):
-        pmcid = meta["pmcid"]
+        result["limitations"].append("Exact DOI metadata not confirmed; full text requires direct XML DOI/permission checks")
+    pmcid = meta.get("pmcid") if (meta.get("doi_confirmed") and meta.get("is_open_access")) else None
+    if not pmcid:
+        # Explicit project-screened PMCID; do not infer from arbitrary links.
+        pmcid = item.get("known_pmcid")
+    if pmcid:
         if not re.fullmatch(r"PMC\d+", pmcid):
             result["limitations"].append("Unsafe/malformed PMCID")
         else:
@@ -216,18 +226,19 @@ def fetch_source(item, opener=None, sleeper=None):
                                    "raw_source_bytes": raw})
                     return result
                 result["limitations"].append("Full text lacked body/paragraphs")
-            except (urllib.error.HTTPError, urllib.error.URLError, ValueError, ET.ParseError) as exc:
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError, ET.ParseError) as exc:
                 result["limitations"].append("OA XML unavailable or invalid: " + type(exc).__name__ + ": " + str(exc)[:140])
-    # Abstract content is not a full methods/results source.
+    # An abstract is a study report but not a methodological appraisal.
     sections = extract_abstract(meta)
     if sections:
         result.update({"status": "abstract_only", "source_access_level": "abstract",
                        "source_url": meta["query_url"], "source_sha256": sha256(sections[0]["text"].encode()),
                        "sections": sections})
+    elif meta.get("status") == "metadata_transport_error":
+        result["limitations"].append("No accessible source after metadata retrieval error")
     else:
         result["limitations"].append("No full text or abstract available through configured source")
     return result
-
 
 def selected_passages(source):
     """Retrieve diverse sections without inventing sample sizes or causal evidence."""
@@ -312,6 +323,14 @@ def validate_model_draft(draft, aid, source, passages):
     if source["source_access_level"] != "full_text" and draft.get("abstain_from_method_appraisal") is not True:
         errors.append("abstract-only source cannot justify completed methodology appraisal")
     valid = {p["id"]: p["text"] for p in passages}
+    def normalize_passage_id(value):
+        for p in passages:
+            # Small models sometimes repeat the section label after the id.
+            # Only exact known id+section pairs are accepted, never fuzzy IDs.
+            if value in (p["id"], p["id"] + " " + p["section"],
+                         "[" + p["id"] + " " + p["section"] + "]"):
+                return p["id"]
+        return value
     count = 0
     for field in ("observations", "controls"):
         values = draft.get(field)
@@ -322,7 +341,7 @@ def validate_model_draft(draft, aid, source, passages):
             if not isinstance(entry, dict):
                 errors.append("malformed evidence entry")
                 continue
-            pid, quote, claim = entry.get("passage_id"), entry.get("quote"), entry.get("claim")
+            pid, quote, claim = normalize_passage_id(entry.get("passage_id")), entry.get("quote"), entry.get("claim")
             if not isinstance(quote, str) or not isinstance(claim, str) or not claim.strip():
                 errors.append("missing grounded claim or quote")
             elif not quote.strip() or len(quote) > MAX_QUOTE_LENGTH or pid not in valid or quote not in valid[pid]:
