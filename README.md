@@ -72,7 +72,7 @@ Especially valuable early contributions include rigorous definitions, literature
 
 This project is currently at the **conceptual documentation stage**. The ontology is a proposal for discussion, not a finalized standard. No specific species, architecture, dataset, or experimental outcome has been endorsed as validated.
 
-**License pending:** public visibility does not itself grant reuse rights. A suitable documentation/code/data licensing policy should be agreed before substantial external contributions.
+**Open and independent.** Dr. Dolittle was initiated by **Yves Albuquerque** as a curiosity-driven, non-commercial research initiative, independent of Polite Goblin. The repository's original content is available under the [MIT License](LICENSE), which permits reuse, modification, redistribution, and commercial use while retaining the copyright and permission notice. External datasets, recordings, and third-party material remain subject to their own licenses and permissions. Contributions are welcome.
 
 ---
 
