@@ -57,6 +57,19 @@
 | [Mechanisms of Cultural Evolution in the Songs of Wild Bird Populations](https://pmc.ncbi.nlm.nih.gov/articles/PMC8107227/) (2021) | Longitudinal cultural analysis | Locator checked; read pending |
 | [Communication in Dogs](https://pmc.ncbi.nlm.nih.gov/articles/PMC6116041/) (2018) | Intraspecific communication and **supporting-only** interspecies evidence | Locator checked; read pending |
 
+## New comparative databases and methods located in review round 2 (P1/P2)
+
+These are **new discovery records**, not full-text evidence assessments.
+
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| [Mapping nonhuman cultures with the Animal Culture Database](https://doi.org/10.1038/s41597-025-05315-y) (2025) | Comparative behavior database with documented sources and nested group/population levels; cultural communication is a subset of its much broader scope | Source located; read and data audit pending |
+| [A Web App for the Animal Culture Database and a Template for Deploying Comparative Trait Databases With Shiny](https://doi.org/10.1002/ece3.71913) (2025) | Existing public comparative trait atlas architecture to assess before inventing our own | Source located; read and UI audit pending |
+| [Multi-interaction: a new open-access approach for studying multimodal communication and interactions across species](https://doi.org/10.1016/j.anbehav.2026.123526) (2026) | Temporal interaction, overlapping signals and silences across modalities; possible tool reuse | Source located; software audit pending |
+| [Supervised learning algorithm for analysis of communication signals in the weakly electric fish *Apteronotus leptorhynchus*](https://doi.org/10.1007/s00359-023-01664-4) (2023) | Distinguishes detecting electric signal types from inferring social meanings | Source located; read pending |
+| [The ecology and evolution of cues and signals in animal interspecies cooperation](https://doi.org/10.1016/j.anbehav.2026.123611) (2026) | Boundary/counterpoint for signal vs cue; interspecies communication remains supporting evidence, not a second full atlas | Source located; read pending |
+| [Tricco et al., PRISMA-ScR](https://doi.org/10.7326/M18-0850) (2018) | Scoping-review reporting standard; not animal communication evidence | Reporting guidance, not evidence |
+
 ## Research methods and collaboration (P2)
 
 | Reference | Why it belongs | Status |
