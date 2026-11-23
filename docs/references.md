@@ -63,6 +63,26 @@
 | --- | --- | --- |
 | ManyPrimates et al. (2019), [Establishing an infrastructure for collaboration in primate cognition research](https://doi.org/10.1371/journal.pone.0223675) | Comparative, multi-site sampling and collaborative research | Locator checked; read pending |
 
+## Additional high-priority gaps: touch, mechanisms, comparative methods (P0/P1)
+
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| [The communicative functions of touch in humans, nonhuman primates, and rats](https://doi.org/10.3200/MONO.132.1.5-94) (2006) | Neglected tactile channel; separability of contact, function and interpretation | Locator checked; read pending |
+| [The social role of touch in humans and primates](https://doi.org/10.1016/j.neubiorev.2008.07.001) (2008) | Social grooming and affiliation | Locator checked; read pending |
+| [Brief touch is different from a massage](https://doi.org/10.1016/j.cobeha.2021.10.008) (2022) | Short contact vs grooming, potentially distinct social functions | Locator checked; read pending |
+| [A Newly Reported Tactile Gesture for Grooming Initiation in Japanese Macaques](https://doi.org/10.1111/eth.70075) (2026) | Tactile gesture as specific behavior with contextual evidence | Locator checked; read pending |
+| [Multisensory cues and multimodal communication in spiders](https://doi.org/10.1159/000064909) (2002) | Visual and vibratory playback design; counterbalance vertebrate focus | Locator checked; read pending |
+| [A systems approach to animal communication](https://pmc.ncbi.nlm.nih.gov/articles/PMC4810859/) (2016) | Multiple receivers, components, media and social constraints | Locator checked; read pending |
+| [How Signaling Geometry Shapes the Efficacy and Evolution of Animal Communication Systems](https://doi.org/10.1093/icb/icab090) (2021) | Spatial medium and receiver perspective | Locator checked; read pending |
+| [Comparative bioacoustics: a roadmap for quantifying and comparing animal sounds across diverse taxa](https://doi.org/10.1111/brv.12695) (2021) | Cross-taxon methods and phylogenetic dependence | Locator checked; read pending |
+| [Mechanistic constraint and evolutionary history matter for the origin of innovation in animal communication](https://doi.org/10.1093/beheco/arag044) (2026) | Evolutionary inference requires constraints and history, not similarity alone | Locator checked; read pending |
+| [Individual variation in animal communication: from species averages to unique voices](https://doi.org/10.1111/brv.70061) (2025) | Individual-level variation and limits of species averages | Locator checked; read pending |
+| [Animal linguistics: a primer](https://doi.org/10.1111/brv.12897) (2022) | Application and limits of linguistic concepts across species | Locator checked; read pending |
+| [Social learning in insects—from miniature brains to consensus building](https://doi.org/10.1016/j.cub.2007.06.012) (2007) | Learned cues vs signals and social information in insects | Locator checked; read pending |
+| [Oral transfer of chemical cues, growth proteins and hormones in social insects](https://doi.org/10.7554/eLife.20375) (2016) | Tactile, chemical and social exchanges; not every transferred substance is a signal | Locator checked; read pending |
+| [Communication in ants](https://doi.org/10.1016/j.cub.2006.07.015) (2006) | Broad social-insect communication mechanisms | Locator checked; read pending |
+| [The FAIR Guiding Principles for scientific data management and stewardship](https://doi.org/10.1038/sdata.2016.18) (2016) | Findability, accessibility, interoperability and reuse of scientific records | Locator checked; read pending |
+
 ## Priority reading sequence
 
 1. **Debates on definitions:** Scott-Phillips (2008), 2010 information paper, 2011 terminology paper, meaning framework (2023).
