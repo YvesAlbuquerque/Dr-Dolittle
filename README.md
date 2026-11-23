@@ -11,7 +11,7 @@ Our working approach is *phenomenon-first*: classify general communication mecha
 
 ## Why this matters
 
-Animal communication extends far beyond vocalizations. It can involve gesture, posture, chemical cues, touch, vibration, electrical signals, and multimodal combinations. Some systems are highly specialized; others exhibit contextual flexibility, learning, or complex social organization. Similar capabilities can arise in distant lineages — but superficial resemblance does not prove common meaning or ancestry.
+Animal communication extends far beyond vocalizations. It can involve gesture, posture, chemical cues, touch, vibration, electrical signals, and multimodal combinations. We also investigate **physiological correlates and mechanisms**—such as hormones, neural responses, cardiovascular dynamics and respiration—without automatically treating internal biomarkers as communicative signals. Some systems are highly specialized; others exhibit contextual flexibility, learning, or complex social organization. Similar capabilities can arise in distant lineages — but superficial resemblance does not prove common meaning or ancestry.
 
 By comparing **capabilities rather than ranking species**, we hope to identify conserved patterns, convergent innovations, and informative gaps in the evidence. The longer-term opportunity is to make computational discovery more interpretable, testable, and cumulative.
 
@@ -55,7 +55,7 @@ Dr. Dolittle is **not the only initiative studying animal communication**, and w
 
 ## Open bibliography and data foundations
 
-The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**65 discovery records; eight with checked author/venue metadata; no accepted evidence assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
+The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**74 discovery records; eight with checked author/venue metadata; no accepted evidence assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
 
 ## Explore the research
 
@@ -67,6 +67,7 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
 | [R1 definition comparison](docs/definition-comparison-r1.md) | Seven competing theoretical positions, operational tests and source-access limits |
+| [Physiological biomarkers](docs/physiological-biomarkers-and-communication.md) | Hormones, neural activity, heart rate and comparative physiology—without assuming direct communication |
 | [Respiratory behavior research](docs/respiration-and-communication.md) | Why deep breaths, sighs and snorts matter even before establishing communication |
 | [Communication foundations (R1)](docs/communication-foundations.md) | Working definitions, classification protocol, and open questions |
 | [Research questions & boundaries](docs/research-scope.md) | Central hypothesis, scientific scope, and important distinctions |
