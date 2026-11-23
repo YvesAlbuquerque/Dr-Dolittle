@@ -47,6 +47,20 @@ class CrossrefWorkerTests(unittest.TestCase):
         self.assertEqual("retraction", r["listed_updates"][0]["type"])
         self.assertEqual("unknown", r["peer_review_status"])
 
+    def test_original_updated_by_retraction_and_correction_are_recognized(self):
+        retracted = json.loads(payload())
+        retracted["message"]["updated-by"] = [
+            {"type":"retraction","DOI":"10.1234/retraction-notice","source":"retraction-watch"}]
+        result = parse_payload("10.1234/test", json.dumps(retracted).encode())
+        self.assertEqual("metadata_updates_present", result["integrity_notice_result"])
+        self.assertEqual("updated-by", result["listed_updates"][0]["relation_field"])
+        corrected = json.loads(payload())
+        corrected["message"]["updated-by"] = [
+            {"type":"correction","DOI":"10.1234/correction-notice","source":"publisher"}]
+        r = parse_payload("10.1234/test", json.dumps(corrected).encode())
+        self.assertEqual("correction", r["listed_updates"][0]["type"])
+        self.assertEqual("unknown", r["peer_review_status"])
+
     def test_mismatched_or_invalid_payload_not_promoted(self):
         self.assertEqual("mismatch_or_incomplete",
                          parse_payload("10.1234/test", payload("10.1234/other"))["status"])
