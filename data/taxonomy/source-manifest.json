@@ -1,0 +1,26 @@
+{
+  "status": "planned_not_ingested",
+  "authority": "Catalogue of Life",
+  "baseline": {
+    "release": "2026-10-14",
+    "type": "Base Release",
+    "source_url": "https://www.catalogueoflife.org/data/download",
+    "downloaded": false,
+    "extracted_animalia": false,
+    "checksum": null,
+    "license_reviewed": false
+  },
+  "auxiliary": {
+    "release": "2026-10-16 XR",
+    "type": "Extended Release",
+    "source_url": "https://www.catalogueoflife.org/data/metadata",
+    "doi": "10.48580/dgzlf",
+    "downloaded": false
+  },
+  "manifest_recorded": "2026-11-23",
+  "warnings": [
+    "Taxonomy is not a communication dataset",
+    "Totals on COL pages span all kingdoms and include extinct taxa",
+    "Any future analysis must use a pinned release and record individual source licenses"
+  ]
+}
