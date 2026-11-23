@@ -147,7 +147,7 @@ def extract_xml(raw, expected_doi):
     cleaned = re.sub(rb'<!DOCTYPE\s+article\s+(?:PUBLIC\s+"[^"]+"\s+"[^"]+"|SYSTEM\s+"[^"]+")\s*>',
                      b"", raw, count=1, flags=re.I)
     if b"<!DOCTYPE" in cleaned.upper():
-        raise ValueError("unsupported XML doctype/internal subset")
+        raise ValueError("unsupported XML DTD or internal subset")
     root = ET.fromstring(cleaned)
     doi_values = {element_text(x).lower() for x in root.findall(".//article-id[@pub-id-type='doi']")}
     if expected_doi.lower() not in doi_values:
