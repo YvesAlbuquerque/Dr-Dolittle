@@ -61,6 +61,15 @@ class CrossrefWorkerTests(unittest.TestCase):
         self.assertEqual("correction", r["listed_updates"][0]["type"])
         self.assertEqual("unknown", r["peer_review_status"])
 
+    def test_title_retraction_warning_even_without_update_links(self):
+        flagged = parse_payload("10.1234/test", payload(title="RETRACTED: Synthetic experiment"))
+        self.assertTrue(flagged["title_retraction_flag_present"])
+        self.assertEqual("title_suggests_retraction_needs_verification", flagged["integrity_notice_result"])
+        self.assertEqual([], flagged["listed_updates"])
+        normal = parse_payload("10.1234/test", payload(title="Normal article"))
+        self.assertFalse(normal["title_retraction_flag_present"])
+        self.assertEqual("not_cleared", normal["integrity_notice_result"])
+
     def test_mismatched_or_invalid_payload_not_promoted(self):
         self.assertEqual("mismatch_or_incomplete",
                          parse_payload("10.1234/test", payload("10.1234/other"))["status"])
