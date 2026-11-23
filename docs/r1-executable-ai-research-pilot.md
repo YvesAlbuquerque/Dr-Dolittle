@@ -12,14 +12,14 @@ A reproducible pilot runs on [GitHub Actions](../.github/workflows/r1-live-scien
 ### Steps
 
 1. Match each local reference to the **exact DOI** in Europe PMC's public `search` API (core result format).
-2. If the record advertises open access and a plausible PMCID, request `fullTextXML`. Accept the XML **only if it matches the DOI and includes an inspectable license declaration and article body**. Otherwise use an available abstract or abstain.
+2. If the record advertises open access and a plausible PMCID, request `fullTextXML`. Accept JATS **only if the XML matches the DOI and includes an inspectable license and article body**. If Europe PMC returns HTTP 500 or malformed XML, try the **official NCBI PMC Open Access BioC API**, requiring confirmed DOI/PMCID/OA metadata and matching document identity; record that the per-article reuse license still needs inspection. Otherwise use an abstract or abstain.
 3. Save a run-local source snapshot, metadata, text sections, selected source excerpts and SHA-256 values. **Do not commit potentially copyrighted full texts**, credentials, or transient snapshots; retain CI artifacts briefly.
 4. Feed limited, labeled primary-source passages into a local model with explicit **untrusted source** handling. Require structured output separating observations and controls from alternative hypotheses; do not infer semantics or evolved communicative intent.
 5. Validate that cited passage IDs and *exact short quotes* actually appear in the retrieved text, that abstract-only sources abstain from full-method evaluation, and that no scientific confidence value is supplied.
 6. Report number of sources acquired, full texts obtained, proposals accepted/rejected **structurally**, errors and model absten­tions. Any proposal is **uncalibrated**, not a verified study appraisal.
 7. Never modify `data/evidence/study_appraisals.csv`, `certainty_assessments.csv`, `source_integrity.csv`, or `conjectures.csv`.
 
-The currently configured retrieval host is `https://www.ebi.ac.uk/europepmc/webservices/rest/`; the only model URL is loopback `http://127.0.0.1:11434/api/generate`. No arbitrary URL or credential-powered scraping is supported. For production, pin the container and model artifact digests and add provider rate-limit/HTTP 429 monitoring.
+The allowlisted retrieval hosts are `https://www.ebi.ac.uk/europepmc/webservices/rest/` and NCBI's [PMC OA BioC API](https://www.ncbi.nlm.nih.gov/research/bionlp/APIs/BioC-PMC/); the only model URL is loopback `http://127.0.0.1:11434/api/generate`. No arbitrary URL or credential-powered scraping is supported. For production, pin the container and model artifact digests and add provider rate-limit/HTTP 429 monitoring.
 
 ### Commands
 
@@ -40,6 +40,14 @@ python -m unittest tests.test_r1_research_pipeline -v
 ```
 
 The output directory must not exist to avoid overwriting provenance. The CI job has a 25-minute limit, and emits an artifact retained for seven days.
+
+## Initial empirical failure modes and corrections
+
+The first four-study source acquisition returned **two abstracts, zero full texts, one HTTP timeout and one record without a DOI search hit**. The latter was recovered through a cited PubMed ID without asserting an unverified DOI; a subsequent run returned **all four abstracts**, but the OA JATS endpoint returned **HTTP 500** for both eligible open-access papers. A fallback to the official NCBI PMC OA BioC JSON endpoint was therefore added, with separate tests.
+
+The first local Qwen run produced **two draft proposals**, each of which cited a real source quote but formatted the passage ID as `p001 Abstract` instead of the strict `p001`; both were initially rejected. The validator now accepts only **exact known passage ID + known section label**, not fuzzy IDs, so that a formatting difference does not masquerade as fabricated evidence. This does not mean the inference itself has been verified.
+
+These observations are source/format and model-fidelity **engineering benchmark results**, not scientific accuracy measurements. See [initial GitHub Actions model run](https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45119621618) and [source-only run](https://github.com/YvesAlbuquerque/Dr-Dolittle/actions/runs/45120235254).
 
 ## What the current tests do *not* prove
 
