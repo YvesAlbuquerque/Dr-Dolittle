@@ -63,7 +63,7 @@ Governance for a solo-maintained phase: the founder may curate **metadata** and 
 
 ## First useful visual
 
-**V0: capability × sampled animal group evidence coverage**. A cell shows counts by *review state* and *evidence state*, with a drill-through to source assertions. Zero-reviewed-studies ≠ biological absence. Display counts per unique study separately from assertions to reduce double counting. Default to "not assessed" for an unexamined cell, not a negative.
+**V0: capability × sampled animal group evidence coverage**. A cell shows counts by *review state* and *evidence state*, with a drill-through to source assertions. In the pilot, assess whether `not_assessed` belongs to a **coverage cell without assertions**, and `conflicting` belongs to a **derived synthesis over separately recorded claims**, rather than both being intrinsic assertion types. Zero-reviewed-studies ≠ biological absence. Display counts per unique study separately from assertions to reduce double counting. Default to "not assessed" for an unexamined cell, not a negative.
 
 **V1:** filter by modality, context and quality; **V2:** network of explicitly supported comparisons; **V3:** overlay an independently sourced phylogenetic tree. More elaborate visualizations are conditional on real reviewed data.
 
