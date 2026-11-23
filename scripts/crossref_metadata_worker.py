@@ -73,7 +73,7 @@ def year_value(work):
 def update_notices(work):
     """Record listed Crossref update metadata; absence never means 'no retraction'."""
     result = []
-    for key in ("update-to", "update-by"):
+    for key in ("update-to", "updated-by"):
         entries = work.get(key, [])
         if not isinstance(entries, list):
             continue
