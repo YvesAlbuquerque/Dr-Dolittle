@@ -71,6 +71,8 @@ python scripts/build_r1_pilot_matrix.py
 
 The generator writes `docs/figures/r1-draft-coverage.csv` and `.svg`. GitHub Actions is configured to run these checks on relevant changes, but a workflow file is **not proof** that GitHub hosted checks passed; inspect the PR checks independently. Tooling validation is not scientific review.
 
+The [first AI-assisted method critique](r1-ai-methodological-critique-01.md) examines four of these studies with explicit source access and abstention. It is an exploratory analysis, **not** a scientific confidence promotion or a stand-in for full independent replication.
+
 ## Next decisive gate
 
 Apply the [criteria-based confidence protocol](evidence-certainty-methodology.md) to a **diverse four-source pilot**: (a) alarm playback, (b) chemical eavesdropping, (c) sighs without any recipient, (d) neural response/playback. Capture exact Methods/Results, controls, sampling independence, risks of bias, measurement validity, conflicting evidence and all uncertainty domains. Human/AI assessors can propose assessments with provenance; external replication and falsification matter more than a reviewer's signature. Do **not** assign hypothesis certainty until enough source evidence has actually been appraised.
