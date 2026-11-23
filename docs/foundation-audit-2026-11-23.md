@@ -44,7 +44,7 @@ This audit re-reads the existing Dr. Dolittle repository documents as claims abo
 | Project scope, mission, open contribution rules | Existing foundational texts; coherent | Documented |
 | Comparative ontology | Six axes, **provisional** definitions; modality correction needed | Proposed |
 | Literature landscape | Expanded curated index, 20+ resources | Discovered/linked; licensing and publication audits pending |
-| Literature bibliography | 30+ manually located sources; 33 partial CSL JSON seed records | Seed metadata, **not** full text screened |
+| Literature bibliography | 30+ manually located sources; 48 partial CSL JSON seed records | Seed metadata, **not** full text screened |
 | Taxonomy reference | COL Base policy and release manifest candidate | Source chosen; **no** Animalia inventory ingested |
 | Evidence data | CSV headers and provisional modalities | Scaffolded, **0 reviewed assertions** |
 | Validator and tests | JSON schema exists; no runnable automated validation | Not implemented |
