@@ -25,6 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 STUDIES = ("r1-001", "r1-006", "r1-009", "r1-013")
 REST = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
+BIOC = "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/"
 AGENT = "DrDolittleResearch/0.1 (+https://github.com/YvesAlbuquerque/Dr-Dolittle)"
 MAX_HTTP_BYTES = 5_000_000
 MAX_SECTIONS = 300
@@ -75,8 +76,11 @@ def request(url, opener=None, max_bytes=MAX_HTTP_BYTES, attempts=2, sleeper=None
     parts = urllib.parse.urlparse(url)
     valid_europe = (parts.scheme == "https" and parts.hostname == "www.ebi.ac.uk"
                     and parts.path.startswith("/europepmc/webservices/rest/"))
+    valid_bioc = (parts.scheme == "https" and parts.hostname == "www.ncbi.nlm.nih.gov"
+                  and parts.path.startswith("/research/bionlp/RESTful/pmcoa.cgi/BioC_json/")
+                  and re.fullmatch(r"/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC\d+/unicode", parts.path))
     valid_loopback = (url == MODEL_ENDPOINT)
-    if not (valid_europe or valid_loopback):
+    if not (valid_europe or valid_bioc or valid_loopback):
         raise ValueError("disallowed network endpoint")
     opener = opener or urllib.request.urlopen
     sleeper = sleeper or time.sleep
@@ -182,6 +186,45 @@ def extract_xml(raw, expected_doi):
     return {"license": license_info, "sections": parts, "full_text": bool(body is not None)}
 
 
+def extract_bioc(raw, pmcid, known_pmid=None, metadata_oa=False):
+    """Official PMC-OA BioC JSON fallback; match the API's document identity."""
+    if not metadata_oa:
+        raise ValueError("BioC full text requires independently confirmed OA metadata")
+    payload = json.loads(raw)
+    collections = payload if isinstance(payload, list) else [payload]
+    documents = []
+    for collection in collections:
+        if isinstance(collection, dict) and isinstance(collection.get("documents"), list):
+            documents.extend(collection["documents"])
+    accepted_ids = {pmcid, pmcid.removeprefix("PMC")}
+    if known_pmid:
+        accepted_ids.add(str(known_pmid))
+    matching = [d for d in documents if isinstance(d, dict) and
+                str(d.get("id")) in accepted_ids]
+    if len(matching) != 1:
+        raise ValueError("BioC document id does not match requested PMC/PubMed identity")
+    passages = matching[0].get("passages", [])
+    sections = []
+    for p in passages:
+        if not isinstance(p, dict): continue
+        txt = p.get("text")
+        if not isinstance(txt, str) or not normalize_whitespace(txt): continue
+        info = p.get("infons") or {}
+        label = (info.get("section_type") or info.get("type") or
+                 info.get("section") or "Unlabeled section") if isinstance(info, dict) else "Unlabeled section"
+        label = str(label)[:120]
+        if len(txt.strip()) > 25:
+            sections.append({"id":f"p{len(sections)+1:03d}",
+                             "kind":"full_text","section":label,
+                             "text":normalize_whitespace(txt)[:1800]})
+        if len(sections) >= MAX_SECTIONS: break
+    if len(sections) < 3:
+        raise ValueError("BioC article has too few usable passages to assess")
+    return {"sections":sections,"full_text":True,
+            "rights_basis":"NCBI PMC Open Access BioC endpoint AND Europe PMC isOpenAccess=Y",
+            "license":[{"text":"Access via PMC Open Access BioC; consult original article for reuse license",
+                        "hrefs":["https://pmc.ncbi.nlm.nih.gov/tools/textmining"]}]}
+
 def extract_abstract(metadata):
     txt = metadata.get("abstract") or ""
     if not txt:
@@ -223,11 +266,28 @@ def fetch_source(item, opener=None, sleeper=None):
                     result.update({"status": "full_text", "source_access_level": "full_text",
                                    "source_url": url, "source_sha256": sha256(raw),
                                    "sections": xml["sections"], "license": xml["license"],
+                                   "source_format":"jats_xml",
                                    "raw_source_bytes": raw})
                     return result
                 result["limitations"].append("Full text lacked body/paragraphs")
             except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError, ET.ParseError) as exc:
                 result["limitations"].append("OA XML unavailable or invalid: " + type(exc).__name__ + ": " + str(exc)[:140])
+    # Second official source: PMC's dedicated OA BioC API. Never use it
+    # unless the Europe PMC metadata confirmed the DOI, OA status and PMCID.
+    if meta.get("doi_confirmed") and meta.get("is_open_access") and pmcid and re.fullmatch(r"PMC\d+", pmcid):
+        bioc_url = BIOC + pmcid + "/unicode"
+        try:
+            raw = request(bioc_url, opener=opener, sleeper=sleeper)
+            bioc = extract_bioc(raw, pmcid, meta.get("pmid"), metadata_oa=True)
+            result.update({"status":"full_text","source_access_level":"full_text",
+                           "source_url":bioc_url, "source_sha256":sha256(raw),
+                           "source_format":"bioc_json",
+                           "sections":bioc["sections"], "license":bioc["license"],
+                           "rights_basis":bioc["rights_basis"],"raw_source_bytes":raw})
+            return result
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
+                ValueError, json.JSONDecodeError) as exc:
+            result["limitations"].append("PMC OA BioC unavailable: " + type(exc).__name__ + ": " + str(exc)[:140])
     # An abstract is a study report but not a methodological appraisal.
     sections = extract_abstract(meta)
     if sections:
@@ -379,7 +439,8 @@ def execute(root, output, ids, live=False, model="none", model_opener=None, sour
             raw = source.pop("raw_source_bytes", None)
             if raw:
                 # Private run artifact, not committed to repository.
-                (folder / "source.xml").write_bytes(raw)
+                suffix = "source.bioc.json" if source.get("source_format") == "bioc_json" else "source.jats.xml"
+                (folder / suffix).write_bytes(raw)
             (folder / "source.json").write_text(json.dumps(source, ensure_ascii=False, indent=2)+"\n")
             passages = selected_passages(source)
             (folder / "passages.json").write_text(json.dumps(passages, ensure_ascii=False, indent=2)+"\n")
