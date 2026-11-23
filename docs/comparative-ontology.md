@@ -6,7 +6,7 @@
 
 | Axis | Candidate values | Key caveat |
 | --- | --- | --- |
-| Physical modality | Acoustic, visual, chemical, tactile, substrate-borne vibration, electrical, multimodal | Production and reception may differ; avoid forcing one label |
+| Physical modality | Acoustic, visual, chemical, tactile, substrate-borne vibration, electrical | Multiple channels may co-occur: **multimodal is a derived relation, not a channel**. Record production and perception separately |
 | Signal structure | Discrete, continuous, graded, rhythmic, sequential, combined | Distinguish physical form from linguistic composition |
 | Observed function | Alarm, attraction, affiliation, coordination, solicitation, recognition, competition | Requires behavioral evidence; not automatically meaning |
 | Flexibility | Stereotyped, modulated, context-sensitive, learned, socially transmitted | These properties are not a single ordinal scale |
@@ -38,7 +38,7 @@ Only after a group-level evidence survey should the project prioritize species b
 
 ## Evidence states
 
-Use **documented presence**, **documented absence under a defined test**, **conflicting evidence**, **insufficient evidence**, **not assessed**, and **hypothesis only**. Record study, method, population, context, and date. Never turn an untested cell into zero.
+Use **documented presence**, **documented absence under a defined test**, **conflicting evidence**, **insufficient evidence**, **not assessed**, and **hypothesis only**. Classifications attach to tested contexts and populations; no group-wide inheritance. Record study, method, population, context, and date. Never turn an untested cell into zero.
 
 ## Suggested future evidence record
 
@@ -56,4 +56,4 @@ limitations: []
 review_status: proposed
 ```
 
-This schema is illustrative and not yet an implemented database format.
+This YAML is a historical illustration, **not** the adopted format. See the scaffolded [normalized CSV records](../data/README.md) and [tooling decision](research-instrumentation.md). Ontology and operational tests remain provisional.
