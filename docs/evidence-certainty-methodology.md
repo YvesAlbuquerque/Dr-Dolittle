@@ -57,6 +57,8 @@ For a clear hypothesis with defined population/context/outcome, compare:
 
 For a quantitative meta-analysis use an appropriate model with correlated observations/phylogenetic effects and sensitivity analyses; do not invent a universal weighted point score. Adopt relevant PRISMA-EcoEvo guidance when the review becomes an ecology/evolution systematic synthesis.
 
+A [source-qualified four-paper AI methods critique](r1-ai-methodological-critique-01.md) now tests abstention and study/design distinctions, but **all canonical method appraisals remain not_assessed**. This is one interactive exploratory AI analysis, not an external calibration result.
+
 ## AI-first operational interpretation
 
 The project does not require access to a domain expert to **run** discovery, screening, source-level extraction, method critiques or hypothesis synthesis. Such steps may be proposed by AI if model identity, prompt version, source snapshot, exact evidence locations, calibrated capabilities and any abstention are recorded. **An AI-produced critique is still a critique, not evidence from a new experiment.**
