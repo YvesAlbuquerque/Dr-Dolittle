@@ -10,7 +10,7 @@
 - **Nine sampling groups**, used only to stress-test the representation; they are **not** accepted phylogenetic or taxonomic categories.
 - **Seven candidate capability/association tags** and **15 provisional observed-phenomenon labels**. Their definitions are not validated.
 - **Five physiological measurement links** (respiration, neural recordings, cardiovascular variability).
-- **Zero independently reviewed scientific assertions** and **zero taxa matched to a pinned Catalogue of Life release**.
+- **15 placeholder study appraisals**, all `not_assessed`, and **zero hypothesis-level certainty ratings**. No taxon is matched to a pinned Catalogue of Life release.
 - **A source-coverage matrix**, not a trait matrix. Cells show distinct linked *draft papers*, not counts of animals that possess a trait.
 
 ## Read the data and visualization
@@ -46,7 +46,7 @@
 | 014 | [Dog cardiac/hormonal markers (2024)](https://doi.org/10.1038/s41598-024-56859-9) | Biomarkers associated with study states | Does not demonstrate a signal to another dog |
 | 015 | [Macaque tactile grooming initiation (2026)](https://doi.org/10.1111/eth.70075) | Contact-based gesture | Single population and untested culture hypothesis |
 
-**Access boundary:** some items were sourced from publicly accessible publisher/PMC HTML sections; others from a publisher/PubMed abstract only. The [screening CSV](../data/evidence/assertion_screening.csv) records this for each. Source *locations* are section names (not invented page numbers). Full-text review, exact effect size extraction, sample reconciliation and independent reviewer signatures remain pending.
+**Access boundary:** some items were sourced from publicly accessible publisher/PMC HTML sections; others from a publisher/PubMed abstract only. The [screening CSV](../data/evidence/assertion_screening.csv) records this for each. Source *locations* are section names (not invented page numbers). Full Methods/Results appraisal, effect-size/uncertainty extraction, sample reconciliation and hypothesis-specific evidence synthesis remain pending. A reviewer signature alone is not a claim of validity.
 
 ## Stress-test results / ontology critiques
 
@@ -55,7 +55,7 @@
 3. **Tags are not all capacities.** The pilot includes `physiological_covariation` under an inherited `capabilities` table as a *temporary tagging compromise*. It should likely move to a broader **association/mechanism axis** before the ontology is stabilized.
 4. **Inference scopes must be explicit.** Our nine sampling group names are workbench categories. Published species labels are not yet mapped to COL IDs, nor is a taxon-wide trait inferred from a study.
 5. **Missing cells must be honest.** The matrix uses dashes for **not covered by these 15 papers**, never for demonstrated absence. It is a biased purposive sample and cannot estimate prevalence.
-6. **Review status is orthogonal to source reports.** An observation tagged `documented_presence` is explicitly *reported in the cited study*, but the record's `draft_unreviewed` state prevents displaying it as scientific consensus.
+6. **Review status is orthogonal to source reports and confidence.** An observation tagged `documented_presence` is explicitly *reported in the cited study*, but the record's `draft_unreviewed` state prevents displaying it as scientific consensus.
 7. **Conflicting/not-assessed belong to synthesis/coverage.** The validator now restricts *atomic observation states* to documented presence, documented absence under test, and insufficient evidence. Contradictions require separate source records and review, not an overwriting enum.
 
 ## Reproduce (stdlib only)
@@ -73,6 +73,6 @@ The generator writes `docs/figures/r1-draft-coverage.csv` and `.svg`. GitHub Act
 
 ## Next decisive gate
 
-Invite at least one knowledgeable human reviewer to independently verify a small **diverse** subset of *actual paper methods/results* and the source passages, especially (a) alarm playback, (b) chemical eavesdropping, (c) sighs without any recipient, and (d) neural response/playback. Record disagreed interpretations as separate rows. Only after those reviews should an evidence-based biological matrix be published.
+Apply the [criteria-based confidence protocol](evidence-certainty-methodology.md) to a **diverse four-source pilot**: (a) alarm playback, (b) chemical eavesdropping, (c) sighs without any recipient, (d) neural response/playback. Capture exact Methods/Results, controls, sampling independence, risks of bias, measurement validity, conflicting evidence and all uncertainty domains. Human/AI assessors can propose assessments with provenance; external replication and falsification matter more than a reviewer's signature. Do **not** assign hypothesis certainty until enough source evidence has actually been appraised.
 
 The next software improvement should move physiological covariation out of the *communicative capability* vocabulary, while preserving existing pilot IDs and transparent versioning.
