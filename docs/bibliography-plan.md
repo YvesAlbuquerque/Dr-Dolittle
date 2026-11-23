@@ -1,6 +1,6 @@
 # Bibliographic discovery, screening, and provenance protocol
 
-**Status:** Adopted initial collection protocol, **not executed as a systematic review**. See [reading queue](references.md) and [instrumentation choice](research-instrumentation.md).
+**Status:** Adopted initial collection protocol, **not executed as a systematic or scoping review**. The first broad mapping phase now targets [PRISMA-ScR reporting](review-protocol-r1.md); no registration or exhaustive searching is claimed. See [reading queue](references.md) and [instrumentation choice](research-instrumentation.md).
 
 ## Research question
 
@@ -62,7 +62,7 @@ The **bibliography is not evidence**. An assertion enters the separate evidence 
 
 ## Replicability and review
 
-Keep a search-log CSV with query version, date, endpoint, result count and retrieval artifacts/checksums when legal. Prefer an ordinary CSL JSON catalog with project-local stable IDs. Preserve import source for manual metadata corrections. On import, deduplicate by normalized DOI first; fallback to normalized title, first author and year with a manual check. Never silently combine distinct reports or preprint/final publication records.
+Use the [blank execution search log](../bibliography/search-log.csv) for **actual** runs only (currently none). Keep a search-log CSV with query version, date, endpoint, result count and retrieval artifacts/checksums when legal. Prefer an ordinary CSL JSON catalog with project-local stable IDs. Preserve import source for manual metadata corrections. On import, deduplicate by normalized DOI first; fallback to normalized title, first author and year with a manual check. Never silently combine distinct reports or preprint/final publication records.
 
 Before claiming a systematic or scoping review, choose and document the review/reporting standard, preregistration decision, exhaustive queries, screening decisions and counts. The current manually curated list makes no such claim.
 
