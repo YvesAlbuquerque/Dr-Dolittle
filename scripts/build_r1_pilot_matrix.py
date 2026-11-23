@@ -49,7 +49,7 @@ def build(root):
     generated = root / "docs" / "figures"
     generated.mkdir(parents=True, exist_ok=True)
     with (generated / "r1-draft-coverage.csv").open("w", newline="", encoding="utf-8") as out:
-        writer = csv.DictWriter(out, fieldnames=rows[0].keys())
+        writer = csv.DictWriter(out, fieldnames=rows[0].keys(), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
