@@ -27,7 +27,7 @@ STUDIES = ("r1-001", "r1-006", "r1-009", "r1-013")
 REST = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 AGENT = "DrDolittleResearch/0.1 (+https://github.com/YvesAlbuquerque/Dr-Dolittle)"
 MAX_HTTP_BYTES = 5_000_000
-MAX_SECTIONS = 90
+MAX_SECTIONS = 300
 MAX_QUOTE_LENGTH = 400
 MODEL_ENDPOINT = "http://127.0.0.1:11434/api/generate"
 
@@ -96,7 +96,7 @@ def request(url, opener=None, max_bytes=MAX_HTTP_BYTES, attempts=2, sleeper=None
 
 
 def lookup_metadata(doi, opener=None, sleeper=None):
-    query = urllib.parse.urlencode({"query": f'DOI:{doi}', "format": "json", "pageSize": 1})
+    query = urllib.parse.urlencode({"query": f'DOI:{doi}', "format": "json", "pageSize": 1, "resultType": "core"})
     url = REST + "search?" + query
     raw = request(url, opener=opener, sleeper=sleeper)
     data = json.loads(raw)
@@ -108,7 +108,7 @@ def lookup_metadata(doi, opener=None, sleeper=None):
     return {"status": "matched", "query_url": url, "metadata_raw_sha256": sha256(raw),
             "doi": r.get("doi"), "title": r.get("title"), "pmcid": r.get("pmcid"),
             "pmid": r.get("id"), "is_open_access": r.get("isOpenAccess") == "Y",
-            "abstract": r.get("authorString", "") if False else r.get("abstractText", ""),
+            "abstract": r.get("abstractText", ""),
             "journal": r.get("journalTitle"), "first_publication_date": r.get("firstPublicationDate")}
 
 
