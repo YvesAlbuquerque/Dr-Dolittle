@@ -66,6 +66,8 @@ The [existing hypothesis assessment and study appraisal schemas](../data/README.
 
 **Phase B empirical result:** [real Crossref benchmark](crossref-live-benchmark-2026-11-23.md) executed six API queries, identified a linked retraction and a separately title-flagged retraction with no linked notice. This is a smoke benchmark, not calibrated recall/precision.
 
+**Phase C prototype:** the [source-first R1 pipeline](r1-executable-ai-research-pilot.md) can query Europe PMC and optionally run a local open model, with strict quote matching and abstention gates. Its code and tests are **Prototyped**; no validated automatic scientific appraisal is claimed.
+
 **Phase C — Extraction worker:** the [R1 source critique packet builder](../scripts/build_ai_appraisal_packets.py) is now **Prototyped** and the [four-paper AI-assisted draft note](r1-ai-methodological-critique-01.md) records an interactive, uncalibrated trial. This does not constitute a running autonomous agent. Future: benchmark source-locator extraction and study-method field extraction against openly documented reference annotations; use explicit `unable_to_assess`, report accuracy by source type/field/language and evaluate robustness to adversarial text.
 
 **Phase D — AI appraisal pilot:** use four R1 papers with methods/Results access. Test if the evaluator can reliably identify study design, sample size, controls, confounders and limitations. Record calibration and disagreements with validated methodological benchmarks, using external published reference appraisals where possible. Do not allow autoreview to be marked `appraised` just because an AI completed a checklist.
