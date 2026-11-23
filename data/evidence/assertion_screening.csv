@@ -1,0 +1,16 @@
+assertion_id,source_access_level,source_access_url,extraction_date,extraction_provenance,independent_review
+r1-001,abstract_only,https://pubmed.ncbi.nlm.nih.gov/7433999/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-002,abstract_only,https://pubmed.ncbi.nlm.nih.gov/15889092/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-003,full_html,https://pmc.ncbi.nlm.nih.gov/articles/PMC11076547/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-004,abstract_only,https://pubmed.ncbi.nlm.nih.gov/39043136/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-005,abstract_only,https://pubmed.ncbi.nlm.nih.gov/22764112/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-006,full_html,https://pmc.ncbi.nlm.nih.gov/articles/PMC6921000/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-007,full_html,https://pmc.ncbi.nlm.nih.gov/articles/PMC1599876/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-008,full_html,https://pmc.ncbi.nlm.nih.gov/articles/PMC8642351/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-009,abstract_only,https://pubmed.ncbi.nlm.nih.gov/8210757/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-010,abstract_only,https://pubmed.ncbi.nlm.nih.gov/16038951/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-011,full_html,https://pmc.ncbi.nlm.nih.gov/articles/PMC6040684/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-012,abstract_only,https://pubmed.ncbi.nlm.nih.gov/31967929/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-013,full_html,https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014024,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-014,abstract_only,https://pubmed.ncbi.nlm.nih.gov/38493262/,2026-11-23,assistant_assisted_primary_source_screening,none
+r1-015,abstract_only,https://onlinelibrary.wiley.com/doi/abs/10.1111/eth.70075,2026-11-23,assistant_assisted_primary_source_screening,none

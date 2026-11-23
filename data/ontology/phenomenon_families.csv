@@ -1,0 +1,16 @@
+phenomenon_id,label,operational_definition,status
+playback_receiver_response,Predator-call playback response,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+spatial_recruitment_event,Spatial recruitment via dance,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+vocal_temporal_structure,Temporal organization of vocal sequences,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+gesture_exchange,Gestural exchange timing,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+audience_specific_display_event,Audience-sensitive visual display,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+chemical_trail_following,Chemical trail detection and following,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+substrate_vibration_recruitment,Vibration-guided group recruitment,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+electrical_signal_interaction,Electrical discharge social interaction,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+respiratory_physiological_event,Respiratory events without tested receiver,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+respiratory_state_association,Respiratory association with context,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+expiratory_context_association,Audible exhalation context association,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+respiration_vocal_motor_coupling,Respiration linked to vocal motor production,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+neural_receiver_familiarity,Neural and vocal response to call familiarity,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+physiological_state_measurement,Internal biomarker context variation,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only
+tactile_grooming_solicitation,Tactile grooming solicitation,Study-described phenomenon or observation family; not proof of communicative meaning.,proposed_pilot_only

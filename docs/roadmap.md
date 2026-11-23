@@ -5,7 +5,7 @@ This is an evidence-gated plan, not a delivery commitment.
 | Phase | Goal | Exit evidence | Status |
 | --- | --- | --- | --- |
 | R0 | Publish scope, ontology proposal, contribution process | Reviewable public documents | Documented |
-| R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Scaffolded (74-reference seed, initial theoretical comparison and bibliography check; definitions still unvalidated) |
+| R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Prototyped (76-reference catalog, 15 unreviewed source observations and draft coverage chart; definitions and claims still unvalidated) |
 | R1-P | Evaluate physiological biomarkers, cross-species molecular homology, assay timescale and neural/behavioral links to communication | Source-linked candidate measurements, explicit confounders and review | Scaffolded (documentation and empty fields only) |
 | R2 | Group-level comparative evidence matrix | Traceable study-to-capability entries and confidence labels | Planned |
 | R3 | Select high-information comparisons and candidate species | Transparent selection criteria and dataset audits | Planned |
@@ -21,4 +21,4 @@ This is an evidence-gated plan, not a delivery commitment.
 - Compare candidate datasets' provenance, licensing, and synchronization.
 - Review the evidence-state vocabulary for ambiguity.
 
-Before opening a large implementation PR, discuss the research question and acceptance criteria in an issue. The [foundation audit](foundation-audit-2026-11-23.md), [reading queue](references.md), [related projects](related-projects.md) and [instrumentation decision](research-instrumentation.md) establish the R1 foundation, **not** the scientific exit criteria.
+Before opening a large implementation PR, discuss the research question and acceptance criteria in an issue. The [R1 pilot](r1-pilot-01.md), [foundation audit](foundation-audit-2026-11-23.md), [reading queue](references.md), [related projects](related-projects.md) and [instrumentation decision](research-instrumentation.md) establish the R1 foundation, **not** the scientific exit criteria.

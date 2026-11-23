@@ -314,14 +314,15 @@
     "id": "ref-electric-signal-synchronization-as-a-behavioural-strategy-to-g",
     "type": "article-journal",
     "title": "Electric signal synchronization as a behavioural strategy to generate social attention",
-    "URL": "https://pubmed.ncbi.nlm.nih.gov/34398266/",
+    "URL": "https://doi.org/10.1007/s00422-021-00892-8",
     "issued": {
       "date-parts": [
         [
           2021
         ]
       ]
-    }
+    },
+    "DOI": "10.1007/s00422-021-00892-8"
   },
   {
     "id": "ref-collective-sensing-in-electric-fish",
@@ -1135,5 +1136,33 @@
       ]
     },
     "DOI": "10.1038/nrg3456"
+  },
+  {
+    "id": "ref-cephalopod-tactical-deception-2012",
+    "type": "article-journal",
+    "title": "It pays to cheat: tactical deception in a cephalopod social signalling system",
+    "URL": "https://doi.org/10.1098/rsbl.2012.0435",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "DOI": "10.1098/rsbl.2012.0435"
+  },
+  {
+    "id": "ref-ant-pheromone-community-2019",
+    "type": "article-journal",
+    "title": "Ants Sense, and Follow, Trail Pheromones of Ant Community Members",
+    "URL": "https://doi.org/10.3390/insects10110383",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "DOI": "10.3390/insects10110383"
   }
 ]

@@ -1,1 +1,16 @@
 assertion_id,reference_id,source_location,relation
+r1-001,ref-monkey-responses-to-three-different-alarm-calls,Abstract (playbacks and corresponding leopard eagle snake responses),supports_reported_observation_draft
+r1-002,ref-the-flight-paths-of-honeybees-recruited-by-the-waggle-dance,PubMed Abstract (harmonic radar and recruitment),supports_reported_observation_draft
+r1-003,ref-contextual-and-combinatorial-structure-in-sperm-whale-vocalisa,Abstract and Results (rhythm tempo rubato ornamentation),supports_reported_observation_draft
+r1-004,ref-chimpanzee-gestural-exchanges-share-temporal-structure-with-hu,PubMed Abstract (signal-to-signal turn-taking),supports_reported_observation_draft
+r1-005,ref-cephalopod-tactical-deception-2012,Abstract and Methods (social configuration and displays),supports_reported_observation_draft
+r1-006,ref-ant-pheromone-community-2019,Abstract; Results; Discussion (Figure 2 and trail-following bioassays),supports_reported_observation_draft
+r1-007,ref-vibrational-communication-facilitates-cooperative-foraging-in-,Abstract; Methods; Discussion (signaling synchronized with group movements),supports_reported_observation_draft
+r1-008,ref-electric-signal-synchronization-as-a-behavioural-strategy-to-g,Abstract; Results and Discussion (electric echo synchronization),supports_reported_observation_draft
+r1-009,ref-issa-porostocky-dog-sigh-1993,PubMed Abstract (4 dogs and sleep-state sigh properties),supports_reported_observation_draft
+r1-010,ref-soltysik-jelen-rat-sigh-2005,PubMed Abstract (relief correlation and speculative safety-signal hypothesis),supports_reported_observation_draft
+r1-011,ref-stomp-horse-snort-2018,Abstract; Results (snort rate by context and welfare indicator),supports_reported_observation_draft
+r1-012,ref-rat-deep-breath-usv-2020,PubMed Abstract (deep breath frequency and acoustic features),supports_reported_observation_draft
+r1-013,ref-zebra-finch-neural-vocal-familiarity-2026,Abstract; Results > Fig 1; HVC results > Fig 2; Methods > behavioral and electrophysiological recordings,supports_reported_observation_draft
+r1-014,ref-dog-acute-emotional-indicators-2024,Abstract; Methods (candidate biomarkers); Results (arousal/valence contrasts),supports_reported_observation_draft
+r1-015,ref-a-newly-reported-tactile-gesture-for-grooming-initiation-in-ja,Publisher Abstract (tapping vs solicitation; dyadic relationships),supports_reported_observation_draft

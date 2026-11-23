@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1218" height="584" viewBox="0 0 1218 584" role="img" aria-labelledby="ttl desc">
+<title id="ttl">R1 pilot draft source coverage by candidate capability and animal sampling group</title>
+<desc id="desc">Not evidence of presence or absence. Cells show count of unique linked papers in a curated fifteen-study draft pilot. Blank cells mean not covered by this pilot.</desc>
+<rect width="1218" height="584" fill="#fffdf9"/>
+<text x="20" y="35" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#18272e">R1 • Draft source coverage</text>
+<text x="20" y="61" font-family="Arial,sans-serif" font-size="14" fill="#4a6069">15 selected studies · candidate tags · unreviewed extractions</text>
+<text x="20" y="83" font-family="Arial,sans-serif" font-size="14" fill="#9a481d">NOT a map of biological ability, absence, prevalence, or verified science</text>
+<text x="20" y="113" font-family="Arial,sans-serif" font-size="13" fill="#415861">Cell values = distinct linked draft papers · dash = not sampled in this pilot</text>
+<text x="329.0" y="177" text-anchor="start" transform="rotate(-48 329.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Birds</text>
+<text x="431.0" y="177" text-anchor="start" transform="rotate(-48 431.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Cephalopods</text>
+<text x="533.0" y="177" text-anchor="start" transform="rotate(-48 533.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Cetaceans</text>
+<text x="635.0" y="177" text-anchor="start" transform="rotate(-48 635.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Fishes</text>
+<text x="737.0" y="177" text-anchor="start" transform="rotate(-48 737.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Other group insects</text>
+<text x="839.0" y="177" text-anchor="start" transform="rotate(-48 839.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Other mammals</text>
+<text x="941.0" y="177" text-anchor="start" transform="rotate(-48 941.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Primates</text>
+<text x="1043.0" y="177" text-anchor="start" transform="rotate(-48 1043.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Rodents</text>
+<text x="1145.0" y="177" text-anchor="start" transform="rotate(-48 1145.0 177)" font-family="Arial,sans-serif" font-size="11" fill="#243d47">Social insects</text>
+<text x="20" y="212" font-family="Arial,sans-serif" font-size="13" fill="#203842">Contact-based solicitation</text>
+<rect x="281" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="329.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="383" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="533.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="587" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="635.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="689" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="737.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="791" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="839.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="893" y="188" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="941.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="995" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="188" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1145.0" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<text x="20" y="258" font-family="Arial,sans-serif" font-size="13" fill="#203842">Context-sensitive change</text>
+<rect x="281" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="329.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="383" y="234" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="431.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="485" y="234" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="533.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="587" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="635.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="689" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="737.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="791" y="234" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="839.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="893" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="941.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="995" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="234" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1145.0" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<text x="20" y="304" font-family="Arial,sans-serif" font-size="13" fill="#203842">Differential receiver response</text>
+<rect x="281" y="280" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="329.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="383" y="280" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="280" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="533.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="587" y="280" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="635.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="689" y="280" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="737.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="791" y="280" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="839.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="893" y="280" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="941.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="995" y="280" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="280" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="1145.0" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<text x="20" y="350" font-family="Arial,sans-serif" font-size="13" fill="#203842">Physiological response covariance</text>
+<rect x="281" y="326" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="329.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="383" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="533.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="587" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="635.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="689" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="737.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="791" y="326" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="839.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="893" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="941.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="995" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="326" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1145.0" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<text x="20" y="396" font-family="Arial,sans-serif" font-size="13" fill="#203842">Reciprocal exchange timing</text>
+<rect x="281" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="329.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="383" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="533.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="587" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="635.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="689" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="737.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="791" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="839.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="893" y="372" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="941.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="995" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="372" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1145.0" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<text x="20" y="442" font-family="Arial,sans-serif" font-size="13" fill="#203842">Spatially guided recruitment</text>
+<rect x="281" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="329.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="383" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="533.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="587" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="635.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="689" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="737.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="791" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="839.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="893" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="941.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="995" y="418" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1043.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="1097" y="418" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="1145.0" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<text x="20" y="488" font-family="Arial,sans-serif" font-size="13" fill="#203842">Temporal pattern organization</text>
+<rect x="281" y="464" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="329.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="383" y="464" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="431.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="485" y="464" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="533.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="587" y="464" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="635.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="689" y="464" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="737.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="791" y="464" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="839.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<rect x="893" y="464" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="941.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="995" y="464" width="96" height="38" rx="5" fill="#e1eef2" stroke="#dbe2e1"/>
+<text x="1043.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">1</text>
+<rect x="1097" y="464" width="96" height="38" rx="5" fill="#f2f3f2" stroke="#dbe2e1"/>
+<text x="1145.0" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#315a68">–</text>
+<text x="20" y="559" font-family="Arial,sans-serif" font-size="12" fill="#586b70">Source: data/evidence/*.csv · generated by scripts/build_r1_pilot_matrix.py · 2026-11-23</text>
+</svg>

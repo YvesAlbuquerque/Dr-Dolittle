@@ -1,1 +1,8 @@
 capability_id,label,operational_definition,status
+receiver_discrimination,Differential receiver response,Receiver behavior or sensory response differs across controlled presented stimuli; does not imply semantics.,proposed_pilot_only
+spatial_recruitment,Spatially guided recruitment,Recruit movement is analyzed in relation to source displacement or direction following a signal.,proposed_pilot_only
+temporal_patterning,Temporal pattern organization,Non-random measured timing rhythmic structure or sequential organization in an observed event.,proposed_pilot_only
+context_dependent_modulation,Context-sensitive change,Measured production or response varies across compared documented contexts; intent not implied.,proposed_pilot_only
+turn_taking,Reciprocal exchange timing,Interacting individuals alternate signals in a manner quantified by response latency.,proposed_pilot_only
+physiological_covariation,Physiological response covariance,Biological measurement varies with stimulus or context; not a standalone communication capacity.,proposed_pilot_only
+tactile_solicitation,Contact-based solicitation,A touch is observed before and compared against a receiver's subsequent behavior.,proposed_pilot_only

@@ -1,0 +1,16 @@
+assertion_id,phenomenon_id
+r1-001,playback_receiver_response
+r1-002,spatial_recruitment_event
+r1-003,vocal_temporal_structure
+r1-004,gesture_exchange
+r1-005,audience_specific_display_event
+r1-006,chemical_trail_following
+r1-007,substrate_vibration_recruitment
+r1-008,electrical_signal_interaction
+r1-009,respiratory_physiological_event
+r1-010,respiratory_state_association
+r1-011,expiratory_context_association
+r1-012,respiration_vocal_motor_coupling
+r1-013,neural_receiver_familiarity
+r1-014,physiological_state_measurement
+r1-015,tactile_grooming_solicitation
