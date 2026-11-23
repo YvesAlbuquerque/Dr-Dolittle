@@ -1,6 +1,6 @@
 # Research instrumentation — adopted choices and evidence boundary
 
-**Decision date:** 2026-11-23. **Decision: adopted for the first research data pilot.** This is a tooling decision, **not** evidence that any import, validation, model, dataset integration, chart or public site has run. Initial directory scaffolding may exist, but functionality remains unvalidated.
+**Decision date:** 2026-11-23. **Decision: adopted for the first research data pilot.** This is a tooling decision. A basic [offline bibliography validator](../scripts/validate_bibliography.py), [synthetic tests](../tests/test_validate_bibliography.py) and [GitHub Actions workflow definition](../.github/workflows/validate-bibliography.yml) now exist. **Five tests were executed locally using synthetic fixtures**, and the live CSL/status files passed an in-session structural check through the GitHub connector; **a clean-checkout Python run and hosted CI run are not verified**. No scientific evidence validation, taxonomy import, model, chart or public atlas has run.
 
 ## Architectural principle
 
@@ -15,7 +15,7 @@
 | Canonical bibliography | **CSL JSON** with stable local `id`, DOI where available, and provenance in a separate review log | Selected; catalog seed may be partial |
 | Scientific evidence and review | **Normalized UTF-8 CSV tables** (one claim, one source link, one review per row); foreign keys checked across files | Selected; no scientific assertions accepted |
 | Controlled terms | Versioned CSV vocabularies; explicit IDs, definitions and migration notes | Selected |
-| Validation | Python stdlib for CSV, identifiers, DOI normalization and relationships; [JSON Schema](https://json-schema.org/) on parsed row objects when justified; pytest when checks exist | Selected; not yet coded |
+| Validation | Python stdlib for CSV, identifiers, DOI normalization and relationships; [JSON Schema](https://json-schema.org/) on parsed row objects when justified; pytest when checks exist | Implemented for bibliography integrity only; evidence foreign-key checks not implemented |
 | Analysis | [DuckDB](https://duckdb.org/docs/data/csv/overview) querying CSV directly, materialized Parquet optionally generated and ignored by Git | Selected; not yet benchmarked |
 | First public visualization | [Vega-Lite](https://vega.github.io/vega-lite/docs/) matrix, sourced from **reviewed** evidence exports; optional GitHub Pages | Selected; not implemented |
 | Derived graph | NetworkX, exportable as GraphML for optional Cytoscape exploration | Later; not implemented |
@@ -80,7 +80,7 @@ Governance for a solo-maintained phase: the founder may curate **metadata** and 
 
 OpenAlex documentation in November 2026 describes **$1 of free API usage per day** for a registered free account, with usage-metered calls. It is not accurate to promise unlimited free OpenAlex harvesting. Crossref's public API has dynamic rate limits. Caching, backoff, request budgets and provenance are required before implementing bulk collection.
 
-## First verification slice (not yet run)
+## First verification slice (partially started; evidence pilot not run)
 
 - 20–30 DOI-checked references spanning **acoustic, visual, chemical, vibrational and electric** signaling.
 - 3–5 broad animal sampling groups, without choosing a canonical species list first.
