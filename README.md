@@ -44,12 +44,15 @@ Interspecies communication may provide **supporting evidence** of shared percept
 
 | Start here | What you'll find |
 | --- | --- |
+| [Communication foundations (R1)](docs/communication-foundations.md) | Working definitions, classification protocol, and open questions |
 | [Research questions & boundaries](docs/research-scope.md) | Central hypothesis, scientific scope, and important distinctions |
 | [Comparative ontology](docs/comparative-ontology.md) | Proposed classification axes, capabilities, and evidence states |
 | [Research methodology](docs/methodology.md) | Literature-first, group-first workflow and validation safeguards |
 | [Research roadmap](docs/roadmap.md) | Phases, milestones, and contribution opportunities |
 | [Reading list & initiatives](docs/references.md) | Foundational research and relevant external projects |
 | [Contributing](CONTRIBUTING.md) | How to propose evidence, critique, datasets, and improvements |
+| [Mission](MISSION.md) | Public-good principles and open collaboration |
+| [History](HISTORY.md) | Project origins and historical milestones |
 
 ## Where collaboration can make a difference
 
@@ -72,7 +75,7 @@ Especially valuable early contributions include rigorous definitions, literature
 
 This project is currently at the **conceptual documentation stage**. The ontology is a proposal for discussion, not a finalized standard. No specific species, architecture, dataset, or experimental outcome has been endorsed as validated.
 
-**Open and independent.** Dr. Dolittle was initiated by **Yves Albuquerque** as a curiosity-driven, non-commercial research initiative, independent of Polite Goblin. The repository's original content is available under the [MIT License](LICENSE), which permits reuse, modification, redistribution, and commercial use while retaining the copyright and permission notice. External datasets, recordings, and third-party material remain subject to their own licenses and permissions. Contributions are welcome.
+**Open and independent.** Dr. Dolittle was initiated by **Yves Albuquerque in 2026** as a curiosity-driven research initiative, independent of Polite Goblin. See the [mission](MISSION.md) and [project history](HISTORY.md); this historical credit is not an additional reuse condition. The repository's original content is available under the [MIT License](LICENSE), which permits reuse, modification, redistribution, and commercial use while retaining the copyright and permission notice. External datasets, recordings, and third-party material remain subject to their own licenses and permissions. Contributions are welcome.
 
 ---
 
