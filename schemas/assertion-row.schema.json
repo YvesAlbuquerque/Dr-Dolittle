@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/YvesAlbuquerque/Dr-Dolittle/blob/main/schemas/assertion-row.schema.json",
+  "title": "Dr. Dolittle CSV assertion row after parsing",
+  "type": "object",
+  "required": [
+    "assertion_id",
+    "claim",
+    "claim_kind",
+    "evidence_state",
+    "review_status"
+  ],
+  "properties": {
+    "assertion_id": {
+      "type": "string",
+      "pattern": "^assertion-[a-z0-9-]+$"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 10
+    },
+    "claim_kind": {
+      "enum": [
+        "observation",
+        "interpretation",
+        "hypothesis",
+        "model_prediction"
+      ]
+    },
+    "evidence_state": {
+      "enum": [
+        "documented_presence",
+        "documented_absence_under_test",
+        "conflicting",
+        "insufficient",
+        "not_assessed",
+        "hypothesis_only"
+      ]
+    },
+    "context": {
+      "type": "string"
+    },
+    "methodology": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "classification_version": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "awaiting_review",
+        "reviewed",
+        "disputed"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
