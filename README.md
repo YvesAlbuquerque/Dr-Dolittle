@@ -66,6 +66,7 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
+| [Crossref DOI metadata worker](docs/crossref-metadata-worker.md) | First reproducible provenance-only tool; dry-run by default, no AI truth grading |
 | [AI-first scientific research operations](docs/ai-first-scientific-operations.md) | Architecture for automated discovery, provenance, appraisal, conjectures and calibration |
 | [Evidence certainty methodology](docs/evidence-certainty-methodology.md) | Transparent criteria, study-level bias appraisal and hypothesis-level confidence |
 | [R1 pilot 01 — 15 studies](docs/r1-pilot-01.md) | Source-linked draft observations, data constraints, and first reproducible matrix |
