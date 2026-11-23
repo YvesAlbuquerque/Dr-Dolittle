@@ -327,8 +327,8 @@ def validate_model_draft(draft, aid, source, passages):
         for p in passages:
             # Small models sometimes repeat the section label after the id.
             # Only exact known id+section pairs are accepted, never fuzzy IDs.
-            if value in (p["id"], p["id"] + " " + p["section"],
-                         "[" + p["id"] + " " + p["section"] + "]"):
+            if value in (p["id"], p["id"] + " " + p.get("section", ""),
+                         "[" + p["id"] + " " + p.get("section", "") + "]"):
                 return p["id"]
         return value
     count = 0
