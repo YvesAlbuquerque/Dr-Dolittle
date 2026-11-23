@@ -57,6 +57,12 @@ For a clear hypothesis with defined population/context/outcome, compare:
 
 For a quantitative meta-analysis use an appropriate model with correlated observations/phylogenetic effects and sensitivity analyses; do not invent a universal weighted point score. Adopt relevant PRISMA-EcoEvo guidance when the review becomes an ecology/evolution systematic synthesis.
 
+## AI-first operational interpretation
+
+The project does not require access to a domain expert to **run** discovery, screening, source-level extraction, method critiques or hypothesis synthesis. Such steps may be proposed by AI if model identity, prompt version, source snapshot, exact evidence locations, calibrated capabilities and any abstention are recorded. **An AI-produced critique is still a critique, not evidence from a new experiment.**
+
+The [AI-first operations design](ai-first-scientific-operations.md) separates journal/editorial authenticity, study-specific methods and body-of-evidence certainty. An apparently prestigious institute, high journal impact or a committee endorsement must not automatically improve biological certainty. The operational workflow is only *Documented*; an AI scientific assessor has not been run, benchmarked or approved for graded conclusions.
+
 ## Governance and updating
 
 **Propose → verify provenance → appraise domains → synthesize competing studies → issue a versioned certainty assessment → challenge → update.**
