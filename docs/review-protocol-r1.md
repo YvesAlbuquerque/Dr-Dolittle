@@ -22,6 +22,7 @@ Use a stratified pilot rather than pretending an exhaustive run:
 2. Visual, chemical, contact/tactile, substrate vibration and electrical signaling.
 3. Acoustic signaling and multimodal integration.
 4. Structural organization, contextual modulation, learning/cultural transmission and phylogenetic comparisons.
+5. **Physiological mechanisms and biomarkers:** endocrine, neural, cardiovascular/autonomic, respiration, physiological correlates of signal production and perception, ligand/receptor homology, and measurement validity (control for purely clinical biomarkers unrelated to communication).
 
 Before each batch, document source-specific query and syntax, UTC date, filters, language, result total, paging/cursors, request budgets and deduplication. Put actual runs in [search-log.csv](../bibliography/search-log.csv). A heading or example query is *not* evidence a search occurred.
 
@@ -43,6 +44,8 @@ For each eligible record:
 - taxon and **unit of observation** (individual, dyad, group, population, species, or other); sample characteristics and captive/wild context;
 - signal production and perception channels separately, and whether cues or communicative signals were actually tested;
 - phenomenon, operational definitions, study design, measured receiver response, sampling/controls;
+- any physiological or molecular markers as **separate measures**: analyte or electrophysiological variable, anatomical site, biological sample matrix, sensor/assay, units, timing and latency relative to interaction, central/peripheral origin, within-individual baseline and calibration, physiological confounders and welfare implications;
+- explicit role of the marker in the study: source-production mechanism, reception mechanism, state correlate, externally perceivable cue, candidate signal, or unresolved; evolutionary homolog/ortholog/paralog/analog claims require separate sources;
 - inferred function, reference, meaning or intention as **separate interpretations**;
 - article location (section, page, figure, table, experiment) supporting each assertion;
 - uncertainty, alternative explanations, contradictory sources and human review state;
