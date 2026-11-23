@@ -32,6 +32,12 @@ The price is more tables and explicit referential-integrity validation. This cos
 
 We lack reviewed content. A beautiful atlas of unvalidated assertions could falsely imply scientific certainty. The initial public visualization must prominently differentiate **not assessed**, **insufficient**, **conflicting**, **presence in a particular test**, and **absence under a specified test**. Only reviewed rows may be published as evidence.
 
+### Physiological evidence extension (2026-11-23)
+
+A new [biomarker research note](physiological-biomarkers-and-communication.md) defines physiology as **source-specific mechanistic/context evidence**, distinct from perceptible communication modalities. The schema is **scaffolded only**: [marker families](../data/ontology/physiological_marker_families.csv) and the header-only [assertion–physiology join](../data/evidence/assertion_physiological_markers.csv). No biomarker values have been ingested or validated.
+
+Add to a later pilot only with units, tissue/matrix, assay, temporal scale, physiological controls and correct evolution terminology. Do **not** infer external animal-to-animal signaling from an internal measurement.
+
 ## Conceptual relational entities
 
 ```text
