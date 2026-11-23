@@ -82,6 +82,8 @@ def summarize(record):
         "crossref_type": record.get("crossref_type"),
         "update_types": types,
         "retraction_detected": detected,
+        "title_retraction_flag_present": bool(record.get("title_retraction_flag_present")),
+        "integrity_notice_result": record.get("integrity_notice_result"),
         "expected": record["expected"],
         "positive_control_pass": detected and status == "matched" if positive_control else None,
         "metadata_clears_no_retraction": False,
