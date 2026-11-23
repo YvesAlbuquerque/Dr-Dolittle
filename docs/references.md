@@ -1,28 +1,80 @@
-# Reading list and research landscape
+# Foundational literature and research reading queue
 
-A **starting bibliography**, not a systematic review. Inclusion does not imply endorsement of every interpretation. Contributors are invited to add DOI-verified primary literature and distinguish established results from contested claims.
+**Survey date:** 2026-11-23. **Status:** an expanded, curated seed bibliography, **not** a systematic or exhaustive review and **not** evidence extraction. The DOI, publisher, PubMed or PMC links below were located through source discovery; the complete methods, citations and limitations of most works have **not** been independently assessed.
 
-## Theory and comparative framing
+**Priority keys:** P0 = definitions and classification needed for R1; P1 = modality/capability balance; P2 = comparative cases, data or computational methods. Links point to the work or reputable record, not unauthorized full-text copies.
 
-- Maynard Smith, J. & Harper, D. (2003). *Animal Signals*. Oxford University Press. Foundations for evolutionary signal theory.
-- Bradbury, J. W. & Vehrencamp, S. L. (2011). *Principles of Animal Communication*, 2nd ed. Sinauer. Broad comparative treatment.
-- Seyfarth, R. M., Cheney, D. L. & Marler, P. (1980). Monkey responses to three different alarm calls: evidence of predator classification and semantic communication. *Science*, 210, 801–803. https://doi.org/10.1126/science.7433999
-- Briefer, E. F. (2012). Vocal expression of emotions in mammals: mechanisms of production and evidence. *Journal of Zoology*, 288, 1–20. https://doi.org/10.1111/j.1469-7998.2012.00920.x
+## Signal, cue, meaning and comparative theory (P0)
 
-## Computational and data resources to assess
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| Maynard Smith & Harper (2003), [*Animal Signals*](https://academic.oup.com/book/54249) | Adaptationist signal theory; distinguish signaling from incidental cues | Locator checked; read pending |
+| Bradbury & Vehrencamp (2011), *Principles of Animal Communication*, 2nd ed. | Broad evolutionary and ecological synthesis; bibliographic metadata to complete | Bibliographic lead; read pending |
+| Scott-Phillips (2008), [Defining biological communication](https://doi.org/10.1111/j.1420-9101.2007.01497.x) | Signal/cue/coercion distinctions and adaptive effects | Locator checked; read pending |
+| [Putting information back into biological communication](https://doi.org/10.1111/j.1420-9101.2010.01944.x) (2010) | Counterpoint in information-versus-influence debate | Locator checked; read pending |
+| [Resolving current disagreements and ambiguities in the terminology of animal communication](https://doi.org/10.1111/j.1420-9101.2011.02386.x) (2011) | Terminology synthesis and competing definitions | Locator checked; read pending |
+| [A multifaceted framework to establish the presence of meaning in non-human communication](https://doi.org/10.1111/brv.12989) (2023) | Operational cautions around meaning claims | Locator checked; read pending |
+| [Assessing flexibility in meaning and context in non-human communication](https://doi.org/10.1111/brv.70054) (2025) | Separating context, function and flexibility | Locator checked; read pending |
+| Tanner & Pfennig (2026), [Exploding the Dyad: Animal Communication in Multiple Dimensions](https://doi.org/10.1146/annurev-ecolsys-102723-051605) | Beyond a simple emitter–receiver model; multimodal systems and noise | Locator checked; read pending |
+| [Stanford Encyclopedia of Philosophy: Animal Communication](https://plato.stanford.edu/entries/animal-communication/) (2024) | Useful secondary map of philosophical and empirical debates | Secondary synthesis |
 
-- [Earth Species Project](https://www.earthspecies.org/) — research and tools in animal communication.
-- [Project CETI](https://www.projectceti.org/) — sperm-whale communication research; public access to individual datasets must be verified.
-- [MarmAudio](https://zenodo.org/records/15017207) — marmoset vocalization corpus; audit recording context, labels, and reuse terms before analysis.
+## Multimodal, visual and receiver-centered systems (P1)
 
-## Research gaps for the bibliography
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| Partan & Marler (1999), [Communication Goes Multimodal](https://doi.org/10.1126/science.283.5406.1272) | Foundational multimodal classification | Locator checked; read pending |
+| Partan & Marler (2005), [Issues in the Classification of Multimodal Communication Signals](https://doi.org/10.1086/431246) | Signal combinations, classification pitfalls | Locator checked; read pending |
+| [Dynamic Skin Patterns in Cephalopods](https://doi.org/10.3389/fphys.2017.00393) (2017) | Cephalopod visual signaling and camouflage distinction | Locator checked; read pending |
+| [Dynamic skin behaviors in cephalopods](https://pubmed.ncbi.nlm.nih.gov/38652980/) (2024) | Behavior, skin patterning and communication mechanisms | Locator checked; read pending |
+| [Chimpanzee gestural exchanges share temporal structure with human language](https://doi.org/10.1016/j.cub.2024.06.009) (2024) | Signal-to-signal temporal exchange; scope of analogy to human conversation | Locator checked; read pending |
+| [Vocal-visual combinations in wild chimpanzees](https://doi.org/10.1007/s00265-024-03523-x) (2024) | Interactions between communicative modalities | Locator checked; read pending |
 
-- Multimodal and receiver-centered theories of communication.
-- Bee dance communication and spatial reference.
-- Learned vocal traditions in birds and mammals.
-- Primate vocal combinations and gestural communication.
-- Chemical, tactile, substrate-vibration, and electric signaling.
-- Comparative methods for phylogenetic dependence and convergence.
-- Signal-versus-cue definitions and operational evidence of intentionality.
+## Chemical, vibrational and electrical channels (P1)
 
-When contributing references, provide stable identifiers, a one-sentence relevance statement, and a caveat about what the paper **does not** establish.
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| Cocroft & Rodríguez (2005), [The Behavioral Ecology of Insect Vibrational Communication](https://academic.oup.com/bioscience/article-abstract/55/4/323/270480) | Substrate-borne signal ecology and overlooked channel | Locator checked; read pending |
+| [Vibrational communication facilitates cooperative foraging in a phloem-feeding insect](https://doi.org/10.1098/rspb.2004.3041) (2005) | Case of behavioral coordination via vibrations | Locator checked; read pending |
+| [Insect Pheromone Receptors — Key Elements in Sensing Intraspecific Chemical Signals](https://pmc.ncbi.nlm.nih.gov/articles/PMC6255830/) (2018) | Receptor mechanisms and pheromonal communication | Locator checked; read pending |
+| [Chemical Communication in Insects: New Advances in Integrated Pest Management Strategies](https://pmc.ncbi.nlm.nih.gov/articles/PMC10607249/) (2023) | Recruitment, mating and other chemical functions; applied/ecological bias | Locator checked; read pending |
+| [Living life with an electric touch](https://pubmed.ncbi.nlm.nih.gov/38009325/) (2023) | Separating active electric sensing and social communication | Locator checked; read pending |
+| [Electric signal synchronization as a behavioural strategy to generate social attention](https://pubmed.ncbi.nlm.nih.gov/34398266/) (2021) | Timing, responses and social electric signaling | Locator checked; read pending |
+| [Collective sensing in electric fish](https://pubmed.ncbi.nlm.nih.gov/38448593/) (2024) | Important **cue vs communication** counterexample: shared sensing does not by itself establish communicative intent | Locator checked; read pending |
+
+## Case studies of structure, function, flexibility and culture (P1/P2)
+
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| Seyfarth, Cheney & Marler (1980), [Monkey responses to three different alarm calls](https://doi.org/10.1126/science.7433999) | Context-dependent receiver responses; contested semantics | Locator checked; read pending |
+| [On the Meaning of Alarm Calls: A Review of Functional Reference in Avian Alarm Calling](https://doi.org/10.1111/eth.12097) (2013) | Defining and testing functional reference without treating it as word meaning | Locator checked; read pending |
+| [The flight paths of honeybees recruited by the waggle dance](https://doi.org/10.1038/nature03526) (2005) | Spatial information and behavioral validation | Locator checked; read pending |
+| [Contextual and combinatorial structure in sperm whale vocalisations](https://doi.org/10.1038/s41467-024-47221-8) (2024) | Signal structure; **does not establish coda semantics** | Locator checked; read pending |
+| [Versatile use of chimpanzee call combinations promotes meaning expansion](https://doi.org/10.1126/sciadv.adq2879) (2025) | Vocal combinations and observed contexts; inferential claims need review | Locator checked; read pending |
+| Briefer (2012), [Vocal expression of emotions in mammals](https://doi.org/10.1111/j.1469-7998.2012.00920.x) | Vocal correlates versus unobserved subjective states | Locator checked; read pending |
+| [A taxonomy for vocal learning](https://pmc.ncbi.nlm.nih.gov/articles/PMC6895552/) (2020) | Operational subtypes of vocal learning, not a one-dimensional scale | Locator checked; read pending |
+| [The many functions of vocal learning](https://pmc.ncbi.nlm.nih.gov/articles/PMC8419581/) (2021) | Evolutionary roles and diversity of learning | Locator checked; read pending |
+| [Cultural Transmission, Evolution, and Revolution in Vocal Displays: Insights From Bird and Whale Song](https://pmc.ncbi.nlm.nih.gov/articles/PMC7550662/) (2020) | Social transmission and temporal dynamics | Locator checked; read pending |
+| [Mechanisms of Cultural Evolution in the Songs of Wild Bird Populations](https://pmc.ncbi.nlm.nih.gov/articles/PMC8107227/) (2021) | Longitudinal cultural analysis | Locator checked; read pending |
+| [Communication in Dogs](https://pmc.ncbi.nlm.nih.gov/articles/PMC6116041/) (2018) | Intraspecific communication and **supporting-only** interspecies evidence | Locator checked; read pending |
+
+## Research methods and collaboration (P2)
+
+| Reference | Why it belongs | Status |
+| --- | --- | --- |
+| ManyPrimates et al. (2019), [Establishing an infrastructure for collaboration in primate cognition research](https://doi.org/10.1371/journal.pone.0223675) | Comparative, multi-site sampling and collaborative research | Locator checked; read pending |
+
+## Priority reading sequence
+
+1. **Debates on definitions:** Scott-Phillips (2008), 2010 information paper, 2011 terminology paper, meaning framework (2023).
+2. **Comparison without anthropocentrism:** Partan & Marler (2005), Tanner & Pfennig (2026), flexibility/context (2025).
+3. **Balance modalities:** pheromone receptors; vibrational signaling; electrical touch vs signals; cephalopod patterns.
+4. **Test operational definitions:** bees, alarm calls, whale codas, gesture timing, learning and culture.
+5. **Only then** draft reviewed claim records and group-level evidence summaries.
+
+## Inclusion and caution
+
+This bibliography includes **books, reviews, original studies and methodological references**; these should be tagged differently in the structured catalog. A single cited work can motivate multiple *candidate* classifications but does not authorize applying them to all species in its study group.
+
+**Required next metadata step:** normalize titles, author lists, publication types and stable identifiers from Crossref/OpenAlex/official records into [bibliography/catalog](../bibliography/catalog/), then screen full texts and record conflicts. No paper here is yet described as independently evidence-extracted or scientifically validated by the project.
+
+For search strategy, duplicates and screening states, see [bibliography plan](bibliography-plan.md).
