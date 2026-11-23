@@ -16,15 +16,15 @@ Before selecting species or building AI models, we need reproducible criteria fo
 | Communication system | Recurrent patterns linking signal production, perception, context, and consequences | Are patterns stable, variable, learned, or context-dependent? |
 | Capability | An operationally defined property that can recur across systems and lineages | Can it be tested independently of modality and species? |
 
-These definitions need comparison against competing frameworks; no single definition should be presented as universal consensus.
+These definitions need comparison against competing frameworks; no single definition should be presented as universal consensus. **Priority reading:** [Scott-Phillips 2008](https://doi.org/10.1111/j.1420-9101.2007.01497.x), [2010 information debate](https://doi.org/10.1111/j.1420-9101.2010.01944.x), [2011 terminology synthesis](https://doi.org/10.1111/j.1420-9101.2011.02386.x), [Partan & Marler 2005](https://doi.org/10.1086/431246), and [Tanner & Pfennig 2026](https://doi.org/10.1146/annurev-ecolsys-102723-051605). These are reading candidates, not a completed critical review.
 
 ## Proposed first-pass classification
 
-**Physical channel:** acoustic, visual, chemical, tactile, substrate-borne vibrational, electrical, or combined.
+**Physical channel:** acoustic, visual, chemical, tactile, substrate-borne vibrational and electrical; **multimodal combinations are relationships among channels**, not an additional physical modality.
 
 **Signal organization:** discrete/graded, temporal patterning, sequentiality, combination, spatial organization, persistence.
 
-**Interaction:** one-to-one, broadcast, group-mediated, distributed; receiver identity, audience effects, feedback.
+**Interaction:** dyadic, broadcast, multiple receivers, group-mediated and distributed; include bystanders, eavesdropping, audience effects, propagation medium, noise and feedback.
 
 **Behavioral function:** observed changes in attention, movement, coordination, mating, defense, affiliation, or resource acquisition. Function must be distinguished from inferred meaning.
 
