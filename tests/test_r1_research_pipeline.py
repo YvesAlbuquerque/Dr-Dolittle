@@ -134,6 +134,19 @@ class ResearchPipelineTests(unittest.TestCase):
         self.assertEqual("full_text",r["status"])
         self.assertEqual("bioc_json",r["source_format"])
 
+    def test_nested_result_heading_remains_retrievable(self):
+        nested = OA.replace(
+            b"<sec><title>Results</title><p>",
+            b"<sec><title>Results</title><sec><title>Response patterns</title><p>"
+        ).replace(
+            b"response differed across familiarity conditions.</p></sec>",
+            b"response differed across familiarity conditions.</p></sec></sec>"
+        )
+        result = extract_xml(nested, DOI)
+        self.assertIn("Results > Response patterns", [r["section"] for r in result["sections"]])
+        selected = selected_passages({"source_access_level":"full_text","sections":result["sections"]})
+        self.assertTrue(any("Results >" in row["section"] for row in selected))
+
     def test_restricted_url_is_rejected(self):
         with self.assertRaisesRegex(ValueError,"disallowed"):
             request("https://arbitrary.example.com/unsafe")
