@@ -10,6 +10,10 @@ Review comparative communication theory, biosemiotics, ethology, behavioral ecol
 
 Develop independent axes for modality, structure, function, flexibility, social organization, and informational capacities. Define inclusion/exclusion criteria and measurable observables. Avoid imposing human linguistic categories on all animals.
 
+### Physiological and molecular evidence — supplemental axis
+
+Record physiology relevant to communication **at any stage** when supported by a cited study: endocrine regulation, neural production/perception mechanisms, autonomic/cardiorespiratory measurements, and conserved ligand/receptor systems. These are study measurements, not a new sensory modality or proof of external signaling. Preserve biological matrix, assay, relative timing, within-animal baseline, potential receiver and confounds. Separate hormone homology from conservation of function and keep biological evolution distinct from cross-taxon behavioral analogy. See [dedicated protocol](physiological-biomarkers-and-communication.md).
+
 ## Stage 3 — survey animal groups
 
 Build an evidence matrix at the **group** level first. Each claim should point to specific studies and carry a status reflecting evidence quality and uncertainty. Group summaries must not imply every species in the group has a trait.
