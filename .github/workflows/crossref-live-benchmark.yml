@@ -1,0 +1,37 @@
+name: Bounded live Crossref benchmark (opt-in code changes)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/crossref_metadata_worker.py'
+      - 'scripts/crossref_live_benchmark.py'
+      - 'tests/test_crossref_metadata_worker.py'
+      - 'tests/test_crossref_live_benchmark.py'
+      - '.github/workflows/crossref-live-benchmark.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  crossref-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline regression tests
+        run: python -m unittest tests.test_crossref_metadata_worker tests.test_crossref_live_benchmark -v
+      - name: Six bounded real DOI lookups
+        # Explicit --live is used only for this opt-in benchmark workflow.
+        run: python scripts/crossref_live_benchmark.py --live --output "${{ runner.temp }}/dr-dolittle-crossref-live"
+      - name: Upload factual benchmark record even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r1-crossref-real-doi-benchmark
+          path: ${{ runner.temp }}/dr-dolittle-crossref-live/
+          if-no-files-found: warn
+          retention-days: 30
