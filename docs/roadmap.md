@@ -5,7 +5,7 @@ This is an evidence-gated plan, not a delivery commitment.
 | Phase | Goal | Exit evidence | Status |
 | --- | --- | --- | --- |
 | R0 | Publish scope, ontology proposal, contribution process | Reviewable public documents | Documented |
-| R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Scaffolded (reference seed and formats; definitions unvalidated) |
+| R1 | Literature-backed definitions and claim taxonomy | Critically read sources, operational definitions and unresolved disagreements | Scaffolded (65-reference seed, initial theoretical comparison and bibliography check; definitions still unvalidated) |
 | R2 | Group-level comparative evidence matrix | Traceable study-to-capability entries and confidence labels | Planned |
 | R3 | Select high-information comparisons and candidate species | Transparent selection criteria and dataset audits | Planned |
 | R4 | Reproducible baseline computational experiments | Data permissions, code, evaluation splits, measured results | Planned |
