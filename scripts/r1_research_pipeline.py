@@ -179,10 +179,16 @@ def extract_xml(raw, expected_doi):
             add("abstract", "Abstract", element_text(abstract))
     body = root.find(".//body")
     if body is not None:
-        for sec in body.iter("sec"):
-            label = next((element_text(t) for t in sec.findall("title")), "Unlabeled section")
+        def visit_section(sec, parents=()):
+            title = next((element_text(t) for t in sec.findall("title")), "Unlabeled section")
+            path = parents + (title,)
+            label = " > ".join(path)
             for p in sec.findall("p"):  # direct paragraphs, avoid nested duplicates
                 add("full_text", label, element_text(p))
+            for sub in sec.findall("sec"):
+                visit_section(sub, path)
+        for sec in body.findall("sec"):
+            visit_section(sec)
     return {"license": license_info, "sections": parts, "full_text": bool(body is not None)}
 
 
