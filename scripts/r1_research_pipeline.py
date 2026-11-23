@@ -307,32 +307,27 @@ def fetch_source(item, opener=None, sleeper=None):
     return result
 
 def selected_passages(source):
-    """Retrieve diverse sections without inventing sample sizes or causal evidence."""
+    """Balanced, bounded Methods / Results / Abstract input for small CPU models."""
     parts = source["sections"]
     if source["source_access_level"] != "full_text":
-        return parts[:4]
-    categories = [
-        ("methods", re.compile(r"method|material|design|experiment|animal|statistic|procedure", re.I)),
-        ("results", re.compile(r"result|finding|analysis", re.I)),
-        ("abstract", re.compile("abstract", re.I)),
-    ]
-    chosen = []
-    for _, regex in categories:
-        matches = [p for p in parts if regex.search(p["section"])]
-        chosen.extend(matches[:8])
-    if not chosen:
-        chosen = parts[:18]
-    seen = set()
-    answer = []
-    for p in chosen:
+        return parts[:3]
+    methods = [p for p in parts if re.search(
+        r"method|material|design|experiment|animal|statistic|procedure|analysis", p["section"], re.I)]
+    results = [p for p in parts if re.search(r"result|finding", p["section"], re.I)]
+    abstract = [p for p in parts if p["section"].lower() == "abstract"]
+    # Read both observation and method; retain one late statistical control.
+    candidate = methods[:3] + methods[-1:] + results[:4] + abstract[:1]
+    if not candidate:
+        candidate = parts[:8]
+    output, seen = [], set()
+    for p in candidate:
         if p["id"] not in seen:
-            answer.append(p)
+            output.append(p)
             seen.add(p["id"])
-    return answer[:22]
-
+    return output[:9]
 
 def prompt(item, source, passages):
-    context = "\n".join(f'[{p["id"]} {p["section"]}] {p["text"]}' for p in passages)
+    context = "\n".join(f'[{p["id"]} {p["section"]}] {p["text"][:900]}' for p in passages)
     task = {
         "task": "source_grounded_draft_methodology_critique",
         "study_id": item["assertion_id"],
@@ -347,6 +342,10 @@ def prompt(item, source, passages):
             "Separate observed effect from conjectured meaning, and identify alternative hypotheses.",
             "Treat animals, colonies and populations as independent units only where source supports it.",
             "Output ONLY one JSON object; no surrounding Markdown.",
+            "Use at most one observation, one control, two uncertainties and two alternative explanations.",
+            "Every quote must be a short EXACT contiguous substring from a listed passage, max 160 characters.",
+            "For passage_id output ONLY the bare identifier such as p001; do not repeat the section title.",
+            "Write concise values and close the JSON object; do not paste full abstracts or long paragraphs.",
         ],
         "required_json": {
             "study_id": item["assertion_id"], "abstain_from_method_appraisal": True,
@@ -355,7 +354,7 @@ def prompt(item, source, passages):
             "uncertainties": [""], "alternative_explanations": [""],
             "scientific_confidence": None
         },
-        "source_passages": context[:11000],
+        "source_passages": context[:9000],
     }
     return json.dumps(task, ensure_ascii=False)
 
@@ -364,7 +363,7 @@ def model_call_ollama(prompt_text, model, opener=None):
     if not model or not re.fullmatch(r"[A-Za-z0-9._:/-]{1,80}", model):
         raise ValueError("invalid local model name")
     body = json.dumps({"model": model, "prompt": prompt_text, "stream": False,
-                       "format": "json", "options": {"temperature": 0, "num_predict": 550, "num_ctx": 4096}}).encode()
+                       "format": "json", "options": {"temperature": 0, "num_predict": 850, "num_ctx": 4096}}).encode()
     req = urllib.request.Request(MODEL_ENDPOINT, data=body, headers={
         "Content-Type": "application/json", "User-Agent": AGENT}, method="POST")
     opener = opener or urllib.request.urlopen
