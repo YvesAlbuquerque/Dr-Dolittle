@@ -1,0 +1,16 @@
+assertion_id,sampling_group,taxon_as_published,unit_of_inference,taxonomy_authority_status
+r1-001,primates,vervet monkey (historically Cercopithecus aethiops),tested animals during playbacks,not_yet_matched_to_pinned_COL
+r1-002,eusocial_insects,honeybee (Apis mellifera),tracked recruited bees,not_yet_matched_to_pinned_COL
+r1-003,cetaceans,sperm whale (Physeter macrocephalus),recorded codas and interactions,not_yet_matched_to_pinned_COL
+r1-004,primates,chimpanzee (Pan troglodytes),observed dyadic gestures,not_yet_matched_to_pinned_COL
+r1-005,cephalopods,mourning cuttlefish (Sepia plangon),courting male displays,not_yet_matched_to_pinned_COL
+r1-006,eusocial_insects,Lasius niger; Camponotus modoc; Myrmica rubra,experimental worker cohorts,not_yet_matched_to_pinned_COL
+r1-007,group_living_insects,Calloconophora pinguis,nymph sibling groups,not_yet_matched_to_pinned_COL
+r1-008,fishes,Mormyrus rume,fish groups up to four,not_yet_matched_to_pinned_COL
+r1-009,terrestrial_mammals,domestic dog (Canis familiaris as studied),four individual dogs,not_yet_matched_to_pinned_COL
+r1-010,rodents,laboratory rat (Rattus norvegicus),tested rats and trials,not_yet_matched_to_pinned_COL
+r1-011,terrestrial_mammals,horse (Equus caballus),observed horses in different contexts,not_yet_matched_to_pinned_COL
+r1-012,rodents,Sprague-Dawley rat (Rattus norvegicus),recorded laboratory rats,not_yet_matched_to_pinned_COL
+r1-013,birds,zebra finch (Taeniopygia guttata),tested birds and recording sessions,not_yet_matched_to_pinned_COL
+r1-014,terrestrial_mammals,domestic dog (Canis familiaris),experimentally tested dogs,not_yet_matched_to_pinned_COL
+r1-015,primates,Japanese macaque (Macaca fuscata),observed dyadic interactions in one group,not_yet_matched_to_pinned_COL
