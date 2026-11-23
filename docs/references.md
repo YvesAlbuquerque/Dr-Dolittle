@@ -4,6 +4,28 @@
 
 **Priority keys:** P0 = definitions and classification needed for R1; P1 = modality/capability balance; P2 = comparative cases, data or computational methods. Links point to the work or reputable record, not unauthorized full-text copies.
 
+## R1 theoretical comparison and bodily signals
+
+The first [source-qualified definition comparison](definition-comparison-r1.md) contrasts adaptationist, informational, influence and multidimensional meaning accounts. The separate [respiration research note](respiration-and-communication.md) addresses deep inhalations, sighs, snorts and possible social cues without assuming they are signals.
+
+New source leads:
+
+| Reference | Purpose | Review level |
+| --- | --- | --- |
+| [Rendall, Owren & Ryan (2009)](https://doi.org/10.1016/j.anbehav.2009.06.007) | Influence-oriented critique of information-heavy signal interpretation | Institutional abstract inspected |
+| [Seyfarth et al. (2010)](https://doi.org/10.1016/j.anbehav.2010.04.012) | Defense of information as an operational research construct | Publisher abstract inspected |
+| [Owren, Rendall & Ryan (2010)](https://doi.org/10.1007/s10539-010-9224-4) | Influence-centered alternative to encoded-message metaphors | Source located, critical full text pending |
+| [Issa & Porostocky (1993)](https://doi.org/10.1016/0034-5687(93)90004-t) | Dog respiratory sighs during waking and sleep, negative control against automatic social interpretation | PubMed abstract inspected |
+| [Soltysik & Jelen (2005)](https://doi.org/10.1016/j.physbeh.2005.06.008) | Sighs and laboratory relief in rats | Abstract inspected; not proven social signal |
+| [Stomp et al. (2018)](https://doi.org/10.1371/journal.pone.0197898) | Context-dependent horse snorts | Article/abstract inspected; recipient function untested here |
+| [Horse snort acoustic structure (2018)](https://doi.org/10.1007/s00114-018-1582-9) | Distinct expulsion acoustic properties and correlates | PubMed abstract inspected |
+| [Deep breaths in ultrasonic rat calls (2020)](https://doi.org/10.1152/jn.00590.2019) | Respiratory motor pattern coupled to acoustic vocalization | Abstract inspected |
+| [Psychophysiology of the sigh I (2022)](https://doi.org/10.1016/j.biopsycho.2022.108313) | Physiological competing explanations for deep breaths | Abstract inspected |
+| [Neuroglial mechanisms of sighs (2023)](https://doi.org/10.1038/s41467-023-40812-x) | Endogenous respiratory control mechanism | Abstract inspected |
+| [Horse snorts outdoors (2026)](https://doi.org/10.1007/s00114-026-02113-3) | Environment/temperature-related snorts and separate recordings of sighs | Publisher HTML/abstract inspected |
+
+**Important:** the presence of these references in the reading list or CSL catalog is not an accepted behavioral claim.
+
 ## Signal, cue, meaning and comparative theory (P0)
 
 | Reference | Why it belongs | Status |
