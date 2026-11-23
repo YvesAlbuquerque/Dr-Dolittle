@@ -50,6 +50,7 @@ Interspecies communication may provide **supporting evidence** of shared percept
 | [Research methodology](docs/methodology.md) | Literature-first, group-first workflow and validation safeguards |
 | [Research roadmap](docs/roadmap.md) | Phases, milestones, and contribution opportunities |
 | [Related research worldwide](docs/related-projects.md) | Other initiatives, research groups, and open tools |
+| [Research instrumentation](docs/research-instrumentation.md) | Proposed recording, classification, and visualization architecture |
 | [Bibliography plan](docs/bibliography-plan.md) | Literature sources, screening workflow, and reading queue |
 | [Taxonomic authority](docs/taxonomy-source.md) | Catalogue of Life, release policy, and species inventory provenance |
 | [Reading list](docs/references.md) | Initial references and research leads |
