@@ -108,7 +108,7 @@ def lookup_metadata(doi, opener=None, sleeper=None, pmid=None):
     records = data.get("resultList", {}).get("result", [])
     matching = [x for x in records if (x.get("doi") or "").lower() == doi.lower()]
     status, raw_hash = "matched", sha256(raw)
-    if not matching and pmid and re.fullmatch(r"\\d{1,12}", pmid):
+    if not matching and pmid and re.fullmatch(r"\d{1,12}", pmid):
         fallback_query = urllib.parse.urlencode({"query": f"EXT_ID:{pmid} AND SRC:MED",
                                                   "format":"json","pageSize":1,"resultType":"core"})
         fallback_url = REST + "search?" + fallback_query
