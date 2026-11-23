@@ -1,50 +1,71 @@
-# Bibliography strategy and initial reading queue
+# Bibliographic discovery, screening, and provenance protocol
 
-**Status:** Seed bibliography, not a completed systematic review. The objective is a large, traceable, deduplicated literature catalog that can later be screened and read in stages.
+**Status:** Adopted initial collection protocol, **not executed as a systematic review**. See [reading queue](references.md) and [instrumentation choice](research-instrumentation.md).
 
-## Collection scope
+## Research question
 
-Search across animal signaling theory, behavioral ecology, evolutionary biology, biosemiotics, comparative cognition, multimodal communication, signal evolution, receiver responses, cultural transmission, language evolution, and computational bioacoustics.
+What operational definitions, observed phenomena, measurable capacities and empirical tests allow comparison of animal communication **across modalities and taxonomic groups**? Distinguish communicative signals, cues, coercion/influence, functional effects, learning, and interpretive claims.
 
-Include all modalities: acoustic, visual, chemical, tactile, substrate-borne vibration, electrical, and multimodal. Avoid collecting only studies about charismatic mammals or vocalizations.
+## Search sources
 
-## Source discovery
+- [Crossref](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) — DOI and publication metadata; deduplication.
+- [OpenAlex](https://openalex.org/) — broader scholarly discovery and citation graph; API budget/terms must be respected.
+- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) — relevant biological and behavioral literature.
+- [Semantic Scholar](https://www.semanticscholar.org/) — supplementary discovery; do not treat rankings as quality.
+- Direct journal, publisher and scholarly archive records for verification.
+- Snowballing from review bibliographies, including [Tanner & Pfennig 2026](https://doi.org/10.1146/annurev-ecolsys-102723-051605).
 
-- [Crossref](https://www.crossref.org/) — publication metadata and DOIs.
-- [OpenAlex](https://openalex.org/) — broad scholarly discovery and citation relationships.
-- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) — biomedical and relevant behavioral research.
-- [Semantic Scholar](https://www.semanticscholar.org/) — literature discovery and related works.
-- [Earth Species Project publications](https://earthspecies.org/what-we-do/publications/) — current computational research.
-- [Project CETI research](https://www.projectceti.org/research/index) — whale communication studies.
-- [BirdNET publications](https://birdnet.cornell.edu/publications/) — methods and bioacoustics.
-- [Talk2Nature resources](https://metivity.github.io/talk2nature/research/resources/) — candidate discovery list; verify at original source.
+## Search strategy v0 (candidate strings, not yet executed as a reproducible batch)
 
-## Initial anchor references
+Use explicit source-specific syntax and record query, date, endpoint, filters, page or cursor, total retrieved, exclusions, and source API version. Search English literature initially, then evaluate language bias and targeted translation/discovery strategies.
 
-| Work | Why review | Status |
-| --- | --- | --- |
-| Maynard Smith & Harper (2003), *Animal Signals* | Signal evolution and definitions | Queued |
-| Bradbury & Vehrencamp (2011), *Principles of Animal Communication* (2nd ed.) | Broad comparative theoretical reference | Queued |
-| Seyfarth, Cheney & Marler (1980), [Science](https://doi.org/10.1126/science.7433999) | Alarm calls and receiver responses | Queued |
-| Briefer (2012), [Journal of Zoology](https://doi.org/10.1111/j.1469-7998.2012.00920.x) | Affect-related vocal correlates and inferential limits | Queued |
-| ManyPrimates et al. (2019), [PLOS ONE](https://doi.org/10.1371/journal.pone.0223675) | Collaborative comparative methods | Queued |
+**Conceptual definitions**
+```
+"animal communication" AND ("signal" OR "cue" OR "influence") AND (definition OR evolution)
+"animal communication" AND ("meaning" OR "context" OR "functional reference")
+"animal communication" AND ("receiver" OR "audience" OR "multimodal")
+```
 
-## Minimum bibliographic record
+**Deliberate modality balance**
+```
+("pheromone" OR "chemical signal" OR "semiochemical") AND ("communication" OR "receiver")
+("substrate-borne vibration" OR "vibrational communication") AND animal*
+("electric communication" OR "electric organ discharge") AND fish
+("visual signal" OR "body pattern" OR gesture) AND animal* AND communication
+("animal vocal" OR "bioacoustics") AND ("context" OR "playback")
+```
 
-Record stable DOI/URL; title; authors; year; venue; work type; abstract/metadata source; animal group; modality; capability axis; method; sample size where reported; study context; code/data availability; license/access status; screening status; interpretation limitations; and date checked.
+**Capabilities and evolution**
+```
+("vocal learning" OR "cultural transmission") AND (bird* OR whale* OR mammal*)
+("call combination" OR compositionality OR "signal sequence") AND animal*
+("phylogenetic comparative" OR convergence) AND "communication"
+```
 
-Statuses: **discovered → metadata checked → screened → full text assessed → evidence extracted → independently reviewed**; allow **excluded** with reason.
+Avoid one undifferentiated high-volume search. Predefine a **stratified discovery quota** per modality and record zero-result strata rather than filling them with irrelevant works.
 
-## Review discipline
+## Inclusion and exclusions (pilot)
 
-- Start with searches and transparent inclusion criteria, then snowball references and citations.
-- Deduplicate by DOI and title/author/year; flag conflicting metadata.
-- Distinguish primary experimental studies, observational studies, reviews, methods, datasets, and preprints.
-- Do not interpret abstracts as proof of an empirical claim; seek full methods and limitations.
-- Record selection bias, publication bias, phylogenetic non-independence, and missing modalities.
-- Do not download or redistribute copyrighted full texts without authorization.
-- Consider a machine-readable bibliography (CSL JSON or BibTeX) after deciding schema and curation workflow.
+Include peer-reviewed primary studies and scholarly reviews about observable animal signal production/reception, function, context, learning, interaction, or evolutionary mechanism; include relevant analytical methods and comparative datasets as separate types. Book chapters and credible preprints may be included **with type labels**.
 
-## Next work package
+Exclude purely metaphorical "communication", human-only linguistics unless comparative controls are relevant, commercial promotional claims without methods, and untraceable AI-generated bibliographic records.
 
-Produce a search protocol and the first metadata-only batch, with clear query strings and source/date provenance. Then prioritize foundational definitions and group-level evidence, not species-first model training.
+**Do not equate:** a recorded noise with a communicative signal; an open-access article with reusable audio; a taxonomy with behavior annotations; a benchmark classification score with validation of meaning.
+
+## Metadata and screening states
+
+`discovered` → `metadata_checked` → `title_abstract_screened` → `full_text_assessed` → `evidence_extracted` → `independently_reviewed`. An `excluded` state requires a reason.
+
+Every record: stable local ID; title; year; authors (when verified); type; DOI or stable URL; publisher/venue when verified; metadata source/retrieval date; potential modality, taxa and capabilities as **unreviewed discovery tags**; deduplication decision; screening reviewer; accessible full text?; data/code links and separate license terms; methodological concerns.
+
+The **bibliography is not evidence**. An assertion enters the separate evidence register only when its actual study passage, method, tested group/context and competing interpretation are traceable.
+
+## Replicability and review
+
+Keep a search-log CSV with query version, date, endpoint, result count and retrieval artifacts/checksums when legal. Prefer an ordinary CSL JSON catalog with project-local stable IDs. Preserve import source for manual metadata corrections. On import, deduplicate by normalized DOI first; fallback to normalized title, first author and year with a manual check. Never silently combine distinct reports or preprint/final publication records.
+
+Before claiming a systematic or scoping review, choose and document the review/reporting standard, preregistration decision, exhaustive queries, screening decisions and counts. The current manually curated list makes no such claim.
+
+## Practical sequence
+
+R1a: expand the [public landscape index](related-projects.md). R1b: maintain a 30+ multi-modal bibliographic seed. R1c: ingest CSL JSON + query logs. R1d: critically read the P0 definition debate. R1e: publish controlled vocabulary and reviewed, sourced exemplar claims. R2 begins only after these are traceable.
