@@ -21,6 +21,14 @@ A visible respiratory change can be classified as a **visual observation** and a
 
 For each event record observation method, context, individual, possible receiver, time sequence and alternate physiological explanations **without** inventing communicative intent. See [R1 definition comparison](definition-comparison-r1.md).
 
+### Internal physiological mechanisms and biomarkers (proposed independent evidence axis)
+
+The original six axes remain about **observable communication**. Add a **parallel physiological evidence layer** for endocrine/neurochemical, neural, autonomic/cardiovascular, respiratory/somatic, thermal/metabolic, immune/biochemical and molecular/evolutionary measurements. This does **not** turn cortisol, blood pressure, neural activity, or oxytocin into a seventh physical communication channel.
+
+Link biomarker results to documented **producer state**, **signal production**, **receiver state**, **signal reception**, or **interaction consequence**, with study-specific assays, tissues, timescales, controls and uncertainty. A change inside an organism can be correlated with communication without being externally detectable by another organism. Separate **homology of molecule/receptor** from **similarity of biological function**.
+
+See [physiological biomarkers and communication](physiological-biomarkers-and-communication.md) and [proposed marker families](../data/ontology/physiological_marker_families.csv). The ontology remains **provisional**; no claims about species capabilities follow from the candidate vocabulary.
+
 ## Level 2 — capabilities
 
 For each candidate capability, document:
