@@ -24,7 +24,14 @@
         ]
       ]
     },
-    "DOI": "10.1111/j.1420-9101.2007.01497.x"
+    "DOI": "10.1111/j.1420-9101.2007.01497.x",
+    "author": [
+      {
+        "family": "Scott-Phillips",
+        "given": "T. C."
+      }
+    ],
+    "container-title": "Journal of Evolutionary Biology"
   },
   {
     "id": "ref-putting-information-back-into-biological-communication",
@@ -38,7 +45,18 @@
         ]
       ]
     },
-    "DOI": "10.1111/j.1420-9101.2010.01944.x"
+    "DOI": "10.1111/j.1420-9101.2010.01944.x",
+    "author": [
+      {
+        "family": "Carazo",
+        "given": "P."
+      },
+      {
+        "family": "Font",
+        "given": "E."
+      }
+    ],
+    "container-title": "Journal of Evolutionary Biology"
   },
   {
     "id": "ref-resolving-current-disagreements-and-ambiguities-in-the-termino",
@@ -52,7 +70,18 @@
         ]
       ]
     },
-    "DOI": "10.1111/j.1420-9101.2011.02386.x"
+    "DOI": "10.1111/j.1420-9101.2011.02386.x",
+    "author": [
+      {
+        "family": "Ruxton",
+        "given": "G. D."
+      },
+      {
+        "family": "Schaefer",
+        "given": "H. M."
+      }
+    ],
+    "container-title": "Journal of Evolutionary Biology"
   },
   {
     "id": "ref-a-multifaceted-framework-to-establish-the-presence-of-meaning-",
@@ -66,7 +95,30 @@
         ]
       ]
     },
-    "DOI": "10.1111/brv.12989"
+    "DOI": "10.1111/brv.12989",
+    "author": [
+      {
+        "family": "Amphaeris",
+        "given": "Jenny"
+      },
+      {
+        "family": "Blumstein",
+        "given": "Daniel T."
+      },
+      {
+        "family": "Shannon",
+        "given": "Graeme"
+      },
+      {
+        "family": "Tenbrink",
+        "given": "Thora"
+      },
+      {
+        "family": "Kershenbaum",
+        "given": "Arik"
+      }
+    ],
+    "container-title": "Biological Reviews"
   },
   {
     "id": "ref-assessing-flexibility-in-meaning-and-context-in-non-human-comm",
@@ -739,5 +791,223 @@
       ]
     },
     "DOI": "10.1016/j.anbehav.2026.123611"
+  },
+  {
+    "id": "ref-rendall-owren-ryan-2009",
+    "type": "article-journal",
+    "title": "What do animal signals mean?",
+    "URL": "https://doi.org/10.1016/j.anbehav.2009.06.007",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.anbehav.2009.06.007",
+    "author": [
+      {
+        "family": "Rendall",
+        "given": "Drew"
+      },
+      {
+        "family": "Owren",
+        "given": "Michael J."
+      },
+      {
+        "family": "Ryan",
+        "given": "Michael J."
+      }
+    ],
+    "container-title": "Animal Behaviour"
+  },
+  {
+    "id": "ref-seyfarth-et-al-information-2010",
+    "type": "article-journal",
+    "title": "The central importance of information in studies of animal communication",
+    "URL": "https://doi.org/10.1016/j.anbehav.2010.04.012",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.anbehav.2010.04.012",
+    "author": [
+      {
+        "family": "Seyfarth",
+        "given": "Robert M."
+      },
+      {
+        "family": "Cheney",
+        "given": "Dorothy L."
+      },
+      {
+        "family": "Bergman",
+        "given": "Thore"
+      },
+      {
+        "family": "Fischer",
+        "given": "Julia"
+      },
+      {
+        "family": "Zuberbühler",
+        "given": "Klaus"
+      },
+      {
+        "family": "Hammerschmidt",
+        "given": "Kurt"
+      }
+    ],
+    "container-title": "Animal Behaviour"
+  },
+  {
+    "id": "ref-owren-rendall-ryan-2010",
+    "type": "article-journal",
+    "title": "Redefining animal signaling: Influence versus information in communication",
+    "URL": "https://doi.org/10.1007/s10539-010-9224-4",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "DOI": "10.1007/s10539-010-9224-4"
+  },
+  {
+    "id": "ref-issa-porostocky-dog-sigh-1993",
+    "type": "article-journal",
+    "title": "Effect of sleep on changes in breathing pattern accompanying sigh breaths",
+    "URL": "https://doi.org/10.1016/0034-5687(93)90004-t",
+    "issued": {
+      "date-parts": [
+        [
+          1993
+        ]
+      ]
+    },
+    "DOI": "10.1016/0034-5687(93)90004-t",
+    "author": [
+      {
+        "family": "Issa",
+        "given": "F. G."
+      },
+      {
+        "family": "Porostocky",
+        "given": "S."
+      }
+    ],
+    "container-title": "Respiration Physiology"
+  },
+  {
+    "id": "ref-soltysik-jelen-rat-sigh-2005",
+    "type": "article-journal",
+    "title": "In rats, sighs correlate with relief",
+    "URL": "https://doi.org/10.1016/j.physbeh.2005.06.008",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.physbeh.2005.06.008",
+    "author": [
+      {
+        "family": "Soltysik",
+        "given": "Stefan"
+      },
+      {
+        "family": "Jelen",
+        "given": "Piotr"
+      }
+    ],
+    "container-title": "Physiology & Behavior"
+  },
+  {
+    "id": "ref-stomp-horse-snort-2018",
+    "type": "article-journal",
+    "title": "An unexpected acoustic indicator of positive emotions in horses",
+    "URL": "https://doi.org/10.1371/journal.pone.0197898",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "DOI": "10.1371/journal.pone.0197898"
+  },
+  {
+    "id": "ref-horse-snort-acoustic-2018",
+    "type": "article-journal",
+    "title": "Snort acoustic structure codes for positive emotions in horses",
+    "URL": "https://doi.org/10.1007/s00114-018-1582-9",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "DOI": "10.1007/s00114-018-1582-9"
+  },
+  {
+    "id": "ref-rat-deep-breath-usv-2020",
+    "type": "article-journal",
+    "title": "Role of deep breaths in ultrasonic vocal production of Sprague-Dawley rats",
+    "URL": "https://doi.org/10.1152/jn.00590.2019",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "DOI": "10.1152/jn.00590.2019"
+  },
+  {
+    "id": "ref-sigh-physiology-review-2022",
+    "type": "article-journal",
+    "title": "The psychophysiology of the sigh: I: The sigh from the physiological perspective",
+    "URL": "https://doi.org/10.1016/j.biopsycho.2022.108313",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.biopsycho.2022.108313"
+  },
+  {
+    "id": "ref-purinergic-sigh-2023",
+    "type": "article-journal",
+    "title": "Purinergic signaling mediates neuroglial interactions to modulate sighs",
+    "URL": "https://doi.org/10.1038/s41467-023-40812-x",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "DOI": "10.1038/s41467-023-40812-x"
+  },
+  {
+    "id": "ref-horse-snort-outdoors-2026",
+    "type": "article-journal",
+    "title": "Could snort production reflect comfort in horses kept outdoors? A first study",
+    "URL": "https://doi.org/10.1007/s00114-026-02113-3",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "DOI": "10.1007/s00114-026-02113-3"
   }
 ]
