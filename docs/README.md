@@ -5,6 +5,7 @@ This directory contains the conceptual foundation of Dr. Dolittle. Documents dis
 | Document | Purpose |
 | --- | --- |
 | [Theoretical definitions compared (R1)](definition-comparison-r1.md) | Source-qualified comparison, disagreements and operational tiers |
+| [Physiology, biomarkers and communication](physiological-biomarkers-and-communication.md) | Endocrine, neural, cardiovascular, evolutionary and assay evidence as a separate axis |
 | [Respiration and communication](respiration-and-communication.md) | Deep breaths, sighs, snorts, cues versus signals |
 | [Communication foundations (R1)](communication-foundations.md) | Working definitions, comparisons and open classification questions |
 | [R1 scoping-review protocol](review-protocol-r1.md) | Search, eligibility, screening, and charting protocol (not yet run) |
