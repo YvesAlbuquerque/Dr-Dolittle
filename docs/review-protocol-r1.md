@@ -34,7 +34,7 @@ Do not pre-select an article count as evidence of comprehensiveness. Track the n
 
 **Exclude or flag separately:** detection-only works with no communicative question (unless used as a method reference); human-only work without explicit comparative use; assertions based solely on marketing; unverifiable records; redundant preprint/final-publication pairs (retain both links when useful).
 
-Screen titles/abstracts first, then retrieve authorized full text. Record each inclusion/exclusion decision, responsible reviewer and reason. There is currently no independent second reviewer. Reviewer count is **screening provenance**, not a biological validity score. The [certainty protocol](evidence-certainty-methodology.md) defines source appraisal and body-of-evidence inference independently of individual approval.
+Screen titles/abstracts first, then retrieve authorized full text. Record each inclusion/exclusion decision, responsible reviewer and reason. There is currently no independent second reviewer and no calibrated AI research assessor. This project is designed for AI-assisted and eventually AI-operated screening and appraisal, with explicit recording of model/version, source location, and abstention. Reviewer count is **screening provenance**, not a biological validity score. The [AI-first operating model](ai-first-scientific-operations.md) and [certainty protocol](evidence-certainty-methodology.md) define source appraisal and body-of-evidence inference independently of individual approval.
 
 ## Charting / extraction template
 
