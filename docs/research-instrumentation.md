@@ -15,7 +15,7 @@
 | Canonical bibliography | **CSL JSON** with stable local `id`, DOI where available, and provenance in a separate review log | Selected; catalog seed may be partial |
 | Scientific evidence and review | **Normalized UTF-8 CSV tables** (one claim, one source link, one review per row); foreign keys checked across files | Selected; no scientific assertions accepted |
 | Controlled terms | Versioned CSV vocabularies; explicit IDs, definitions and migration notes | Selected |
-| Validation | Python stdlib for CSV, identifiers, DOI normalization and relationships; [JSON Schema](https://json-schema.org/) on parsed row objects when justified; pytest when checks exist | Implemented for bibliography integrity only; evidence foreign-key checks not implemented |
+| Validation | Python stdlib for bibliography, evidence graph, and confidence-record consistency; unittest regression checks | Implemented structure checks; **no scientific inference validation** |
 | Analysis | [DuckDB](https://duckdb.org/docs/data/csv/overview) querying CSV directly, materialized Parquet optionally generated and ignored by Git | Selected; not yet benchmarked |
 | First public visualization | [Vega-Lite](https://vega.github.io/vega-lite/docs/) matrix, sourced from **reviewed** evidence exports; optional GitHub Pages | Selected; not implemented |
 | Derived graph | NetworkX, exportable as GraphML for optional Cytoscape exploration | Later; not implemented |
@@ -30,7 +30,7 @@ The price is more tables and explicit referential-integrity validation. This cos
 
 ### Why not a web application now?
 
-We lack reviewed content. A beautiful atlas of unvalidated assertions could falsely imply scientific certainty. The initial public visualization must prominently differentiate **not assessed**, **insufficient**, **conflicting**, **presence in a particular test**, and **absence under a specified test**. Only reviewed rows may be published as evidence.
+We lack reviewed content. A beautiful atlas of unvalidated assertions could falsely imply scientific certainty. The initial public visualization must prominently differentiate **not assessed**, **insufficient**, **conflicting**, **presence in a particular test**, and **absence under a specified test**. Only **methodologically appraised and transparently synthesized** claims may be displayed as evidence with a certainty level; individual human review is not sufficient. The pilot can be displayed as **explicitly provisional source coverage**.
 
 ### Physiological evidence extension (2026-11-23)
 
@@ -61,11 +61,11 @@ Minimum assertion fields: local ID; literal claim; evidence status; observation-
 1. **Discovered** bibliographic reference: DOI/title/URL metadata available. May enter catalog; says nothing about a scientific conclusion.
 2. **Screened** reference: scope and inclusion/exclusion reason documented.
 3. **Extracted draft**: one atomic assertion supported by a specified source location and defined observational method. AI may draft tags only with an explicit draft flag.
-4. **Reviewed**: human reviewer checks the source, operative definition, counterexamples and context. No silent promotion merely because a PR merged.
-5. **Disputed**: retain conflicting records; do not collapse them to an unjustified majority vote.
-6. **Independently corroborated**: only after independent review and/or independent empirical evidence as appropriate. A single reviewer must not be described as external validation.
+4. **Appraised**: inspect the study's methods, observation, controls, measurement validity, bias, precision and applicability, documenting domain-level reasons and assessor provenance; no automatic promotion after a PR merge.
+5. **Disputed**: preserve conflicting studies or assessments; neither a vote nor a single AI output resolves them.
+6. **Synthesized with explicit confidence**: evaluate all relevant supporting/opposing/null studies, their independence, heterogeneity and alternative explanations, and issue a **versioned, revisable qualitative certainty assessment**. Independent replication/convergence is more informative than agreement between assessors.
 
-Governance for a solo-maintained phase: the founder may curate **metadata** and mark a record as checked, but scientific assertions lacking external review remain provisional. Record authorship and reviewers; avoid invented reviewers or endorsements.
+Governance: the founder may curate metadata and propose interpretations but has no authority to make an unsupported claim scientifically true. Human/AI appraisers record method, source and rationale; independent scrutiny is welcome, not a substitute for empirical evidence. See [scientific certainty protocol](evidence-certainty-methodology.md).
 
 ## First useful visual
 

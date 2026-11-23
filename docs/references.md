@@ -4,6 +4,14 @@
 
 **Priority keys:** P0 = definitions and classification needed for R1; P1 = modality/capability balance; P2 = comparative cases, data or computational methods. Links point to the work or reputable record, not unauthorized full-text copies.
 
+## Evidence appraisal and research synthesis methods (methodology; not animal traits)
+
+- [GRADE / Core GRADE (2025)](https://doi.org/10.1136/bmj-2024-081903): evaluate certainty for a body of evidence addressing a question; our comparative-ethology adaptation requires calibration.
+- [ARRIVE 2.0 (2020)](https://doi.org/10.1371/journal.pbio.3000410): reporting completeness standards for in-vivo animal experiments, not proof of sound methodology.
+- [SYRCLE risk-of-bias tool (2014)](https://doi.org/10.1186/1471-2288-14-43): animal intervention studies; not a universal rubric for every observational study.
+- [PRISMA-EcoEvo (2021)](https://doi.org/10.1111/brv.12721): evolutionary/ecological synthesis and dependence/heterogeneity caution.
+- [Evidence certainty method](evidence-certainty-methodology.md): our **proposed, non-validated** adaptation.
+
 ## R1 theoretical comparison and bodily signals
 
 The first [source-qualified definition comparison](definition-comparison-r1.md) contrasts adaptationist, informational, influence and multidimensional meaning accounts. The separate [respiration research note](respiration-and-communication.md) addresses deep inhalations, sighs, snorts and possible social cues without assuming they are signals.

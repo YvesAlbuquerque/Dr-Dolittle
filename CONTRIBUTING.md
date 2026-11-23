@@ -34,7 +34,7 @@ Prefer non-invasive existing data. Any future collection or playback experiment 
 
 ## Review and governance
 
-The repository maintainers review changes. A merged hypothesis is not a validated finding. Substantive claims should have traceable sources and explicit confidence. Respectful disagreement and negative findings are welcome.
+Maintainers review repository changes, but approval or merge does not establish scientific truth. Evaluate findings through the [certainty methodology](docs/evidence-certainty-methodology.md): exact sources, study designs, operational tests, bias, controls, uncertainty, contradictory findings, and versioned hypothesis-level assessments. Use `not_assessed` until an appraisal actually exists; never treat agreement with a reviewer or AI as a sufficient basis for confidence. Respectful disagreement and negative findings are welcome.
 
 ## License
 

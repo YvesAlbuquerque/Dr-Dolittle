@@ -38,7 +38,7 @@ A statistically coherent cluster is **not** evidence of emotion, intention, word
 - Separate facts, interpretations, hypotheses, and open questions.
 - Report contradictory and negative findings.
 - Record dataset licensing, provenance, and any ethical restrictions.
-- Require human review before promoting claims to established evidence.
+- Require domain-based study appraisal, transparent uncertainty and hypothesis-level synthesis rather than relying on a single human review. Track assessor provenance and make claims revisable; see [evidence certainty methodology](evidence-certainty-methodology.md).
 - Never describe planned analyses as completed results.
 
 ## Interspecies bridges

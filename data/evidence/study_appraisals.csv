@@ -1,0 +1,16 @@
+appraisal_id,assertion_id,reference_id,status,risk_of_bias,measurement_validity,controls_confounding,precision,reporting_completeness,directness,reproducibility,assessment_method,assessor_kind,assessor_id,assessed_on,evidence_location,rationale
+app-r1-001,r1-001,ref-monkey-responses-to-three-different-alarm-calls,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-002,r1-002,ref-the-flight-paths-of-honeybees-recruited-by-the-waggle-dance,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-003,r1-003,ref-contextual-and-combinatorial-structure-in-sperm-whale-vocalisa,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-004,r1-004,ref-chimpanzee-gestural-exchanges-share-temporal-structure-with-hu,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-005,r1-005,ref-cephalopod-tactical-deception-2012,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-006,r1-006,ref-ant-pheromone-community-2019,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-007,r1-007,ref-vibrational-communication-facilitates-cooperative-foraging-in-,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-008,r1-008,ref-electric-signal-synchronization-as-a-behavioural-strategy-to-g,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-009,r1-009,ref-issa-porostocky-dog-sigh-1993,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-010,r1-010,ref-soltysik-jelen-rat-sigh-2005,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-011,r1-011,ref-stomp-horse-snort-2018,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-012,r1-012,ref-rat-deep-breath-usv-2020,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-013,r1-013,ref-zebra-finch-neural-vocal-familiarity-2026,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-014,r1-014,ref-dog-acute-emotional-indicators-2024,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.
+app-r1-015,r1-015,ref-a-newly-reported-tactile-gesture-for-grooming-initiation-in-ja,not_assessed,,,,,,,,,,,,,Awaiting study-specific Methods/Results appraisal; draft source report is not a certainty grade.

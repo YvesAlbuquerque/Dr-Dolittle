@@ -34,7 +34,7 @@ Do not pre-select an article count as evidence of comprehensiveness. Track the n
 
 **Exclude or flag separately:** detection-only works with no communicative question (unless used as a method reference); human-only work without explicit comparative use; assertions based solely on marketing; unverifiable records; redundant preprint/final-publication pairs (retain both links when useful).
 
-Screen titles/abstracts first, then retrieve authorized full text. Record each inclusion/exclusion decision, responsible reviewer and reason. There is currently no independent second reviewer. Do **not** claim independent screening or scientific validation.
+Screen titles/abstracts first, then retrieve authorized full text. Record each inclusion/exclusion decision, responsible reviewer and reason. There is currently no independent second reviewer. Reviewer count is **screening provenance**, not a biological validity score. The [certainty protocol](evidence-certainty-methodology.md) defines source appraisal and body-of-evidence inference independently of individual approval.
 
 ## Charting / extraction template
 
@@ -48,7 +48,8 @@ For each eligible record:
 - explicit role of the marker in the study: source-production mechanism, reception mechanism, state correlate, externally perceivable cue, candidate signal, or unresolved; evolutionary homolog/ortholog/paralog/analog claims require separate sources;
 - inferred function, reference, meaning or intention as **separate interpretations**;
 - article location (section, page, figure, table, experiment) supporting each assertion;
-- uncertainty, alternative explanations, contradictory sources and human review state;
+- uncertainty, alternative explanations, contradictory sources, access and assessor provenance;
+- domain appraisals of measurement validity, controls, bias, precision and reporting **when feasible for the source design**; separate hypothesis-level certainty ratings only after an actual body-of-evidence synthesis;
 - external data or code license and ethics limitations when applicable.
 
 Record multiple interacting receivers, simultaneous modalities, temporal overlaps, silence, and background/eavesdropper effects when relevant; do not require a single emitter–receiver pair.
@@ -68,7 +69,7 @@ The current scaffold allows `conflicting` and `not_assessed` as assertion-level 
 
 ## First review gate
 
-R1 cannot be called a completed scoping review until exact searches, deduplication/screening trail, source-level extraction, full reporting, and PRISMA-ScR coverage exist. Proposed next slice: verify structured metadata of P0 sources, then critically read six cornerstone definitions papers, compare their conflicting terms in a versioned matrix, and draft a handful of sourced examples **marked unreviewed**. No public biological capability map from this alone.
+R1 cannot be called a completed scoping review until exact searches, deduplication/screening trail, source-level extraction, full reporting, and PRISMA-ScR coverage exist. Proposed next slice: verify structured metadata of P0 sources, then critically read six cornerstone definitions papers, compare their conflicting terms in a versioned matrix, and draft a handful of sourced examples **marked unreviewed**. No public biological capability map from this alone. The first 15 pilot assertions have **not_assessed** methodological appraisals; they are not automatically `very_low` evidence. The evidence confidence protocol must be calibrated and audited before promoting any hypothesis.
 
 ## Methodological precedents
 

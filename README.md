@@ -55,7 +55,7 @@ Dr. Dolittle is **not the only initiative studying animal communication**, and w
 
 ## Open bibliography and data foundations
 
-The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**76 candidate references; eight with checked author/venue metadata; 15 unreviewed source observations; zero independently accepted assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
+The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**80 candidate references; eight with checked author/venue metadata; 15 unreviewed source observations; zero assessed hypotheses**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
 
 ## Explore the research
 
@@ -66,6 +66,7 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
+| [Evidence certainty methodology](docs/evidence-certainty-methodology.md) | Transparent criteria, study-level bias appraisal and hypothesis-level confidence |
 | [R1 pilot 01 — 15 studies](docs/r1-pilot-01.md) | Source-linked draft observations, data constraints, and first reproducible matrix |
 | [Draft source coverage matrix](docs/figures/r1-draft-coverage.svg) | Visual exploratory source-count matrix; not a biological trait map |
 | [R1 definition comparison](docs/definition-comparison-r1.md) | Seven competing theoretical positions, operational tests and source-access limits |
@@ -95,6 +96,7 @@ Especially valuable early contributions include rigorous definitions, literature
 
 ## Scientific commitments
 
+- **Confidence is earned, not voted.** Study methods and source-specific quality are appraised separately from versioned hypothesis-level certainty; ratings can rise or fall with new evidence.
 - **Evidence before interpretation.** Separate observed phenomena from inferred functions, emotions, intentions, and meanings.
 - **Uncertainty is data.** Distinguish documented presence, demonstrated absence under defined tests, conflicting evidence, and unknowns.
 - **Evolution is not a ladder.** Compare capabilities while accounting for phylogeny, ecology, and convergence.

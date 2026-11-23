@@ -1164,5 +1164,61 @@
       ]
     },
     "DOI": "10.3390/insects10110383"
+  },
+  {
+    "id": "ref-arrive-2-guidelines-2020",
+    "type": "article-journal",
+    "title": "The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research",
+    "URL": "https://doi.org/10.1371/journal.pbio.3000410",
+    "DOI": "10.1371/journal.pbio.3000410",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ref-syrcle-risk-of-bias-tool-2014",
+    "type": "article-journal",
+    "title": "SYRCLE's risk of bias tool for animal studies",
+    "URL": "https://doi.org/10.1186/1471-2288-14-43",
+    "DOI": "10.1186/1471-2288-14-43",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ref-prisma-ecoevo-2021",
+    "type": "article-journal",
+    "title": "Preferred reporting items for systematic reviews and meta-analyses in ecology and evolutionary biology: a PRISMA extension",
+    "URL": "https://doi.org/10.1111/brv.12721",
+    "DOI": "10.1111/brv.12721",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ref-core-grade-1-2025",
+    "type": "article-journal",
+    "title": "Core GRADE 1: overview of the Core GRADE approach",
+    "URL": "https://doi.org/10.1136/bmj-2024-081903",
+    "DOI": "10.1136/bmj-2024-081903",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    }
   }
 ]

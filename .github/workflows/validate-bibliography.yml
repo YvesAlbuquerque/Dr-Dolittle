@@ -38,6 +38,8 @@ jobs:
         run: python scripts/validate_bibliography.py
       - name: Validate draft evidence links
         run: python scripts/validate_evidence.py
+      - name: Validate study appraisals and hypothesis certainty
+        run: python scripts/validate_confidence.py
       - name: Rebuild draft matrix
         run: python scripts/build_r1_pilot_matrix.py
       - name: Verify reproducible committed visualization
