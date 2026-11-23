@@ -55,7 +55,7 @@ Dr. Dolittle is **not the only initiative studying animal communication**, and w
 
 ## Open bibliography and data foundations
 
-The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**54 discovery records, none fully reviewed**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
+The [expanded scientific reading queue](docs/references.md) and [portable CSL JSON seed catalog](bibliography/catalog/seed.csl.json) (**65 discovery records; eight with checked author/venue metadata; no accepted evidence assertions**) map foundational and cross-modal literature. These are **discovered references, not papers already reviewed in full**. We have also published the [initial normalized CSV evidence schema](data/README.md), with **no accepted scientific assertions yet**, and the [foundation audit](docs/foundation-audit-2026-11-23.md). The chosen software stack and its evidence boundary are in [research instrumentation](docs/research-instrumentation.md).
 
 ## Explore the research
 
@@ -66,6 +66,8 @@ The [expanded scientific reading queue](docs/references.md) and [portable CSL JS
 | [Foundation audit (2026-11-23)](docs/foundation-audit-2026-11-23.md) | Corrections, strengths, research gaps, and next validation gates |
 | [CSL JSON reference catalog](bibliography/catalog/README.md) | Portable seed bibliography and metadata status |
 | [Evidence data model](data/README.md) | Initial normalized CSV record structure; not yet populated |
+| [R1 definition comparison](docs/definition-comparison-r1.md) | Seven competing theoretical positions, operational tests and source-access limits |
+| [Respiratory behavior research](docs/respiration-and-communication.md) | Why deep breaths, sighs and snorts matter even before establishing communication |
 | [Communication foundations (R1)](docs/communication-foundations.md) | Working definitions, classification protocol, and open questions |
 | [Research questions & boundaries](docs/research-scope.md) | Central hypothesis, scientific scope, and important distinctions |
 | [Comparative ontology](docs/comparative-ontology.md) | Proposed classification axes, capabilities, and evidence states |
