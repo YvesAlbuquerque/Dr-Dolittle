@@ -11,6 +11,10 @@ Thank you for considering a contribution. This is an early-stage, open comparati
 - Improve accessibility, diagrams, documentation, or methodological rigor.
 - Propose small computational experiments with baselines and falsifiable outcomes.
 
+## Initial record formats
+
+New bibliographic references should be proposed with stable DOI/URL, verified fields and relevance. Canonical import/export is [CSL JSON](bibliography/catalog/README.md). For scientific assertions, follow the [normalized CSV evidence model](data/README.md). Each claim requires the source passage, tested population, context, competing explanations and a review record. Do not infer evidence from a species name or model output. Taxonomy labels need a source and release. See the [tooling decision](docs/research-instrumentation.md).
+
 ## Before submitting
 
 1. Search existing issues and documentation for related work.
